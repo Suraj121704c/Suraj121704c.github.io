@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import CV from "../assests/cv.pdf"
+import CV from "../assests/cv.pdf";
+import { IoMenuOutline } from "react-icons/io5";
 
 const Header = () => {
   const [activeNave, setActiveNav] = useState("#");
@@ -23,19 +24,34 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a href="#about" onClick={() => setActiveNav("#about")}> About</a>
+            <a href="#about" onClick={() => setActiveNav("#about")}>
+              {" "}
+              About
+            </a>
           </li>
           <li>
-            <a href="#skills" onClick={() => setActiveNav("#skills")}> Skills</a>
+            <a href="#skills" onClick={() => setActiveNav("#skills")}>
+              {" "}
+              Skills
+            </a>
           </li>
           <li>
-            <a href="#projects" onClick={() => setActiveNav("#skills")}> Projects</a>
+            <a href="#projects" onClick={() => setActiveNav("#projects")}>
+              {" "}
+              Projects
+            </a>
           </li>
           <li>
-            <a href="#githubs" onClick={() => setActiveNav("#githubs")}> GitHub</a>
+            <a href="#githubs" onClick={() => setActiveNav("#githubs")}>
+              {" "}
+              GitHub
+            </a>
           </li>
           <li>
-            <a href="#contact" onClick={() => setActiveNav("#contact")}> Contact</a>
+            <a href="#contact" onClick={() => setActiveNav("#contact")}>
+              {" "}
+              Contact
+            </a>
           </li>
           <button id="resume-button-1">
             <a
@@ -49,6 +65,9 @@ const Header = () => {
             </a>
           </button>
         </ul>
+        <div id="menu-icon">
+          <IoMenuOutline />
+        </div>
       </header>
     </>
   );

@@ -27,7 +27,7 @@ const Githubs = () => {
           <img
             className="ht1"
             id="github-streak-stats"
-            src="https://github-readme-streak-stats.herokuapp.com?user=Sayeda-5&theme=radical&hide_border=true&border_radius=6.5&date_format=M%20j%5B%2C%20Y%5D"
+            src="https://github-readme-streak-stats.herokuapp.com/?user=Suraj121704c&theme=radical&hide_border=true&border_radius=6.5&date_format=m%20j%5b%2c%20y%5d"
           />
         </div>
       </div>

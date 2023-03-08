@@ -18,7 +18,7 @@ const Contact = () => {
             Fill the form to connect if any query <i className="fas fa-smile"></i>
           </p>
           <div className="list">
-            <li>
+            <li id="contact-phone">
               <a
                 href="https://api.whatsapp.com/send?phone=+916387389485"
                 target="_blank"
