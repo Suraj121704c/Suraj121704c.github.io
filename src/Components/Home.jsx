@@ -1,6 +1,5 @@
 import React from "react";
 import CV from "../assests/cv.pdf";
-import { AiOutlineDownload } from "react-icons/ai";
 
 const Home = () => {
   return (
@@ -17,16 +16,14 @@ const Home = () => {
           </h3>
 
           <br />
-          <button id="resume-button-2">
+          <button id="resume-button-2" style={{marginTop:"5px"}}>
             <a
               href={CV}
               download="pdf"
               id="resume-link-2"
             >
               <span>
-                <i>
-                  <AiOutlineDownload />
-                </i>
+                <i className="bx bx-download"></i>
               </span>
               Resume
             </a>

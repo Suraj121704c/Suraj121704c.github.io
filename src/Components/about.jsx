@@ -18,7 +18,7 @@ const About = () => {
           </h2>
 
           <h4>Mern Developer</h4>
-          <p id="user-detail-intro">
+          <p id="user-detail-intro" style={{letterSpacing : "1px"}}>
             An enthusiastic Mern Developer with excellent hands-on experience in
             developing scalable websites and application using a wide range of
             front-end and back-end skills like HTML, CSS, JavaScript, React,

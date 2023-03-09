@@ -163,6 +163,7 @@ section{
 
 #resume-link-1{
   border: 0px solid white;
+  background:var(--second-color)
 }
 #user-detail-skill{
   font-size: 45px;
@@ -506,7 +507,7 @@ header.sticky{
   gap: 2rem;
   background: var(--bg-color);
 }
-.last-text p{
+.last p{
   color: var(--second-color);
   font-size: 14px;
 }
@@ -597,8 +598,10 @@ header.sticky{
         grid-template-columns: 1fr;
     }
     .about-img{
-        text-align: center;
+        margin: auto;
         order: 2;
+        width: 150px;
+        height: 220px;
     }
     .about-img img{
         width: 100%;

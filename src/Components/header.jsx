@@ -2,6 +2,19 @@ import React from "react";
 import { useState } from "react";
 import CV from "../assests/cv.pdf";
 import { IoMenuOutline } from "react-icons/io5";
+import {
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  PopoverBody,
+  PopoverArrow,
+  IconButton,
+  Button,
+  Stack,
+  Flex,
+} from "@chakra-ui/react";
+import { BsThreeDotsVertical, BsChatSquareQuote } from "react-icons/bs";
+import { RiShutDownLine, RiRestartLine, RiFileShredLine } from "react-icons/ri";
 
 const Header = () => {
   const [activeNave, setActiveNav] = useState("#");
@@ -24,10 +37,7 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a href="#about" onClick={() => setActiveNav("#about")}>
-              {" "}
-              About
-            </a>
+            <a href="#about"> About</a>
           </li>
           <li>
             <a href="#skills" onClick={() => setActiveNav("#skills")}>
@@ -66,7 +76,52 @@ const Header = () => {
           </button>
         </ul>
         <div id="menu-icon">
-          <IoMenuOutline />
+          <Popover placement="top" isLazy>
+            <PopoverTrigger>
+              <IconButton
+                aria-label="More server options"
+                icon={<IoMenuOutline />}
+                variant="solid"
+                w="fit-content"
+                color="#61dc14"
+                width={"30px"}
+                background={"none"}
+              />
+            </PopoverTrigger>
+            <PopoverContent
+              w="fit-content"
+              _focus={{
+                boxShadow: "none",
+                background: "gray",
+                color: "#61dc14",
+              }}
+            >
+              <PopoverBody>
+                <Stack>
+                  <a href="#home" className="active">
+                    {" "}
+                    Home
+                  </a>
+
+                  <a href="#about" className="active">
+                    {" "}
+                    About
+                  </a>
+
+                  <a href="#skills" className="active">
+                    {" "}
+                    Skills
+                  </a>
+
+                  <a href="#projects"> Projects</a>
+
+                  <a href="#githubs"> GitHub</a>
+
+                  <a href="#contact"> Contact</a>
+                </Stack>
+              </PopoverBody>
+            </PopoverContent>
+          </Popover>
         </div>
       </header>
     </>

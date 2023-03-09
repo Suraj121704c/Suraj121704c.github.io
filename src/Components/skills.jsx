@@ -22,8 +22,9 @@ const Skills = () => {
         <div className="nav-link skills" id="skills-part">
           <div className="skills-card">
             <div className="skills-card-img">
-              {/* <i style="font-size: 100px;" className="bx bxl-java"></i> */}
-              <FaReact style={{ height: "50px", width: "50px" }} />
+              <FaReact
+                style={{ height: "50px", width: "50px", margin: "auto" }}
+              />
             </div>
             <h3 className="skills-card-name" style={{ color: "#61dc14" }}>
               React
@@ -31,8 +32,9 @@ const Skills = () => {
           </div>
           <div className="skills-card">
             <div className="skills-card-img">
-              {/* <i style="font-size: 100px;" className="bx bxl-javascript"></i> */}
-              <TbBrandJavascript style={{ height: "50px", width: "50px" }} />
+              <TbBrandJavascript
+                style={{ height: "50px", width: "50px", margin: "auto" }}
+              />
             </div>
             <h3 className="skills-card-name" style={{ color: "#61dc14" }}>
               JavaScript
@@ -40,8 +42,9 @@ const Skills = () => {
           </div>
           <div className="skills-card">
             <div className="skills-card-img">
-              {/* <i style="font-size: 100px;" className="bx bxl-html5"></i> */}
-              <AiOutlineHtml5 style={{ height: "50px", width: "50px" }} />
+              <AiOutlineHtml5
+                style={{ height: "50px", width: "50px", margin: "auto" }}
+              />
             </div>
             <h3 className="skills-card-name" style={{ color: "#61dc14" }}>
               HTML
@@ -49,17 +52,19 @@ const Skills = () => {
           </div>
           <div className="skills-card">
             <div className="skills-card-img">
-              {/* <i style="font-size: 100px;" clclassNameass="bx bxl-css3"></i> */}
-              <TbBrandCss3 style={{ height: "50px", width: "50px" }} />
+              <TbBrandCss3
+                style={{ height: "50px", width: "50px", margin: "auto" }}
+              />
             </div>
             <h3 className="skills-card-name" style={{ color: "#61dc14" }}>
               CSS
             </h3>
           </div>
           <div className="skills-card">
-            <div className="skills-card-img">
-              {/* <i style="font-size: 100px;" className="bx bx-sushi"></i> */}
-              <SiRedux style={{ height: "50px", width: "50px" }} />
+            <div className="skills-card-img" style={{ textAlign: "center" }}>
+              <SiRedux
+                style={{ height: "50px", width: "50px", margin: "auto" }}
+              />
             </div>
             <h3 className="skills-card-name" style={{ color: "#61dc14" }}>
               Redux
@@ -67,8 +72,9 @@ const Skills = () => {
           </div>
           <div className="skills-card">
             <div className="skills-card-img">
-              {/* <i style="font-size: 100px;" className="bx bxl-spring-boot"></i> */}
-              <DiNodejs style={{ height: "50px", width: "50px" }} />
+              <DiNodejs
+                style={{ height: "50px", width: "50px", margin: "auto" }}
+              />
             </div>
             <h3 className="skills-card-name" style={{ color: "#61dc14" }}>
               Node JS
@@ -76,8 +82,9 @@ const Skills = () => {
           </div>
           <div className="skills-card">
             <div className="skills-card-img">
-              {/* <i style="font-size: 100px;" className="fas fa-database"></i> */}
-              <SiTypescript style={{ height: "50px", width: "50px" }} />
+              <SiTypescript
+                style={{ height: "50px", width: "50px", margin: "auto" }}
+              />
             </div>
             <h3 className="skills-card-name" style={{ color: "#61dc14" }}>
               Typescript
@@ -86,8 +93,9 @@ const Skills = () => {
 
           <div className="skills-card">
             <div className="skills-card-img">
-              {/* <i style="font-size: 100px;" className="fa-solid fa-cubes"></i> */}
-              <TfiWrite style={{ height: "50px", width: "50px" }} />
+              <TfiWrite
+                style={{ height: "50px", width: "50px", margin: "auto" }}
+              />
             </div>
             <h3 className="skills-card-name" style={{ color: "#61dc14" }}>
               DSA

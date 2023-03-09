@@ -5,19 +5,16 @@ const End = () => {
   return (
     <>
       <section className="end">
-        <div className="last-text">
+        <div className="last" style={{display : "flex"}}>
+        <AiOutlineCopyrightCircle color="#61dc14"/>
           <p>
-            {" "}
-            Created by Suraj Singh{" "}
-            <i style={{ color: "#61dc14" }}>
-              <AiOutlineCopyrightCircle />
-            </i>{" "}
-            2023 All Rights Reserved.{" "}
+            Created by Suraj Singh 2023 All Rights Reserved.
           </p>
+         
         </div>
         <div className="top">
           <a href="#home">
-            <BsArrowUpSquare style={{color : "#61dc14"}}/>
+            <BsArrowUpSquare style={{ color: "#61dc14" }} />
           </a>
         </div>
       </section>
