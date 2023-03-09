@@ -18,7 +18,7 @@ const About = () => {
           </h2>
 
           <h4>Mern Developer</h4>
-          <p id="user-detail-intro" style={{letterSpacing : "1px"}}>
+          <p id="user-detail-intro" style={{ letterSpacing: "1px" }}>
             An enthusiastic Mern Developer with excellent hands-on experience in
             developing scalable websites and application using a wide range of
             front-end and back-end skills like HTML, CSS, JavaScript, React,
@@ -26,11 +26,16 @@ const About = () => {
             implementation of functional specifications, Ready for taking
             challenging roles..
           </p>
-          <button id="resume-button-2" style={{marginTop:"5px"}}>
+          <button id="resume-button-2" style={{ marginTop: "5px" }}>
             <a
               href={CV}
               download="pdf"
               id="resume-link-2"
+              onClick={() =>
+                window.open(
+                  "https://drive.google.com/file/d/1kkba3IRIWZ7W77s2AZ040myrHEOJVOmh/view?usp=share_link"
+                )
+              }
             >
               <span>
                 <i className="bx bx-download"></i>

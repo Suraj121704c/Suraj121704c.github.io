@@ -70,6 +70,11 @@ const Header = () => {
               download="pdf"
               id="resume-link-1"
               className="nav-link resume"
+              onClick={() =>
+                window.open(
+                  "https://drive.google.com/file/d/1kkba3IRIWZ7W77s2AZ040myrHEOJVOmh/view?usp=share_link"
+                )
+              }
             >
               Resume
             </a>
@@ -117,7 +122,7 @@ const Header = () => {
 
                   <a href="#githubs"> GitHub</a>
 
-                  <a href="#contact"> Contact</a>
+                  <a href="#contact"> Contactn</a>
                 </Stack>
               </PopoverBody>
             </PopoverContent>

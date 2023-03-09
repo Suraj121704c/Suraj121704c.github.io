@@ -1,7 +1,6 @@
 import React from "react";
 import GitHubCalendar from "react-github-calendar";
 
-
 const Githubs = () => {
   return (
     <div id="githubs" className="max-width">
