@@ -14,21 +14,21 @@ const Githubs = () => {
           <img
             className="ht1"
             id="github-stats-card"
-            src="https://github-readme-stats.vercel.app/api?username=suraj121704c&count_private=true"
+            src="https://github-readme-stats.vercel.app/api?username=Suraj121704c&count_private=true"
           />
         </div>
         <div>
           <img
             className="ht1"
             id="github-top-langs"
-            src="https://github-readme-stats.vercel.app/api/top-langs/?username=suraj121704c&theme=outrun"
+            src="https://github-readme-stats.vercel.app/api/top-langs/?username=Suraj121704c&theme=outrun"
           />
         </div>
         <div>
           <img
             className="ht1"
             id="github-streak-stats"
-            src="https://github-readme-streak-stats.herokuapp.com/?user=suraj121704c&theme=radical&hide_border=true&border_radius=6.5&date_format=m%20j%5b%2c%20y%5d"
+            src="https://github-readme-streak-stats.herokuapp.com/?user=Suraj121704c&theme=radical&hide_border=true&border_radius=6.5&date_format=m%20j%5b%2c%20y%5d"
           />
         </div>
       </div>
