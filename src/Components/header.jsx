@@ -1,23 +1,15 @@
 import React from "react";
 import { useState } from "react";
 import CV from "../assests/cv.pdf";
-import { IoMenuOutline } from "react-icons/io5";
-import {
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
-  PopoverBody,
-  PopoverArrow,
-  IconButton,
-  Button,
-  Stack,
-  Flex,
-} from "@chakra-ui/react";
-import { BsThreeDotsVertical, BsChatSquareQuote } from "react-icons/bs";
-import { RiShutDownLine, RiRestartLine, RiFileShredLine } from "react-icons/ri";
+import { BsThreeDotsVertical } from "react-icons/bs";
+import DropDown from "./dropDown";
 
 const Header = () => {
   const [activeNave, setActiveNav] = useState("#");
+  const [selectedOption, setSelectedOption] = useState("");
+  const handleOptionSelect = (option) => {
+    setSelectedOption(option);
+  };
   return (
     <>
       <header id="nav-menu">
@@ -81,52 +73,17 @@ const Header = () => {
           </button>
         </ul>
         <div id="menu-icon">
-          <Popover placement="top" isLazy>
-            <PopoverTrigger>
-              <IconButton
-                aria-label="More server options"
-                icon={<IoMenuOutline />}
-                variant="solid"
-                w="fit-content"
-                color="#61dc14"
-                width={"30px"}
-                background={"none"}
-              />
-            </PopoverTrigger>
-            <PopoverContent
-              w="fit-content"
-              _focus={{
-                boxShadow: "none",
-                background: "gray",
-                color: "#61dc14",
-              }}
-            >
-              <PopoverBody>
-                <Stack>
-                  <a href="#home" className="active">
-                    {" "}
-                    Home
-                  </a>
-
-                  <a href="#about" className="active">
-                    {" "}
-                    About
-                  </a>
-
-                  <a href="#skills" className="active">
-                    {" "}
-                    Skills
-                  </a>
-
-                  <a href="#projects"> Projects</a>
-
-                  <a href="#githubs"> GitHub</a>
-
-                  <a href="#contact"> Contactn</a>
-                </Stack>
-              </PopoverBody>
-            </PopoverContent>
-          </Popover>
+          <DropDown
+            options={[
+              <a href="#home">Home</a>,
+              <a href="#about">About</a>,
+              <a href="#skills">Skills</a>,
+              <a href="#projects">Projects</a>,
+              <a href="#githubs">GitHub</a>,
+              <a href="#contact">Contact</a>,
+            ]}
+            onSelect={handleOptionSelect}
+          />
         </div>
       </header>
     </>
