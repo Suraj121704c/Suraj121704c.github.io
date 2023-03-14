@@ -52,7 +52,7 @@ span{
 }
 .navlist a{
   color: var(--main-color);
-  font-size: 17px;
+  font-size: 20px;
   font-weight: 500;
   margin: 0 25px;
   transition: all .45s ease;
@@ -62,6 +62,10 @@ span{
 }
 .navlist a.active{
   color: var(--main-color);
+}
+
+ #nav-menu{
+ background : var(--bg-color);
 }
 
 #menu-icon{
@@ -81,6 +85,7 @@ section{
 /* Home Section */
 
 #home{
+  margin-top: 6%;
   position: relative;
   height: 100vh;
   width: 100%;
@@ -547,7 +552,7 @@ header.sticky{
         
      }
      #github-top-langs{
-        border: 0px solid crimson;
+        border: 0px solid rgb(185, 65, 89);
         height: 195px;
         margin-top: -9%;
       }
@@ -638,6 +643,7 @@ header.sticky{
 
     #menu-icon{
         display: block;
+        font-size: 20px;
     }
     .navlist{
         position: absolute;

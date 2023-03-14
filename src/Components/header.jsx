@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
 import CV from "../assests/cv.pdf";
-import { BsThreeDotsVertical } from "react-icons/bs";
 import DropDown from "./dropDown";
 
 const Header = () => {
