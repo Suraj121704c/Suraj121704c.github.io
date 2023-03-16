@@ -87,7 +87,7 @@ const Skills = () => {
               />
             </div>
             <h3 className="skills-card-name" style={{ color: "#61dc14" }}>
-              Typescript
+              TypeScript
             </h3>
           </div>
 
