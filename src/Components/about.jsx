@@ -33,7 +33,7 @@ const About = () => {
               id="resume-link-2"
               onClick={() =>
                 window.open(
-                  "https://drive.google.com/file/d/1kkba3IRIWZ7W77s2AZ040myrHEOJVOmh/view?usp=share_link"
+                  "https://drive.google.com/file/d/1Imnhhw_y6CtRpNZUgv3uLlpNxmULVHqK/view?usp=share_link"
                 )
               }
             >
