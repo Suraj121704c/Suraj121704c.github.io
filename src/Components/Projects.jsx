@@ -1,7 +1,7 @@
 import React from "react";
 import geek from "../assests/pirate.png";
 import lens from "../assests/lenskart.png";
-import cal from "../assests/cal.png";
+import stale from "../assests/stylesup.png"
 import { SiNetlify } from "react-icons/si";
 import gojo from "../assests/gojo.png";
 import { AiFillGithub } from "react-icons/ai";
@@ -20,15 +20,15 @@ const Projects = () => {
           <div className="project-card">
             <img src={lens} alt="" />
             <div className="layer">
-              <h5 className="project-title">Visula Design</h5>
-              <p className="project-description">
+              <h5 className="project-title">Frames Lobbey</h5>
+              {/* <p className="project-description">
                 GlassWorld was founded in 2022 by Darpan Sanghvi as an at-home
                 beauty salon service. In 2023, it was relaunched as an online
                 cosmetic goggles company in India. In December 2023, it launched
                 its luxury category,
-              </p>
+              </p> */}
               <p className="project-tech-stack">
-                Tech-Stack : REACT, JS, HTML, CSS, Chakra
+                Tech-Stack : REACT, JS, HTML, CSS, ChakraUi
               </p>
               <div className="project-deployed-link">
                 <a href="https://glassworldheaven.netlify.app/" target="_blank">
@@ -54,13 +54,13 @@ const Projects = () => {
           <div className="project-card">
             <img src={geek} alt="" />
             <div className="layer">
-              <h5 className="project-title">Visula Design</h5>
-              <p className="project-description">
+              <h5 className="project-title">Pirated Store</h5>
+              {/* <p className="project-description">
                 IAn enthusiast of a particular topic or field. Geeks are
                 “collection” oriented, gathering facts and mementos related to
                 their subject of interest. They are obsessed with the newest,
                 coolest, trendiest things .
-              </p>
+              </p> */}
               <p className="project-tech-stack">Tech-Stack : HTML , CSS, JS</p>
               <div className="project-deployed-link">
                 <a
@@ -87,19 +87,19 @@ const Projects = () => {
           </div>
 
           <div className="project-card">
-            <img src={cal} alt="" />
+            <img src={stale} alt="" />
             <div className="layer">
-              <h5 className="project-title">Visula Design</h5>
-              <p className="project-description">
+              <h5 className="project-title">Styles Up</h5>
+              {/* <p className="project-description">
                 MyGlamm was founded in 2015 by Darpan Sanghvi as an at-home
                 beauty salon service. In 2017, it was relaunched as an online
                 cosmetic beauty company in India. In December 2018, it launched
                 its luxury category,
-              </p>
-              <p className="project-tech-stack">Tech-Stack</p>
+              </p> */}
+              <p className="project-tech-stack">Tech-Stack - ReactJs,Html,Css,JavaScript,Redux,ChakraUi</p>
               <div className="project-deployed-link">
                 <a
-                  href="https://admirable-panda-d420f4.netlify.app/"
+                  href="https://styesup123112.netlify.app"
                   target="_blank"
                 >
                   <i>
@@ -109,7 +109,7 @@ const Projects = () => {
               </div>
               <div className="project-github-link">
                 <a
-                  href="https://github.com/Shahid77137/gleaming-experience-7292"
+                  href="https://github.com/Suraj121704c/-easy-rose-1070/tree/main/paytm-mall"
                   target="_blank"
                   id="project-deployed-link"
                 >
@@ -124,13 +124,13 @@ const Projects = () => {
           <div className="project-card">
             <img src={gojo} alt="" />
             <div className="layer">
-              <h5 className="project-title">Visula Design</h5>
-              <p className="project-description">
+              <h5 className="project-title">Gojo Store</h5>
+              {/* <p className="project-description">
                 IAn enthusiast of a particular topic or field. Geeks are
                 “collection” oriented, gathering facts and mementos related to
                 their subject of interest. They are obsessed with the newest,
                 coolest, trendiest things .
-              </p>
+              </p> */}
               <p className="project-tech-stack">Tech-Stack : HTML, CSS, JS</p>
               <div class="project-deployed-link">
                 <a

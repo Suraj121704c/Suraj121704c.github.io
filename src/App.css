@@ -327,7 +327,7 @@ header.sticky{
 /* Projects */
 #nav-link-projects{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(500px, auto));
   align-items: center;
   gap: 2.5rem;
   margin-top: 2rem;
