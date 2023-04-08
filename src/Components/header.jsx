@@ -58,7 +58,7 @@ const Header = () => {
             <a
               href={CV}
               target="_blank"
-              download="pdf"
+              download
               id="resume-link-1"
               className="nav-link resume"
               onClick={() =>

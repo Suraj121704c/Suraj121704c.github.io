@@ -19,7 +19,7 @@ const Home = () => {
           <button id="resume-button-2" style={{ marginTop: "5px" }}>
             <a
               href={CV}
-              download="pdf"
+              download
               id="resume-link-2"
               target="_blank"
               onClick={() =>

@@ -30,8 +30,6 @@ const Projects = () => {
           </h2>
         </div>
 
-        <div className="nav-link projects" id="nav-link-projects"></div>
-
         <Swiper
           spaceBetween={30}
           centeredSlides={true}
@@ -50,7 +48,7 @@ const Projects = () => {
           <SwiperSlide>
             {" "}
             <Stack
-              minH={"100vh"}
+              minH={"400px"}
               direction={{ base: "column", md: "row" }}
               className="project-card"
             >
@@ -89,7 +87,11 @@ const Projects = () => {
                       Tech-Stack : REACT, JS, HTML, CSS, ChakraUi
                     </Text>{" "}
                   </Heading>
-                  <Text fontSize={{ base: "md", lg: "lg" }} color={"gray"}>
+                  <Text
+                    fontSize={{ base: "md", lg: "lg" }}
+                    color={"gray"}
+                    className="project-description"
+                  >
                     IAn enthusiast of a particular topic or field. Geeks are
                     “collection” oriented, gathering facts and mementos related
                     to their subject of interest. They are obsessed with the
@@ -128,12 +130,12 @@ const Projects = () => {
                   </Stack>
                 </Stack>
               </Flex>
-              <Flex flex={1}>
+              <Flex flex={1} textAlign={"center"}>
                 <Image
                   alt={"StylesUp Image"}
                   objectFit={"cover"}
-                  height={"100%"}
-                  width={"100%"}
+                  height={"400px"}
+                  width={"500px"}
                   src={lens}
                 />
               </Flex>
@@ -142,7 +144,7 @@ const Projects = () => {
 
           <SwiperSlide>
             <Stack
-              minH={"100vh"}
+              minH={"400px"}
               direction={{ base: "column", md: "row" }}
               className="project-card"
             >
@@ -181,7 +183,11 @@ const Projects = () => {
                       Tech-Stack : HTML , CSS, AdvaceJs
                     </Text>{" "}
                   </Heading>
-                  <Text fontSize={{ base: "md", lg: "lg" }} color={"gray"}>
+                  <Text
+                    fontSize={{ base: "md", lg: "lg" }}
+                    color={"gray"}
+                    className="project-description"
+                  >
                     IAn enthusiast of a particular topic or field. Geeks are
                     “collection” oriented, gathering facts and mementos related
                     to their subject of interest. They are obsessed with the
@@ -220,12 +226,12 @@ const Projects = () => {
                   </Stack>
                 </Stack>
               </Flex>
-              <Flex flex={1}>
+              <Flex flex={1} textAlign={"center"}> 
                 <Image
                   alt={"StylesUp Image"}
                   objectFit={"cover"}
-                  height={"100%"}
-                  width={"100%"}
+                  height={"400px"}
+                  width={"500px"}
                   src={geek}
                 />
               </Flex>
@@ -235,7 +241,7 @@ const Projects = () => {
           <SwiperSlide>
             {" "}
             <Stack
-              minH={"100vh"}
+              minH={"400px"}
               direction={{ base: "column", md: "row" }}
               className="project-card"
             >
@@ -274,7 +280,11 @@ const Projects = () => {
                       Tech-Stack - ReactJs,Html,Css,JavaScript,Redux,ChakraUi
                     </Text>{" "}
                   </Heading>
-                  <Text fontSize={{ base: "md", lg: "lg" }} color={"gray"}>
+                  <Text
+                    fontSize={{ base: "md", lg: "lg" }}
+                    color={"gray"}
+                    className="project-description"
+                  >
                     MyGlamm was founded in 2015 by Darpan Sanghvi as an at-home
                     beauty salon service. In 2017, it was relaunched as an
                     online cosmetic beauty company in India. In December 2018,
@@ -313,12 +323,12 @@ const Projects = () => {
                   </Stack>
                 </Stack>
               </Flex>
-              <Flex flex={1}>
+              <Flex flex={1} textAlign={"center"}>
                 <Image
                   alt={"StylesUp Image"}
                   objectFit={"cover"}
-                  height={"100%"}
-                  width={"100%"}
+                  height={"400px"}
+                  width={"500px"}
                   src={stale}
                 />
               </Flex>
@@ -328,7 +338,7 @@ const Projects = () => {
           <SwiperSlide>
             {" "}
             <Stack
-              minH={"100vh"}
+              minH={"400px"}
               direction={{ base: "column", md: "row" }}
               className="project-card"
             >
@@ -367,7 +377,11 @@ const Projects = () => {
                       Tech-Stack : HTML, CSS, JS
                     </Text>{" "}
                   </Heading>
-                  <Text fontSize={{ base: "md", lg: "lg" }} color={"gray"}>
+                  <Text
+                    fontSize={{ base: "md", lg: "lg" }}
+                    color={"gray"}
+                    className="project-description"
+                  >
                     IAn enthusiast of a particular topic or field. Geeks are
                     “collection” oriented, gathering facts and mementos related
                     to their subject of interest. They are obsessed with the
@@ -406,12 +420,13 @@ const Projects = () => {
                   </Stack>
                 </Stack>
               </Flex>
-              <Flex flex={1}>
+              <Flex flex={1} textAlign={"center"}>
+                
                 <Image
                   alt={"Gojo Image"}
                   objectFit={"cover"}
-                  height={"100%"}
-                  width={"100%"}
+                  height={"400px"}
+                  width={"500px"}
                   src={gojo}
                 />
               </Flex>
