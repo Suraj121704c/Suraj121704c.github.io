@@ -64,7 +64,7 @@ const Projects = () => {
               <p className="project-tech-stack">Tech-Stack : HTML , CSS, JS</p>
               <div className="project-deployed-link">
                 <a
-                  href="https://effulgent-syrniki-67b038.netlify.app/index.html"
+                  href="https://nimble-crostata-869bd1.netlify.app/"
                   target="_blank"
                 >
                   <i>

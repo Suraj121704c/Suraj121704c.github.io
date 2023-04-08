@@ -1,5 +1,5 @@
 import React from "react";
-import me from "../assests/photo.png.jpeg";
+import me from "../assests/photo.png";
 import CV from "../assests/cv.pdf";
 
 const About = () => {
