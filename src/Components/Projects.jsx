@@ -1,441 +1,393 @@
 import React from "react";
-import geek from "../assests/pirate.png";
-import lens from "../assests/lenskart.png";
-import stale from "../assests/stylesup.png";
-import { SiNetlify } from "react-icons/si";
+import { Box, SimpleGrid, useColorMode } from "@chakra-ui/react";
 import gojo from "../assests/gojo.png";
-import { AiFillGithub } from "react-icons/ai";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import {
-  Button,
-  Flex,
-  Heading,
-  Image,
-  Stack,
-  Text,
-  useBreakpointValue,
-} from "@chakra-ui/react";
+import pirate from "../assests/pirate.png";
+import style from "../assests/stylesup.png";
+import frames from "../assests/lenskart.png";
+import { FaGithub, FaEye } from "react-icons/fa";
 
 const Projects = () => {
   return (
-    <>
-      <section id="projects">
-        <div className="main-text">
-          <h2>
-            <span>Latest </span>Projects
-          </h2>
+    <div
+      id="projects"
+      className="main_container"
+      style={{
+        // backgroundColor: "#edf2f8",
+        // backgroundColor: "#2c1e4a",
+        backgroundColor: "var(--bg-color)",
+        color: "white",
+      }}
+    >
+      <div className="project_container">
+        <div className="project_heading">
+          <h2 className="title">Projects</h2>
         </div>
 
-        <Swiper
-          spaceBetween={30}
-          centeredSlides={true}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
-          pagination={{
-            clickable: true,
-          }}
-          navigation={true}
-          modules={[Autoplay, Pagination, Navigation]}
-          className="nav-link projects"
-          id="nav-link-projects"
-        >
-          <SwiperSlide>
-            {" "}
-            <Stack
-              minH={"400px"}
-              direction={{ base: "column", md: "row" }}
-              className="project-card"
-            >
-              <Flex
-                p={8}
-                flex={1}
-                align={"center"}
-                justify={"center"}
-                className="layer"
+        <div className="project_grid">
+          <SimpleGrid
+            columns={[1,1,2]}
+            spacing={100}
+          >
+            <Box>
+              <div
+                className="project_box project-card"
+                style={{
+                  backgroundColor: "#1a202c",
+                }}
               >
-                <Stack spacing={6} w={"full"} maxW={"lg"}>
-                  <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
-                    <Text
-                      as={"span"}
-                      position={"relative"}
-                      className="project-title"
-                      _after={{
-                        content: "''",
-                        width: "full",
-                        height: useBreakpointValue({ base: "20%", md: "30%" }),
-                        position: "absolute",
-                        bottom: 1,
-                        left: 0,
-                        bg: "blue.400",
-                        zIndex: -1,
-                      }}
-                    >
-                      Frames Lobbey
-                    </Text>
-                    <br />{" "}
-                    <Text
-                      color={"blue.400"}
-                      as={"span"}
-                      className="project-tech-stack"
-                    >
-                      Tech-Stack : REACT, JS, HTML, CSS, ChakraUi
-                    </Text>{" "}
-                  </Heading>
-                  <Text
-                    fontSize={{ base: "md", lg: "lg" }}
-                    color={"gray"}
-                    className="project-description"
-                  >
-                    IAn enthusiast of a particular topic or field. Geeks are
-                    “collection” oriented, gathering facts and mementos related
-                    to their subject of interest. They are obsessed with the
-                    newest, coolest, trendiest things .
-                  </Text>
-                  <Stack direction={{ base: "column", md: "row" }} spacing={4}>
-                    <Button
-                      rounded={"full"}
-                      bg={"blue.400"}
-                      color={"white"}
-                      _hover={{
-                        bg: "blue.500",
-                      }}
-                      class="project-deployed-link"
-                    >
-                      <a
-                        href="https://glassworldheaven.netlify.app/"
-                        target="_blank"
-                      >
-                        Deployed
-                      </a>
-                    </Button>
-                    <Button
-                      rounded={"full"}
-                      color={"green"}
-                      className="project-github-link"
-                    >
-                      <a
-                        href="https://github.com/Suraj121704c/excellent-noise-5475/tree/main/glassworld"
-                        target="_blank"
-                        id="project-deployed-link"
-                      >
-                        GitHub
-                      </a>
-                    </Button>
-                  </Stack>
-                </Stack>
-              </Flex>
-              <Flex flex={1} textAlign={"center"}>
-                <Image
-                  alt={"StylesUp Image"}
-                  objectFit={"cover"}
-                  height={"400px"}
-                  width={"500px"}
-                  src={lens}
-                />
-              </Flex>
-            </Stack>
-          </SwiperSlide>
+                <div className="project_image">
+                  <img src={frames} alt="Learning management" />
+                </div>
 
-          <SwiperSlide>
-            <Stack
-              minH={"400px"}
-              direction={{ base: "column", md: "row" }}
-              className="project-card"
-            >
-              <Flex
-                p={8}
-                flex={1}
-                align={"center"}
-                justify={"center"}
-                className="layer"
+                <div className="project_name project-title">
+                  <h2>Frames Lobbey</h2>
+                </div>
+                <div className="project_desc project-description">
+                  <p>
+                    This is one of the best project that I have made. This whole
+                    website divides in two parts admin and user page. This whole
+                    website is created by only in 4 days.
+                  </p>
+                </div>
+                <div className="project_tech_stack project-tech-stack">
+                  <h5>
+                    <span>Tech Stack :</span> JavaScript, HTML, CSS, React,
+                    ChakraUi
+                  </h5>
+                </div>
+                <div className="project_icon">
+                  <div className="github_link project-github-link">
+                    <a
+                      href="https://github.com/Suraj121704c/excellent-noise-5475/tree/main/glassworld"
+                      rel="noopener norefferer"
+                      target="_blank"
+                    >
+                      <FaGithub />
+                    </a>
+                  </div>
+                  <div className="deploy_link project-deployed-link">
+                    <a
+                      href="https://glassworldheaven.netlify.app/"
+                      rel="noopener norefferer"
+                      target="_blank"
+                    >
+                      <FaEye />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </Box>
+            <Box>
+              <div
+                className="project_box project-card"
+                style={{
+                  backgroundColor: "#1a202c",
+                }}
               >
-                <Stack spacing={6} w={"full"} maxW={"lg"}>
-                  <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
-                    <Text
-                      as={"span"}
-                      position={"relative"}
-                      className="project-title"
-                      _after={{
-                        content: "''",
-                        width: "full",
-                        height: useBreakpointValue({ base: "20%", md: "30%" }),
-                        position: "absolute",
-                        bottom: 1,
-                        left: 0,
-                        bg: "blue.400",
-                        zIndex: -1,
-                      }}
-                    >
-                      Pirated Store
-                    </Text>
-                    <br />{" "}
-                    <Text
-                      color={"blue.400"}
-                      as={"span"}
-                      className="project-tech-stack"
-                    >
-                      Tech-Stack : HTML , CSS, AdvaceJs
-                    </Text>{" "}
-                  </Heading>
-                  <Text
-                    fontSize={{ base: "md", lg: "lg" }}
-                    color={"gray"}
-                    className="project-description"
-                  >
-                    IAn enthusiast of a particular topic or field. Geeks are
-                    “collection” oriented, gathering facts and mementos related
-                    to their subject of interest. They are obsessed with the
-                    newest, coolest, trendiest things .
-                  </Text>
-                  <Stack direction={{ base: "column", md: "row" }} spacing={4}>
-                    <Button
-                      rounded={"full"}
-                      bg={"blue.400"}
-                      color={"white"}
-                      _hover={{
-                        bg: "blue.500",
-                      }}
-                      class="project-deployed-link"
-                    >
-                      <a
-                        href="https://nimble-crostata-869bd1.netlify.app/"
-                        target="_blank"
-                      >
-                        Deployed
-                      </a>
-                    </Button>
-                    <Button
-                      rounded={"full"}
-                      color={"green"}
-                      className="project-github-link"
-                    >
-                      <a
-                        href="https://github.com/Shahid77137/abundant-coat-8487"
-                        target="_blank"
-                        id="project-deployed-link"
-                      >
-                        GitHub
-                      </a>
-                    </Button>
-                  </Stack>
-                </Stack>
-              </Flex>
-              <Flex flex={1} textAlign={"center"}> 
-                <Image
-                  alt={"StylesUp Image"}
-                  objectFit={"cover"}
-                  height={"400px"}
-                  width={"500px"}
-                  src={geek}
-                />
-              </Flex>
-            </Stack>
-          </SwiperSlide>
+                <div className="project_image">
+                  <img src={style} alt="Learning managemen" />
+                </div>
 
-          <SwiperSlide>
-            {" "}
-            <Stack
-              minH={"400px"}
-              direction={{ base: "column", md: "row" }}
-              className="project-card"
-            >
-              <Flex
-                p={8}
-                flex={1}
-                align={"center"}
-                justify={"center"}
-                className="layer"
+                <div className="project_name project-title">
+                  <h2>Styles Up</h2>
+                </div>
+                <div className="project_desc project-description">
+                  <p>
+                    An E-Commerce Website : Clone of Paytm Mall . It is group
+                    project created by four peopls and I was the team Lead.
+                  </p>
+                </div>
+                <div className="project_tech_stack project-tech-stack">
+                  <h5>
+                    <span>Tech Stack :</span> React, JavaScript, HTML, CSS,
+                    Redux, ChakraUi
+                  </h5>
+                </div>
+                <div className="project_icon">
+                  <div className="github_link project-github-link">
+                    <a
+                      href="https://github.com/Suraj121704c/-easy-rose-1070/tree/main/paytm-mall"
+                      rel="noopener norefferer"
+                      target="_blank"
+                    >
+                      <FaGithub />
+                    </a>
+                  </div>
+                  <div className="deploy_link project-deployed-link">
+                    <a
+                      href="https://styesup123112.netlify.app/"
+                      rel="noopener norefferer"
+                      target="_blank"
+                    >
+                      <FaEye />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </Box>
+            <Box>
+              <div
+                className="project_box project-card"
+                style={{
+                  backgroundColor: "#1a202c",
+                }}
               >
-                <Stack spacing={6} w={"full"} maxW={"lg"}>
-                  <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
-                    <Text
-                      as={"span"}
-                      position={"relative"}
-                      className="project-title"
-                      _after={{
-                        content: "''",
-                        width: "full",
-                        height: useBreakpointValue({ base: "20%", md: "30%" }),
-                        position: "absolute",
-                        bottom: 1,
-                        left: 0,
-                        bg: "blue.400",
-                        zIndex: -1,
-                      }}
-                    >
-                      Styles Up
-                    </Text>
-                    <br />{" "}
-                    <Text
-                      color={"blue.400"}
-                      as={"span"}
-                      className="project-tech-stack"
-                    >
-                      Tech-Stack - ReactJs,Html,Css,JavaScript,Redux,ChakraUi
-                    </Text>{" "}
-                  </Heading>
-                  <Text
-                    fontSize={{ base: "md", lg: "lg" }}
-                    color={"gray"}
-                    className="project-description"
-                  >
-                    MyGlamm was founded in 2015 by Darpan Sanghvi as an at-home
-                    beauty salon service. In 2017, it was relaunched as an
-                    online cosmetic beauty company in India. In December 2018,
-                    it launched its luxury category,
-                  </Text>
-                  <Stack direction={{ base: "column", md: "row" }} spacing={4}>
-                    <Button
-                      rounded={"full"}
-                      bg={"blue.400"}
-                      color={"white"}
-                      _hover={{
-                        bg: "blue.500",
-                      }}
-                      class="project-deployed-link"
-                    >
-                      <a
-                        href="https://styesup123112.netlify.app"
-                        target="_blank"
-                      >
-                        Deployed
-                      </a>
-                    </Button>
-                    <Button
-                      rounded={"full"}
-                      color={"green"}
-                      className="project-github-link"
-                    >
-                      <a
-                        href="https://github.com/Suraj121704c/-easy-rose-1070/tree/main/paytm-mall"
-                        target="_blank"
-                        id="project-deployed-link"
-                      >
-                        GitHub
-                      </a>
-                    </Button>
-                  </Stack>
-                </Stack>
-              </Flex>
-              <Flex flex={1} textAlign={"center"}>
-                <Image
-                  alt={"StylesUp Image"}
-                  objectFit={"cover"}
-                  height={"400px"}
-                  width={"500px"}
-                  src={stale}
-                />
-              </Flex>
-            </Stack>
-          </SwiperSlide>
+                <div className="project_image">
+                  <img src={gojo} alt="Learning managemen" />
+                </div>
 
-          <SwiperSlide>
-            {" "}
-            <Stack
-              minH={"400px"}
-              direction={{ base: "column", md: "row" }}
-              className="project-card"
-            >
-              <Flex
-                p={8}
-                flex={1}
-                align={"center"}
-                justify={"center"}
-                className="layer"
+                <div className="project_name project-title">
+                  <h2>Gojo Store</h2>
+                </div>
+                <div className="project_desc project-description">
+                  <p>
+                    Its an Indivisual Project completed withing 4 days and this
+                    is my first project in Masai School.
+                  </p>
+                </div>
+                <div className="project_tech_stack project-tech-stack">
+                  <h5>
+                    <span>Tech Stack :</span> JavaScript, HTML, CSS
+                  </h5>
+                </div>
+                <div className="project_icon">
+                  <div className="github_link project-github-link">
+                    <a
+                      href="https://github.com/Suraj121704c/divine-eggnog-8153"
+                      rel="noopener norefferer"
+                      target="_blank"
+                    >
+                      <FaGithub />
+                    </a>
+                  </div>
+                  <div className="deploy_link project-deployed-link">
+                    <a
+                      href="https://glistening-sherbet-5d15f0.netlify.app/"
+                      rel="noopener norefferer"
+                      target="_blank"
+                    >
+                      <FaEye />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </Box>
+            <Box>
+              <div
+                className="project_box project-card"
+                style={{
+                  backgroundColor: "#1a202c",
+                }}
               >
-                <Stack spacing={6} w={"full"} maxW={"lg"}>
-                  <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
-                    <Text
-                      as={"span"}
-                      position={"relative"}
-                      className="project-title"
-                      _after={{
-                        content: "''",
-                        width: "full",
-                        height: useBreakpointValue({ base: "20%", md: "30%" }),
-                        position: "absolute",
-                        bottom: 1,
-                        left: 0,
-                        bg: "blue.400",
-                        zIndex: -1,
-                      }}
+                <div className="project_image">
+                  <img src={pirate} alt="Learning managemen" />
+                </div>
+
+                <div className="project_name project-title">
+                  <h2>Pirated Store</h2>
+                </div>
+                <div className="project_desc project-description">
+                  <p>
+                    An Platform that helps in buying products. This website is a
+                    clone of geeksbuying. Created by the group of 4.
+                  </p>
+                </div>
+                <div className="project_tech_stack project-tech-stack">
+                  <h5>
+                    <span>Tech Stack :</span> Advance JavaScript, HTML, CSS
+                  </h5>
+                </div>
+                <div className="project_icon">
+                  <div className="github_link project-github-link">
+                    <a
+                      href="https://github.com/Shahid77137/abundant-coat-8487_"
+                      rel="noopener norefferer"
+                      target="_blank"
                     >
-                      Gojo Store
-                    </Text>
-                    <br />{" "}
-                    <Text
-                      color={"blue.400"}
-                      as={"span"}
-                      className="project-tech-stack"
+                      <FaGithub />
+                    </a>
+                  </div>
+                  <div className="deploy_link project-deployed-link">
+                    <a
+                      href="https://nimble-crostata-869bd1.netlify.app/"
+                      rel="noopener norefferer"
+                      target="_blank"
                     >
-                      Tech-Stack : HTML, CSS, JS
-                    </Text>{" "}
-                  </Heading>
-                  <Text
-                    fontSize={{ base: "md", lg: "lg" }}
-                    color={"gray"}
-                    className="project-description"
-                  >
-                    IAn enthusiast of a particular topic or field. Geeks are
-                    “collection” oriented, gathering facts and mementos related
-                    to their subject of interest. They are obsessed with the
-                    newest, coolest, trendiest things .
-                  </Text>
-                  <Stack direction={{ base: "column", md: "row" }} spacing={4}>
-                    <Button
-                      rounded={"full"}
-                      bg={"blue.400"}
-                      color={"white"}
-                      _hover={{
-                        bg: "blue.500",
-                      }}
-                      class="project-deployed-link"
-                    >
-                      <a
-                        href="https://majestic-palmier-e45e65.netlify.app"
-                        target="_blank"
-                      >
-                        Deployed
-                      </a>
-                    </Button>
-                    <Button
-                      rounded={"full"}
-                      color={"green"}
-                      className="project-github-link"
-                    >
-                      <a
-                        href="https://github.com/Shahid77137/abundant-coat-8487"
-                        target="_blank"
-                        id="project-deployed-link"
-                      >
-                        GitHub
-                      </a>
-                    </Button>
-                  </Stack>
-                </Stack>
-              </Flex>
-              <Flex flex={1} textAlign={"center"}>
-                
-                <Image
-                  alt={"Gojo Image"}
-                  objectFit={"cover"}
-                  height={"400px"}
-                  width={"500px"}
-                  src={gojo}
-                />
-              </Flex>
-            </Stack>
-          </SwiperSlide>
-        </Swiper>
-      </section>
-    </>
+                      <FaEye />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </Box>
+          </SimpleGrid>
+        </div>
+      </div>
+    </div>
   );
 };
-
 export default Projects;
+
+// import React from "react";
+// import geek from "../assests/pirate.png";
+// import lens from "../assests/lenskart.png";
+// import stale from "../assests/stylesup.png"
+// import { SiNetlify } from "react-icons/si";
+// import gojo from "../assests/gojo.png";
+// import { AiFillGithub } from "react-icons/ai";
+
+// const Projects = () => {
+//   return (
+//     <>
+//       <section id="projects">
+//         <div className="main-text">
+//           <h2>
+//             <span>Latest </span>Projects
+//           </h2>
+//         </div>
+
+//         <div className="nav-link projects" id="nav-link-projects">
+//           <div className="project-card">
+//             <img src={lens} alt="" />
+//             <div className="layer">
+//               <h5 className="project-title">Frames Lobbey</h5>
+//               {/* <p className="project-description">
+//                 GlassWorld was founded in 2022 by Darpan Sanghvi as an at-home
+//                 beauty salon service. In 2023, it was relaunched as an online
+//                 cosmetic goggles company in India. In December 2023, it launched
+//                 its luxury category,
+//               </p> */}
+//               <p className="project-tech-stack">
+//                 Tech-Stack : REACT, JS, HTML, CSS, ChakraUi
+//               </p>
+//               <div className="project-deployed-link">
+//                 <a href="https://glassworldheaven.netlify.app/" target="_blank">
+//                   <i>
+//                     <SiNetlify />
+//                   </i>
+//                 </a>
+//               </div>
+//               <div className="project-github-link">
+//                 <a
+//                   href="https://github.com/Shahid77137/abundant-coat-8487"
+//                   target="_blank"
+//                   id="project-deployed-link"
+//                 >
+//                   <i>
+//                     <AiFillGithub />
+//                   </i>
+//                 </a>
+//               </div>
+//             </div>
+//           </div>
+
+//           <div className="project-card">
+//             <img src={geek} alt="" />
+//             <div className="layer">
+//               <h5 className="project-title">Pirated Store</h5>
+//               {/* <p className="project-description">
+//                 IAn enthusiast of a particular topic or field. Geeks are
+//                 “collection” oriented, gathering facts and mementos related to
+//                 their subject of interest. They are obsessed with the newest,
+//                 coolest, trendiest things .
+//               </p> */}
+//               <p className="project-tech-stack">Tech-Stack : HTML , CSS, JS</p>
+//               <div className="project-deployed-link">
+//                 <a
+//                   href="https://nimble-crostata-869bd1.netlify.app/"
+//                   target="_blank"
+//                 >
+//                   <i>
+//                     <SiNetlify />
+//                   </i>
+//                 </a>
+//               </div>
+//               <div className="project-github-link">
+//                 <a
+//                   href="https://github.com/Shahid77137/abundant-coat-8487"
+//                   target="_blank"
+//                   id="project-deployed-link"
+//                 >
+//                   <i>
+//                     <AiFillGithub />
+//                   </i>
+//                 </a>
+//               </div>
+//             </div>
+//           </div>
+
+//           <div className="project-card">
+//             <img src={stale} alt="" />
+//             <div className="layer">
+//               <h5 className="project-title">Styles Up</h5>
+//               {/* <p className="project-description">
+//                 MyGlamm was founded in 2015 by Darpan Sanghvi as an at-home
+//                 beauty salon service. In 2017, it was relaunched as an online
+//                 cosmetic beauty company in India. In December 2018, it launched
+//                 its luxury category,
+//               </p> */}
+//               <p className="project-tech-stack">Tech-Stack - ReactJs,Html,Css,JavaScript,Redux,ChakraUi</p>
+//               <div className="project-deployed-link">
+//                 <a
+//                   href="https://styesup123112.netlify.app"
+//                   target="_blank"
+//                 >
+//                   <i>
+//                     <SiNetlify />
+//                   </i>
+//                 </a>
+//               </div>
+//               <div className="project-github-link">
+//                 <a
+//                   href="https://github.com/Suraj121704c/-easy-rose-1070/tree/main/paytm-mall"
+//                   target="_blank"
+//                   id="project-deployed-link"
+//                 >
+//                   <i>
+//                     <AiFillGithub />
+//                   </i>
+//                 </a>
+//               </div>
+//             </div>
+//           </div>
+
+//           <div className="project-card">
+//             <img src={gojo} alt="" />
+//             <div className="layer">
+//               <h5 className="project-title">Gojo Store</h5>
+//               {/* <p className="project-description">
+//                 IAn enthusiast of a particular topic or field. Geeks are
+//                 “collection” oriented, gathering facts and mementos related to
+//                 their subject of interest. They are obsessed with the newest,
+//                 coolest, trendiest things .
+//               </p> */}
+//               <p className="project-tech-stack">Tech-Stack : HTML, CSS, JS</p>
+//               <div class="project-deployed-link">
+//                 <a
+//                   href="https://majestic-palmier-e45e65.netlify.app"
+//                   target="_blank"
+//                 >
+//                   <i>
+//                     <SiNetlify />
+//                   </i>
+//                 </a>
+//               </div>
+//               <div className="project-github-link">
+//                 <a
+//                   href="https://github.com/Shahid77137/abundant-coat-8487"
+//                   target="_blank"
+//                   id="project-deployed-link"
+//                 >
+//                   <i>
+//                     <AiFillGithub />
+//                   </i>
+//                 </a>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+//     </>
+//   );
+// };
+
+// export default Projects;
