@@ -2,8 +2,12 @@ import React from "react";
 import { BsLinkedin } from "react-icons/bs";
 import { AiFillGithub } from "react-icons/ai";
 import { AiOutlineWhatsApp } from "react-icons/ai";
+import { useForm, ValidationError } from '@formspree/react';
+import { Button } from "@chakra-ui/react";
+import { useToast } from '@chakra-ui/react'
 
 const Contact = () => {
+  const [state, handleSubmit] = useForm("xayzadzz");
   return (
     <>
       <section className="nav-link contact" id="contact">
@@ -76,19 +80,35 @@ const Contact = () => {
         </div>
 
         <div className="contact-form">
-          <form>
-            <input type="name" placeholder="Your Name" required />
-            <input type="email" placeholder="Your Email Address" required />
-            <input type="" placeholder="Your Mobile Number" required />
+          <form onSubmit={handleSubmit}>
+            <label htmlFor="email" style={{ color: "var(--main-color)" }}>
+              Email Address
+            </label>
+            <input
+              id="email"
+              type="email"
+              name="email"
+            />
+            <ValidationError
+              prefix="Email"
+              field="email"
+              errors={state.errors}
+            />
+            <label htmlFor="email" style={{ marginTop: "10px", marginBottom: "10px", color: "var(--main-color)" }} >
+              Type your message here
+            </label>
             <textarea
-              name=""
-              id=""
-              cols="35"
-              rows="10"
-              placeholder="How Can I Help You"
-              required
-            ></textarea>
-            <input type="submit" value="Send Message" className="submit" required />
+              id="message"
+              name="message"
+            />
+            <ValidationError
+              prefix="Message"
+              field="message"
+              errors={state.errors}
+            />
+            <Button type="submit" disabled={state.submitting} color={"white"} backgroundColor={"green"}>
+              Submit
+            </Button>
           </form>
         </div>
       </section>
