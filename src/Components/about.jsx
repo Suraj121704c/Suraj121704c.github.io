@@ -1,6 +1,6 @@
 import React from "react";
 import me from "../assests/photo.png";
-import CV from "../assests/cv.pdf";
+import Suraj_Singh_Resume from "../assests/cv.pdf";
 
 const About = () => {
   return (
@@ -28,8 +28,8 @@ const About = () => {
           </p>
           <button id="resume-button-2" style={{ marginTop: "5px" }}>
             <a
-              href={CV}
-              download
+              href={Suraj_Singh_Resume}
+              download="Suraj_Singh_Resume.pdf"
               id="resume-link-2"
               onClick={() =>
                 window.open(

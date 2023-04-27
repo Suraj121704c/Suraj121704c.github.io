@@ -1,7 +1,8 @@
 import React from "react";
 import { useState } from "react";
-import CV from "../assests/cv.pdf";
+import Suraj_Singh_Resume from "../assests/cv.pdf";
 import DropDown from "./dropDown";
+import { Button } from "@chakra-ui/react";
 
 const Header = () => {
   const [activeNave, setActiveNav] = useState("#");
@@ -54,13 +55,14 @@ const Header = () => {
               Contact
             </a>
           </li>
-          <button id="resume-button-1">
+          <Button id="resume-button-1" backgroundColor={"green"} _hover={{ bg: "green" }}>
             <a
-              href={CV}
+              href={Suraj_Singh_Resume}
               target="_blank"
-              download
+              download="Suraj_Singh_Resume.pdf"
               id="resume-link-1"
               className="nav-link resume"
+              style={{color : "black", backgroundColor : "green"}}
               onClick={() =>
                 window.open(
                   "https://drive.google.com/file/d/1Imnhhw_y6CtRpNZUgv3uLlpNxmULVHqK/view?usp=share_link"
@@ -69,7 +71,7 @@ const Header = () => {
             >
               Resume
             </a>
-          </button>
+          </Button>
         </ul>
         <div id="menu-icon">
           <DropDown

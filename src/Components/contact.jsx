@@ -8,6 +8,8 @@ import { useToast } from '@chakra-ui/react'
 
 const Contact = () => {
   const [state, handleSubmit] = useForm("xayzadzz");
+  const toast = useToast()
+
   return (
     <>
       <section className="nav-link contact" id="contact">
@@ -88,6 +90,7 @@ const Contact = () => {
               id="email"
               type="email"
               name="email"
+              placeholder="enter email address"
             />
             <ValidationError
               prefix="Email"
@@ -100,13 +103,23 @@ const Contact = () => {
             <textarea
               id="message"
               name="message"
+              placeholder="write here..."
             />
             <ValidationError
               prefix="Message"
               field="message"
               errors={state.errors}
             />
-            <Button type="submit" disabled={state.submitting} color={"white"} backgroundColor={"green"}>
+            <Button type="submit" disabled={state.submitting} color={"white"} backgroundColor={"green"} onClick={() =>
+              toast({
+                title: 'Message Sent...',
+                description: "Thanks for messaging us we will replay you as soon as possible...",
+                status: 'success',
+                duration: 9000,
+                isClosable: true,
+                position: 'top'
+              })
+            }>
               Submit
             </Button>
           </form>
