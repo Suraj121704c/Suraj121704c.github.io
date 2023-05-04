@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import Suraj_Singh_Resume from "../assests/cv.pdf";
+import Suraj_Singh_Resume from "../assests/Suraj_Singh_Resume.pdf";
 import DropDown from "./dropDown";
 import { Button } from "@chakra-ui/react";
 

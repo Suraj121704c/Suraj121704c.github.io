@@ -1,5 +1,5 @@
 import React from "react";
-import Suraj_Singh_Resume from "../assests/cv.pdf";
+import Suraj_Singh_Resume from "../assests/Suraj_Singh_Resume.pdf";
 
 const Home = () => {
   return (

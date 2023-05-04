@@ -1,6 +1,6 @@
 import React from "react";
-import me from "../assests/photo.png";
-import Suraj_Singh_Resume from "../assests/cv.pdf";
+import me from "../assests/Suraj_Singh.jpg";
+import Suraj_Singh_Resume from "../assests/Suraj_Singh_Resume.pdf";
 
 const About = () => {
   return (
