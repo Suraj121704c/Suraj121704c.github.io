@@ -325,150 +325,122 @@ header.sticky{
 }
 
 /* Projects */
-#nav-link-projects{
+#nav-link-projects {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(400px, auto));
   align-items: center;
   gap: 2.5rem;
   margin-top: 2rem;
 }
 
-.main_container {
-  padding: 60px 0;
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+  /* border: 1px solid red; */
+  padding: 3%;
+  box-shadow: var(--text-color) 0px 5px 15px;
+
+  /* height: 500px; */
 }
 
-.project_container {
+.project-card img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+  transition: transform 0.5s;
+}
+
+#project-links {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* .layer {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgb(47, 220, 20));
+  position: absolute;
+  border-radius: 8px;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 40px;
+  transition: height 0.5s;
+} */
+
+.layer h5 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.layer p {
+  color: var(--second-color);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.layer i {
+  color: var(--main-color);
+  margin-top: 20px;
+  font-size: 20px;
+  background: var(--text-color);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.project-card:hover img {
+  transform: scale(0.9);
+}
+
+.project-card:hover .layer {
+  height: 100%;
+}
+
+/* Github */
+
+.max-width {
   width: 80%;
   margin: auto;
-}
-
-
-.project_heading .title {
-  position: relative;
-  text-align: center;
-  font-size: 35px;
-  font-weight: 500;
-  margin-bottom: 60px;
-  padding-bottom: 25px;
-  font-family: "Poppins", sans-serif;
-  color: white;
-}
-
-.project_heading .title::after {
-  content: "Things that I Build";
-  position: absolute;
-  bottom: -17px;
-  left: 50%;
-  font-size: 25px;
-  color: var(--main-color);
-  padding: 5px;
-  transform: translate(-50%);
-}
-
-
-.project_box {
-  padding: 20px;
-  height: auto;
-   box-shadow: rgba(85, 240, 46, 0.4) 5px 5px, rgba(91, 240, 46, 0.3) 10px 10px, rgba(78, 240, 46, 0.2) 15px 15px, rgba(130, 240, 46, 0.1) 20px 20px, rgba(77, 208, 17, 0.05) 25px 25px;
-  border-radius: 10px;
+  margin-top: 50px;
+  /* background: var(--second-bg-color); */
 
 }
 
-.project_box:hover {
-  box-shadow: rgba(49, 190, 6, 0.9) 0px 18px 50px -10px;
-  cursor: pointer;
-
-}
-
-.project_image img {
-  border-radius: 10px;
-  height: 300px;
-  transition: transform 0.5s linear;
-}
-.project_image img:hover {
-  transform: scale(1.1);
-  transition: 0.5s ease-in;
-}
-
-.project_name {
-  text-align: center;
-  font-size: 22px;
-  font-weight: 700;
-  padding: 20px 0;
-  color: var(--main-color);
-}
-
-.project_tech_stack {
-  padding: 10px 0;
-}
-
-.project_tech_stack h5 {
-  font-size: 16px;
-  font-weight: 500;
-  color: gainsboro;
-}
-
-.project_tech_stack span {
-  font-size: 15px;
-  color: var(--main-color);
-  font-weight: 500;
-}
-
-.project_icon {
+#stat {
+  margin-top: 50px;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 10px 0;
+  justify-content: space-between;
+  gap: 10px;
 }
 
-.project_icon div {
-  height: 50px;
-  width: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: 0.1s ease;
-  background-color: var(--main-color);
-  border-radius: 50%;
-}
-.project_icon div:hover {
-  border-radius: 50%;
-  background-color: red;
-  color: #fff;
-}
+#github-top-langs {
+  border: 0px solid rgb(20, 220, 33);
+  height: 195px;
+  margin-top: -10%;
 
-.project_icon a {
-  font-size: 30px;
 }
-.project_desc p {
-  font-size: 15px;
-  font-weight: 500;
-  color: white;
-}
-
 
 @media screen and (max-width:640px){
   
-.project_heading .title {
-  position: relative;
-  text-align: center;
-  margin-top: 10px;
-}
+  #nav-link-projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
 
-.project_heading .title::before {
-  display: none;
-}
-
-.project_heading .title::after {
-  display: none;
-}
-
-.project_image img {
-  border-radius: 10px;
-  height: 200px;
-  transition: transform 0.5s linear;
-}
+  }
 
 }
 

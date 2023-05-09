@@ -22,8 +22,7 @@ const Header = () => {
             <a
               href="#home"
               className="active"
-              onClick={() => setActiveNav("#home")}
-            >
+              onClick={() => setActiveNav("#home")}>
               {" "}
               Home
             </a>
@@ -55,23 +54,29 @@ const Header = () => {
               Contact
             </a>
           </li>
-          <Button id="resume-button-1" backgroundColor={"green"} _hover={{ bg: "green" }}>
-            <a
-              href={Suraj_Singh_Resume}
-              target="_blank"
-              download="Suraj_Singh_Resume.pdf"
-              id="resume-link-1"
-              className="nav-link resume"
-              style={{color : "white", backgroundColor : "green"}}
-              onClick={() =>
-                window.open(
-                  "https://drive.google.com/file/d/1g2tkgrCUQsSTUqDaNkt3NtrajM-CyGiM/view?usp=share_link"
-                )
-              }
-            >
-              Resume
-            </a>
-          </Button>
+          <li>
+            {" "}
+            <Button
+              id="resume-button-1"
+              backgroundColor={"green"}
+              _hover={{ bg: "green" }}>
+              <a
+                href={Suraj_Singh_Resume}
+                target="_blank"
+                download
+                id="resume-link-1"
+                className="nav-link resume"
+                style={{color : "white", backgroundColor : "green"}}
+                // onClick={() =>
+                //   window.open(
+                //     "https://drive.google.com/file/d/1g2tkgrCUQsSTUqDaNkt3NtrajM-CyGiM/view?usp=share_link"
+                //   )
+                // }
+              >
+                Resume
+              </a>
+            </Button>
+          </li>
         </ul>
         <div id="menu-icon">
           <DropDown

@@ -16,7 +16,7 @@ const Home = () => {
           </h3>
 
           <br />
-          <button id="resume-button-2" style={{ marginTop: "5px" }}>
+          {/* <button id="resume-button-2" style={{ marginTop: "5px" }}>
             <a
               href={Suraj_Singh_Resume}
               download="Suraj_Singh_Resume.pdf"
@@ -33,7 +33,7 @@ const Home = () => {
               </span>
               Resume
             </a>
-          </button>
+          </button> */}
         </div>
       </section>
     </>

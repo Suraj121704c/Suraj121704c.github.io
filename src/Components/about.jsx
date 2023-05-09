@@ -29,13 +29,14 @@ const About = () => {
           <button id="resume-button-2" style={{ marginTop: "5px" }}>
             <a
               href={Suraj_Singh_Resume}
-              download="Suraj_Singh_Resume.pdf"
+              download
               id="resume-link-2"
-              onClick={() =>
-                window.open(
-                  "https://drive.google.com/file/d/1g2tkgrCUQsSTUqDaNkt3NtrajM-CyGiM/view?usp=share_link"
-                )
-              }
+              target = "_blank"
+              // onClick={() =>
+              //   window.open(
+              //     "https://drive.google.com/file/d/1g2tkgrCUQsSTUqDaNkt3NtrajM-CyGiM/view?usp=share_link"
+              //   )
+              // }
             >
               <span>
                 <i className="bx bx-download"></i>
@@ -50,3 +51,9 @@ const About = () => {
 };
 
 export default About;
+
+// onClick={() =>
+//   window.open(
+//     "https://drive.google.com/file/d/1g2tkgrCUQsSTUqDaNkt3NtrajM-CyGiM/view?usp=share_link"
+//   )
+// }
