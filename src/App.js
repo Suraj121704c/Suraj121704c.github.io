@@ -7,18 +7,20 @@ import Projects from "./Components/Projects";
 import Githubs from "./Components/githubs";
 import Contact from "./Components/contact";
 import End from "./Components/end";
+import Stars from "./Components/particles";
 
 function App() {
   return (
     <div className="body">
-     <Header />
-     <Home />
-     <About />
-     <Skills />
-     <Projects />
-     <Githubs />
-     <Contact />
-     <End />
+      <Stars />
+      <Header />
+      <Home />
+      <About />
+      <Skills />
+      <Projects />
+      <Githubs />
+      <Contact />
+      <End />
     </div>
   );
 }

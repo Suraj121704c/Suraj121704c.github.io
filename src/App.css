@@ -464,6 +464,12 @@ header.sticky{
   display: none;
 }
 
+.project_image img {
+  border-radius: 10px;
+  height: 200px;
+  transition: transform 0.5s linear;
+}
+
 }
 
 /* 

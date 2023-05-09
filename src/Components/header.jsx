@@ -62,10 +62,10 @@ const Header = () => {
               download="Suraj_Singh_Resume.pdf"
               id="resume-link-1"
               className="nav-link resume"
-              style={{color : "black", backgroundColor : "green"}}
+              style={{color : "white", backgroundColor : "green"}}
               onClick={() =>
                 window.open(
-                  "https://drive.google.com/file/d/1Imnhhw_y6CtRpNZUgv3uLlpNxmULVHqK/view?usp=share_link"
+                  "https://drive.google.com/file/d/1g2tkgrCUQsSTUqDaNkt3NtrajM-CyGiM/view?usp=share_link"
                 )
               }
             >

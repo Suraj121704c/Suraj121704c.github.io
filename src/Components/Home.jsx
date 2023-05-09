@@ -24,7 +24,7 @@ const Home = () => {
               target="_blank"
               onClick={() =>
                 window.open(
-                  "https://drive.google.com/file/d/1Imnhhw_y6CtRpNZUgv3uLlpNxmULVHqK/view?usp=share_link"
+                  "https://drive.google.com/file/d/1g2tkgrCUQsSTUqDaNkt3NtrajM-CyGiM/view?usp=share_link"
                 )
               }
             >
@@ -41,3 +41,4 @@ const Home = () => {
 };
 
 export default Home;
+// home page

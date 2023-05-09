@@ -7,6 +7,7 @@ import { SiRedux } from "react-icons/si";
 import { DiNodejs } from "react-icons/di";
 import { SiTypescript } from "react-icons/si";
 import { TfiWrite } from "react-icons/tfi";
+import { DiMongodb } from "react-icons/di";
 
 const Skills = () => {
   return (
@@ -99,6 +100,17 @@ const Skills = () => {
             </div>
             <h3 className="skills-card-name" style={{ color: "#61dc14" }}>
               DSA
+            </h3>
+          </div>
+
+          <div className="skills-card">
+            <div className="skills-card-img">
+              <DiMongodb
+                style={{ height: "50px", width: "50px", margin: "auto" }}
+              />
+            </div>
+            <h3 className="skills-card-name" style={{ color: "#61dc14" }}>
+              Mongo
             </h3>
           </div>
         </div>
