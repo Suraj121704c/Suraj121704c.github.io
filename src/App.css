@@ -27,7 +27,7 @@ header{
   width: 100%;
   top: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 500;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -89,13 +89,15 @@ section{
   position: relative;
   height: 100vh;
   width: 100%;
-  background-image: url("./assests/banner.png");
+  background-image: url("./assests/Black\ Modern\ Marketing\ Banner.png");
 
   background-size: cover;
   background-position: center;
   display: flex;
+  display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
+  text-align: center;
 
 }
 
@@ -163,7 +165,8 @@ section{
   border:  solid 0px;
 }
 #resume-link-2:hover{
-  transform: scale(1.2);
+  transform: scale(0.8);
+  transition: transform 0.5s;
 }
 
 #resume-link-1{
@@ -177,7 +180,7 @@ section{
 
 
 #user-detail-name{
-  font-size: 55px;
+  font-size: 35px;
   font-weight: 800;
 }
 
@@ -197,12 +200,14 @@ header.sticky{
   width: 350px;
   border-radius: 10%;
   align-items: end;
+  box-shadow: var(--main-color) 0px 5px 15px;
 }
 
 #about{
   border: 0px solid green;
   display: grid;
   grid-template-columns: repeat(2,1fr);
+  justify-content: space-between;
   align-items: center;  
 }
 
@@ -260,7 +265,7 @@ header.sticky{
   text-align: center;
   justify-content: center;
 
-
+  box-shadow: var(--main-color) 0px 5px 15px;
 }
 .skills-card-img i{
   font-size: 32px;
@@ -327,9 +332,9 @@ header.sticky{
 /* Projects */
 #nav-link-projects {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, auto));
+  grid-template-columns: repeat(2,1fr);
   align-items: center;
-  gap: 2.5rem;
+  gap: 4.5rem;
   margin-top: 2rem;
 }
 
@@ -340,7 +345,7 @@ header.sticky{
   cursor: pointer;
   /* border: 1px solid red; */
   padding: 3%;
-  box-shadow: var(--text-color) 0px 5px 15px;
+  box-shadow: rgba(62, 240, 46, 0.4) 5px 5px, rgba(85, 240, 46, 0.3) 10px 10px, rgba(91, 240, 46, 0.2) 15px 15px, rgba(56, 240, 46, 0.1) 20px 20px, rgba(46, 240, 65, 0.05) 25px 25px;
 
   /* height: 500px; */
 }
@@ -349,7 +354,11 @@ header.sticky{
   width: 100%;
   border-radius: 8px;
   display: block;
-  transition: transform 0.5s;
+}
+
+.project-title {
+  color: var(--main-color);
+  text-align: center;
 }
 
 #project-links {
@@ -390,10 +399,10 @@ header.sticky{
 }
 
 .layer i {
-  color: var(--main-color);
+  color: var(--bg-color);
   margin-top: 20px;
   font-size: 20px;
-  background: var(--text-color);
+  background: var(--main-color);
   width: 60px;
   height: 60px;
   display: flex;
@@ -408,30 +417,6 @@ header.sticky{
 
 .project-card:hover .layer {
   height: 100%;
-}
-
-/* Github */
-
-.max-width {
-  width: 80%;
-  margin: auto;
-  margin-top: 50px;
-  /* background: var(--second-bg-color); */
-
-}
-
-#stat {
-  margin-top: 50px;
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-}
-
-#github-top-langs {
-  border: 0px solid rgb(20, 220, 33);
-  height: 195px;
-  margin-top: -10%;
-
 }
 
 @media screen and (max-width:640px){
@@ -814,4 +799,21 @@ header.sticky{
 /* Style for last dropdown item */
 .dropdown-item:last-child {
   border-bottom: none;
+}
+
+
+/* type writer effect */
+.typewriter-holder {
+  width: 280px;
+  position: relative;
+  display: block;
+  margin: auto;
+}
+
+.typewriter-holder p {
+  position: absolute;
+  left: 0;
+
+  font-weight: bold;
+  font-size: 20px;
 }

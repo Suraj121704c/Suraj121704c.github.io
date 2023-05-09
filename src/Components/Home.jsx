@@ -1,5 +1,9 @@
 import React from "react";
 import Suraj_Singh_Resume from "../assests/Suraj_Singh_Resume.pdf";
+import TypeWriter from "./TypeWriter";
+
+const typeWriter = ["Singh"];
+const typeWriter2 = ["I'm A Mern Developer...", "Ready to Work with you..."];
 
 const Home = () => {
   return (
@@ -9,10 +13,13 @@ const Home = () => {
           <div className="slide">
             <span className="one">Hello</span>
             <span className="two">I'm</span>
+
+            <h1 id="user-detail-name">
+              Suraj <TypeWriter data={typeWriter} />
+            </h1>
           </div>
-          <h1 id="user-detail-name">Suraj Singh</h1>
           <h3 id="user-detail-skill">
-            Mern <span>Developer.</span>
+            <TypeWriter data={typeWriter2} />
           </h3>
 
           <br />

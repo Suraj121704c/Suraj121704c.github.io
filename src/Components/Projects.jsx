@@ -254,24 +254,28 @@ const Projects = () => {
           <div className="project-card">
             <img src={frames} alt="" />
             <div className="layer">
-              <h5 className="project-title">FASHIQUE</h5>
+              <h5 className="project-title">GlassWorld</h5>
               <p className="project-description">
-                Fashique is a online fashion retailer inspired by asos.com, that
-                follows the latest fashion trends, primarily aimed at young
-                adults.
+                GlassWorld is a online glass shop inspired by lenskart.com, that
+                follows the latest trends, aimed at all the age group peoples of
+                india.
               </p>
               <p className="project-tech-stack">
-                Tech-Stack : REACT, REDUX, JS, HTML, CSS, CHAKRA UI
+                Tech-Stack : REACT, JS, HTML, CSS, CHAKRA UI,CONTEXT-API
               </p>
               <div id="project-links">
                 <div className="project-deployed-link">
-                  <a href="https://fashique.vercel.app/" target="_blank">
-                    <i>Live {/*  <SiNetlify size={15} /> */}</i>
+                  <a
+                    href="https://glassworldheaven.netlify.app/"
+                    target="_blank">
+                    <i>
+                      <FaEye />
+                    </i>
                   </a>
                 </div>
                 <div className="project-github-link">
                   <a
-                    href="https://github.com/Vikas23sharma/large-house-6330"
+                    href="https://github.com/Suraj121704c/excellent-noise-5475"
                     target="_blank"
                     id="project-deployed-link">
                     <i>
@@ -286,23 +290,26 @@ const Projects = () => {
           <div className="project-card">
             <img src={style} alt="" />
             <div className="layer">
-              <h5 className="project-title">DOLLAR STORE</h5>
+              <h5 className="project-title">Styles Up</h5>
               <p className="project-description">
-                Dollar store is a domestic merchandise retail stores.Inspired
-                from Bed Bath & Beyond that was founded in 1971.
+                An E-Commerce Website : Clone of Paytm Mall . It is group
+                project created by four peopls and I was the team Lead. We
+                created this website in 4 days time period.
               </p>
               <p className="project-tech-stack">
-                Tech-Stack : HTML , CSS, JS, REACT, CHAKRA UI
+                Tech-Stack : HTML , CSS, JS, REACT, CHAKRA UI, REDUX
               </p>
               <div id="project-links">
                 <div className="project-deployed-link">
-                  <a href="https://vsdollarstore.netlify.app/" target="_blank">
-                    <i>Live {/* <SiNetlify /> */}</i>
+                  <a href="https://styesup123112.netlify.app/" target="_blank">
+                    <i>
+                      <FaEye />
+                    </i>
                   </a>
                 </div>
                 <div className="project-github-link">
                   <a
-                    href="https://github.com/Vikas23sharma/uttermost-rat-9889/tree/main/bbby"
+                    href="https://github.com/Suraj121704c/-easy-rose-1070"
                     target="_blank"
                     id="project-deployed-link">
                     <i>
@@ -317,23 +324,25 @@ const Projects = () => {
           <div className="project-card">
             <img src={gojo} alt="" />
             <div className="layer">
-              <h5 className="project-title">Myntra</h5>
+              <h5 className="project-title">Gojo Store</h5>
               <p className="project-description">
-                The Project is inspired from Myntra which is a major Indian
+                The Project is inspired from Yoox which is a major foreign
                 fashion e-commerce company.
               </p>
               <p className="project-tech-stack">Tech-Stack : HTML, CSS, JS</p>
               <div id="project-links">
                 <div className="project-deployed-link">
                   <a
-                    href="https://jazzy-selkie-afc155.netlify.app/"
+                    href="https://majestic-palmier-e45e65.netlify.app/"
                     target="_blank">
-                    <i>Live {/* <SiNetlify /> */}</i>
+                    <i>
+                      <FaEye />
+                    </i>
                   </a>
                 </div>
                 <div className="project-github-link">
                   <a
-                    href="https://github.com/PrashantGIT7388/blessed-story-3613"
+                    href="https://github.com/Suraj121704c/divine-eggnog-8153"
                     target="_blank"
                     id="project-deployed-link">
                     <i>
@@ -348,27 +357,31 @@ const Projects = () => {
           <div className="project-card">
             <img src={pirate} alt="" />
             <div className="layer">
-              <h5 className="project-title">V apparels</h5>
+              <h5 className="project-title">Pirated Store</h5>
               <p className="project-description">
-                V apparels is a luxury department store.Inspired from a United
-                Kingdom based E-commerce website.
+                An Platform that helps in buying products. This website is a
+                clone of geeksbuying. Created by the group of 4..
               </p>
-              <p className="project-tech-stack">Tech-Stack : HTML, CSS, JS</p>
+              <p className="project-tech-stack">
+                Tech-Stack : HTML, CSS, Advance Js
+              </p>
               <div id="project-links">
                 <div className="project-deployed-link">
                   <a
-                    href="https://fluffy-malasada-634452.netlify.app/"
+                    href="https://nimble-crostata-869bd1.netlify.app/"
                     target="_blank">
-                    <i>Live {/* <SiNetlify /> */}</i>
+                    <i>
+                      <FaEye />
+                    </i>
                   </a>
                 </div>
                 <div className="project-github-link">
                   <a
-                    href="https://github.com/Vikas23sharma/verdant-straw-7365"
+                    href="https://github.com/Shahid77137/abundant-coat-8487"
                     target="_blank"
                     id="project-deployed-link">
                     <i>
-                      <AiFillGithub />
+                      <FaGithub />
                     </i>
                   </a>
                 </div>

@@ -10,15 +10,15 @@ const About = () => {
           <img className="home-img" src={me} alt="home-image" />
         </div>
         <div className="nav-link about">
-          <h1>
+          <h2 style={{fontSize : "45px"}}>
             About <span>Me</span>
-          </h1>
+          </h2>
           <h2 id="user-detail-name">
             I'm <span>Suraj Singh</span> from Prayagraj, UttarPradesh
           </h2>
 
           <h4>Mern Developer</h4>
-          <p id="user-detail-intro" style={{ letterSpacing: "1px" }}>
+          <p id="user-detail-intro" style={{ letterSpacing: "1px",gap : "3px" }}>
             An enthusiastic Mern Developer with excellent hands-on experience in
             developing scalable websites and application using a wide range of
             front-end and back-end skills like HTML, CSS, JavaScript, React,
@@ -26,12 +26,12 @@ const About = () => {
             implementation of functional specifications, Ready for taking
             challenging roles..
           </p>
-          <button id="resume-button-2" style={{ marginTop: "5px" }}>
+          <button id="resume-button-2" style={{ marginTop: "10px" }}>
             <a
               href={Suraj_Singh_Resume}
               download
               id="resume-link-2"
-              target = "_blank"
+              target="_blank"
               // onClick={() =>
               //   window.open(
               //     "https://drive.google.com/file/d/1g2tkgrCUQsSTUqDaNkt3NtrajM-CyGiM/view?usp=share_link"

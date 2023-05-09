@@ -8,12 +8,14 @@ import Githubs from "./Components/githubs";
 import Contact from "./Components/contact";
 import End from "./Components/end";
 import Stars from "./Components/particles";
+import AnimatedCursor from "react-animated-cursor";
 
 function App() {
   return (
     <div className="body">
       <Stars />
       <Header />
+      <AnimatedCursor />
       <Home />
       <About />
       <Skills />
