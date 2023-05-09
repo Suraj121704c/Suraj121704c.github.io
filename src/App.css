@@ -354,6 +354,7 @@ header.sticky{
   width: 100%;
   border-radius: 8px;
   display: block;
+  transition: transform 0.5s;
 }
 
 .project-title {
@@ -412,7 +413,7 @@ header.sticky{
 }
 
 .project-card:hover img {
-  transform: scale(0.9);
+  transform: scale(1.2);
 }
 
 .project-card:hover .layer {
