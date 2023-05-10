@@ -2,13 +2,13 @@ import React from "react";
 import { BsLinkedin } from "react-icons/bs";
 import { AiFillGithub } from "react-icons/ai";
 import { AiOutlineWhatsApp } from "react-icons/ai";
-import { useForm, ValidationError } from '@formspree/react';
+import { useForm, ValidationError } from "@formspree/react";
 import { Button } from "@chakra-ui/react";
-import { useToast } from '@chakra-ui/react'
+import { useToast } from "@chakra-ui/react";
 
 const Contact = () => {
   const [state, handleSubmit] = useForm("xayzadzz");
-  const toast = useToast()
+  const toast = useToast();
 
   return (
     <>
@@ -21,14 +21,14 @@ const Contact = () => {
             Talent wins games, but teamwork and intelligence win championships.
           </h4>
           <p>
-            Fill the form to connect if any query <i className="fas fa-smile"></i>
+            Fill the form to connect if any query{" "}
+            <i className="fas fa-smile"></i>
           </p>
           <div className="list">
             <li id="contact-phone">
               <a
                 href="https://api.whatsapp.com/send?phone=+916387389485"
-                target="_blank"
-              >
+                target="_blank">
                 +91-6387389485
               </a>
             </li>
@@ -36,16 +36,14 @@ const Contact = () => {
               <a
                 href="mailto:surajsinghpatel2002@gmail.com"
                 id="contact-email"
-                target="_blank"
-              >
+                target="_blank">
                 surajsinghpatel2002@gmail.com{" "}
               </a>
             </li>
             <li>
               <a
                 href="https://www.linkedin.com/in/shahid-afridi-40ab93241/"
-                id="contact-linkedin"
-              >
+                id="contact-linkedin">
                 {" "}
                 Linkedin : Suraj Singh
               </a>
@@ -55,16 +53,14 @@ const Contact = () => {
             <a
               id="contact-github"
               href="https://github.com/Suraj121704c"
-              target="_blank"
-            >
+              target="_blank">
               <i>
                 <AiFillGithub />
               </i>
             </a>
             <a
               href="https://api.whatsapp.com/send?phone=+916387389485"
-              target="_blank"
-            >
+              target="_blank">
               <i>
                 <AiOutlineWhatsApp />
               </i>
@@ -72,8 +68,7 @@ const Contact = () => {
             <a
               id="contact-linkedin"
               href="https://www.linkedin.com/in/suraj-singh-22844a257/"
-              target="_blank"
-            >
+              target="_blank">
               <i>
                 <BsLinkedin />
               </i>
@@ -97,29 +92,37 @@ const Contact = () => {
               field="email"
               errors={state.errors}
             />
-            <label htmlFor="email" style={{ marginTop: "10px", marginBottom: "10px", color: "var(--main-color)" }} >
+            <label
+              htmlFor="email"
+              style={{
+                marginTop: "10px",
+                marginBottom: "10px",
+                color: "var(--main-color)",
+              }}>
               Type your message here
             </label>
-            <textarea
-              id="message"
-              name="message"
-              placeholder="write here..."
-            />
+            <textarea id="message" name="message" placeholder="write here..." />
             <ValidationError
               prefix="Message"
               field="message"
               errors={state.errors}
             />
-            <Button type="submit" disabled={state.submitting} color={"white"} backgroundColor={"green"} onClick={() =>
-              toast({
-                title: 'Message Sent...',
-                description: "Thanks for messaging us we will replay you as soon as possible...",
-                status: 'success',
-                duration: 9000,
-                isClosable: true,
-                position: 'top'
-              })
-            }>
+            <Button
+              type="submit"
+              disabled={state.submitting}
+              color={"white"}
+              backgroundColor={"green"}
+              onClick={() =>
+                toast({
+                  title: "Message Sent...",
+                  description:
+                    "Thanks for messaging us we will replay you as soon as possible...",
+                  status: "success",
+                  duration: 9000,
+                  isClosable: true,
+                  position: "top",
+                })
+              }>
               Submit
             </Button>
           </form>

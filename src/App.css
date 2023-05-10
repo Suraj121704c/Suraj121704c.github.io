@@ -470,8 +470,8 @@ header.sticky{
 
 #stat {
   margin-top: 50px;
-  /* display: flex; */
-  /* justify-content: space-between; */
+  display: flex;
+  justify-content: space-between;
   gap:10px;
 }
 #github-top-langs{
