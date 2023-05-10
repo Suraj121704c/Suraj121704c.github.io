@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.66a52704.css",
-    "main.js": "/static/js/main.bf3b8f20.js",
+    "main.js": "/static/js/main.c54ebfa2.js",
     "static/js/787.2e9b76fa.chunk.js": "/static/js/787.2e9b76fa.chunk.js",
     "static/media/gojo.png": "/static/media/gojo.bd92558cba32f860d64a.png",
     "static/media/lenskart.png": "/static/media/lenskart.d8a6ef2771a44f3df5e9.png",
@@ -11,11 +11,11 @@
     "static/media/Suraj_Singh.jpg": "/static/media/Suraj_Singh.a5632119ddce37f4c372.jpg",
     "index.html": "/index.html",
     "main.66a52704.css.map": "/static/css/main.66a52704.css.map",
-    "main.bf3b8f20.js.map": "/static/js/main.bf3b8f20.js.map",
+    "main.c54ebfa2.js.map": "/static/js/main.c54ebfa2.js.map",
     "787.2e9b76fa.chunk.js.map": "/static/js/787.2e9b76fa.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.66a52704.css",
-    "static/js/main.bf3b8f20.js"
+    "static/js/main.c54ebfa2.js"
   ]
 }
