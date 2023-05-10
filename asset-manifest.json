@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.ba64d512.css",
+    "main.css": "/static/css/main.66a52704.css",
     "main.js": "/static/js/main.bf3b8f20.js",
     "static/js/787.2e9b76fa.chunk.js": "/static/js/787.2e9b76fa.chunk.js",
     "static/media/gojo.png": "/static/media/gojo.bd92558cba32f860d64a.png",
@@ -10,12 +10,12 @@
     "static/media/Suraj_Singh_Resume.pdf": "/static/media/Suraj_Singh_Resume.19788b7c5d81ce1aaad6.pdf",
     "static/media/Suraj_Singh.jpg": "/static/media/Suraj_Singh.a5632119ddce37f4c372.jpg",
     "index.html": "/index.html",
-    "main.ba64d512.css.map": "/static/css/main.ba64d512.css.map",
+    "main.66a52704.css.map": "/static/css/main.66a52704.css.map",
     "main.bf3b8f20.js.map": "/static/js/main.bf3b8f20.js.map",
     "787.2e9b76fa.chunk.js.map": "/static/js/787.2e9b76fa.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ba64d512.css",
+    "static/css/main.66a52704.css",
     "static/js/main.bf3b8f20.js"
   ]
 }
