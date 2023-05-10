@@ -5,6 +5,9 @@ import pirate from "../assests/pirate.png";
 import style from "../assests/stylesup.png";
 import frames from "../assests/lenskart.png";
 import { FaGithub, FaEye } from "react-icons/fa";
+import TypeWriter from "./TypeWriter";
+
+
 
 // const Projects = () => {
 //   return (
@@ -237,6 +240,12 @@ import { SiNetlify } from "react-icons/si";
 // import gojo from "../assests/gojo.png";
 import { AiFillGithub } from "react-icons/ai";
 
+const typeWriter1 = ["GlassWorld"];
+const typeWriter2 = ["Styles Up"];
+const typeWriter3 = ["Gojo Store"];
+const typeWriter4 = ["Pirated Store"];
+
+
 const Projects = () => {
   return (
     <>
@@ -254,7 +263,7 @@ const Projects = () => {
           <div className="project-card">
             <img src={frames} alt="" />
             <div className="layer">
-              <h5 className="project-title">GlassWorld</h5>
+              <h5 className="project-title"><TypeWriter data={typeWriter1} /></h5>
               <p className="project-description">
                 GlassWorld is a online glass shop inspired by lenskart.com, that
                 follows the latest trends, aimed at all the age group peoples of
@@ -290,7 +299,7 @@ const Projects = () => {
           <div className="project-card">
             <img src={style} alt="" />
             <div className="layer">
-              <h5 className="project-title">Styles Up</h5>
+              <h5 className="project-title"><TypeWriter data={typeWriter2} /></h5>
               <p className="project-description">
                 An E-Commerce Website : Clone of Paytm Mall . It is group
                 project created by four peopls and I was the team Lead. We
@@ -324,7 +333,7 @@ const Projects = () => {
           <div className="project-card">
             <img src={gojo} alt="" />
             <div className="layer">
-              <h5 className="project-title">Gojo Store</h5>
+              <h5 className="project-title"><TypeWriter data={typeWriter3} /></h5>
               <p className="project-description">
                 The Project is inspired from Yoox which is a major foreign
                 fashion e-commerce company.
@@ -357,7 +366,7 @@ const Projects = () => {
           <div className="project-card">
             <img src={pirate} alt="" />
             <div className="layer">
-              <h5 className="project-title">Pirated Store</h5>
+              <h5 className="project-title"><TypeWriter data={typeWriter4} /></h5>
               <p className="project-description">
                 An Platform that helps in buying products. This website is a
                 clone of geeksbuying. Created by the group of 4..

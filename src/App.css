@@ -8,7 +8,7 @@
   scroll-behavior: smooth;
 }
 :root{
-  --bg-color: #2a2a2a;
+  --bg-color: transparent
     --second-bg-color: #202020;
     --text-color: #fff;
     --second-color: #fff;
@@ -65,7 +65,7 @@ span{
 }
 
  #nav-menu{
- background : var(--bg-color);
+ background : rgb(0, 0, 0);
 }
 
 #menu-icon{
@@ -89,7 +89,7 @@ section{
   position: relative;
   height: 100vh;
   width: 100%;
-  background-image: url("./assests/Black\ Modern\ Marketing\ Banner.png");
+  /* background-image: url("./assests/Black\ Modern\ Marketing\ Banner.png"); */
 
   background-size: cover;
   background-position: center;
@@ -180,7 +180,7 @@ section{
 
 
 #user-detail-name{
-  font-size: 35px;
+  font-size: 25px;
   font-weight: 800;
 }
 
@@ -550,6 +550,7 @@ header.sticky{
   color: var(--text-color);
   border: none;
   outline: none;
+  border: 1px solid green;
   font-size: 15px;
   border-radius: 8px;
   margin-bottom: 10px;
@@ -579,7 +580,7 @@ header.sticky{
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  background: var(--bg-color);
+  background: black;
 }
 .last p{
   color: var(--second-color);
@@ -818,3 +819,6 @@ header.sticky{
   font-weight: bold;
   font-size: 20px;
 }
+
+/* laptop */
+

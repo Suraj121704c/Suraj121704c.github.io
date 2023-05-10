@@ -86,6 +86,7 @@ const Contact = () => {
               type="email"
               name="email"
               placeholder="enter email address"
+              border = "1px solid green"
             />
             <ValidationError
               prefix="Email"

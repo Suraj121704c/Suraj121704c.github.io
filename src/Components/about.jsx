@@ -17,8 +17,8 @@ const About = () => {
             I'm <span>Suraj Singh</span> from Prayagraj, UttarPradesh
           </h2>
 
-          <h4>Mern Developer</h4>
-          <p id="user-detail-intro" style={{ letterSpacing: "1px",gap : "3px" }}>
+          <h4 style={{ marginTop: "20px" }}>Mern Developer</h4>
+          <p id="user-detail-intro" style={{ letterSpacing: "1px",gap : "5px" }}>
             An enthusiastic Mern Developer with excellent hands-on experience in
             developing scalable websites and application using a wide range of
             front-end and back-end skills like HTML, CSS, JavaScript, React,
@@ -26,7 +26,7 @@ const About = () => {
             implementation of functional specifications, Ready for taking
             challenging roles..
           </p>
-          <button id="resume-button-2" style={{ marginTop: "10px" }}>
+          <button id="resume-button-2" style={{ marginTop: "30px" }}>
             <a
               href={Suraj_Singh_Resume}
               download

@@ -9,11 +9,17 @@ import Contact from "./Components/contact";
 import End from "./Components/end";
 import Stars from "./Components/particles";
 import AnimatedCursor from "react-animated-cursor";
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
+import { particlesOptions } from "./Components/particlesConfig";
 
 function App() {
+  const particlesInit = (engine) => {
+    loadFull(engine);
+  };
   return (
     <div className="body">
-      <Stars />
+      <Particles init={particlesInit} options={particlesOptions} />
       <Header />
       <AnimatedCursor />
       <Home />
