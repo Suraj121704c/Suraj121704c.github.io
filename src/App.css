@@ -114,7 +114,7 @@ section{
   font-weight: 500;
   border-radius: 5px;
   background: var(--main-color);
-  color: var(--text-color)
+  color: var(--text-color);
 }
 .two{
   display: inline-block;
@@ -413,7 +413,7 @@ header.sticky{
 }
 
 .project-card:hover img {
-  transform: scale(1.2);
+  transform: scale(1.05);
 }
 
 .project-card:hover .layer {
@@ -429,36 +429,6 @@ header.sticky{
   }
 
 }
-
-/* 
-.layer h5{
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 15px;
-}
-.layer p{
-  color: var(--second-color);
-  font-size: 1rem;
-  line-height: 1.8;
-} */
-/* .layer i{
-  color: var(--main-color);
-  margin-top: 20px;
-  font-size: 20px;
-  background: var(--text-color);
-  width: 60px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-} */
-/* .project-card:hover img{
-  transform: scale(1.1);
-} */
-/* .project-card:hover .layer{
-  height: 100%;
-} */
 
 /* Github */
 
