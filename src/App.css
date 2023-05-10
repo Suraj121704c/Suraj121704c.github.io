@@ -5,10 +5,9 @@
   font-family: 'Poppins',sans-serif;
   text-decoration: none;
   list-style: none;
-  scroll-behavior: smooth;
 }
 :root{
-  --bg-color: transparent
+  --bg-color: transparent;
     --second-bg-color: #202020;
     --text-color: #fff;
     --second-color: #fff;
