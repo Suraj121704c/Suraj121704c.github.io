@@ -8,7 +8,7 @@
 }
 :root{
   --bg-color: transparent;
-    --second-bg-color: #202020;
+    --second-bg-color: transparent;
     --text-color: #fff;
     --second-color: #fff;
     --main-color: #61dc14;
@@ -347,6 +347,7 @@ header.sticky{
   box-shadow: rgba(62, 240, 46, 0.4) 5px 5px, rgba(85, 240, 46, 0.3) 10px 10px, rgba(91, 240, 46, 0.2) 15px 15px, rgba(56, 240, 46, 0.1) 20px 20px, rgba(46, 240, 65, 0.05) 25px 25px;
 
   /* height: 500px; */
+  border-radius: 5%;
 }
 
 .project-card img {
@@ -354,6 +355,7 @@ header.sticky{
   border-radius: 8px;
   display: block;
   transition: transform 0.5s;
+  border-radius: 5%;
 }
 
 .project-title {
@@ -399,7 +401,7 @@ header.sticky{
 }
 
 .layer i {
-  color: var(--bg-color);
+  color: black;
   margin-top: 20px;
   font-size: 20px;
   background: var(--main-color);
@@ -408,7 +410,7 @@ header.sticky{
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
+  border-radius: 10%;
 }
 
 .project-card:hover img {

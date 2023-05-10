@@ -14,7 +14,7 @@ const Home = () => {
             <span className="one">Hello</span>
             <span className="two">I'm</span>
 
-            <h1 id="user-detail-name">
+            <h1 id="user-detail-name" style={{marginTop : "15px"}}> 
               Suraj <TypeWriter data={typeWriter} />
             </h1>
           </div>

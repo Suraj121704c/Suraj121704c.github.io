@@ -7,8 +7,6 @@ import frames from "../assests/lenskart.png";
 import { FaGithub, FaEye } from "react-icons/fa";
 import TypeWriter from "./TypeWriter";
 
-
-
 // const Projects = () => {
 //   return (
 //     <Box className="nav-link projects" id="nav-link-projects">
@@ -245,7 +243,6 @@ const typeWriter2 = ["Styles Up"];
 const typeWriter3 = ["Gojo Store"];
 const typeWriter4 = ["Pirated Store"];
 
-
 const Projects = () => {
   return (
     <>
@@ -263,14 +260,17 @@ const Projects = () => {
           <div className="project-card">
             <img src={frames} alt="" />
             <div className="layer">
-              <h5 className="project-title"><TypeWriter data={typeWriter1} /></h5>
+              <h5 className="project-title">
+                <TypeWriter data={typeWriter1} />
+              </h5>
               <p className="project-description">
-                GlassWorld is a online glass shop inspired by lenskart.com, that
-                follows the latest trends, aimed at all the age group peoples of
-                india.
+                <span>Description : </span> GlassWorld is a online glass shop
+                inspired by lenskart.com, that follows the latest trends, aimed
+                at all the age group peoples of india.
               </p>
               <p className="project-tech-stack">
-                Tech-Stack : REACT, JS, HTML, CSS, CHAKRA UI,CONTEXT-API
+                <span>Tech-Stack : </span> REACT, JS, HTML, CSS, CHAKRA
+                UI,CONTEXT-API
               </p>
               <div id="project-links">
                 <div className="project-deployed-link">
@@ -299,14 +299,17 @@ const Projects = () => {
           <div className="project-card">
             <img src={style} alt="" />
             <div className="layer">
-              <h5 className="project-title"><TypeWriter data={typeWriter2} /></h5>
+              <h5 className="project-title">
+                <TypeWriter data={typeWriter2} />
+              </h5>
               <p className="project-description">
-                An E-Commerce Website : Clone of Paytm Mall . It is group
-                project created by four peopls and I was the team Lead. We
-                created this website in 4 days time period.
+                <span>Description : </span> An E-Commerce Website : Clone of
+                Paytm Mall . It is group project created by four peopls and I
+                was the team Lead. We created this website in 4 days time
+                period.
               </p>
               <p className="project-tech-stack">
-                Tech-Stack : HTML , CSS, JS, REACT, CHAKRA UI, REDUX
+                <span>Tech-Stack : </span> HTML , CSS, JS, REACT, CHAKRA UI, REDUX
               </p>
               <div id="project-links">
                 <div className="project-deployed-link">
@@ -333,12 +336,16 @@ const Projects = () => {
           <div className="project-card">
             <img src={gojo} alt="" />
             <div className="layer">
-              <h5 className="project-title"><TypeWriter data={typeWriter3} /></h5>
+              <h5 className="project-title">
+                <TypeWriter data={typeWriter3} />
+              </h5>
               <p className="project-description">
-                The Project is inspired from Yoox which is a major foreign
-                fashion e-commerce company.
+                <span>Description : </span> The Project is inspired from Yoox
+                which is a major foreign fashion e-commerce company.
               </p>
-              <p className="project-tech-stack">Tech-Stack : HTML, CSS, JS</p>
+              <p className="project-tech-stack">
+                <span>Tech-Stack : </span> HTML, CSS, JS
+              </p>
               <div id="project-links">
                 <div className="project-deployed-link">
                   <a
@@ -366,13 +373,16 @@ const Projects = () => {
           <div className="project-card">
             <img src={pirate} alt="" />
             <div className="layer">
-              <h5 className="project-title"><TypeWriter data={typeWriter4} /></h5>
+              <h5 className="project-title">
+                <TypeWriter data={typeWriter4} />
+              </h5>
               <p className="project-description">
-                An Platform that helps in buying products. This website is a
-                clone of geeksbuying. Created by the group of 4..
+                <span>Description : </span> An Platform that helps in buying
+                products. This website is a clone of geeksbuying. Created by the
+                group of 4..
               </p>
               <p className="project-tech-stack">
-                Tech-Stack : HTML, CSS, Advance Js
+                <span>Tech-Stack : </span> HTML, CSS, Advance Js
               </p>
               <div id="project-links">
                 <div className="project-deployed-link">

@@ -42,7 +42,7 @@ const Contact = () => {
             </li>
             <li>
               <a
-                href="https://www.linkedin.com/in/shahid-afridi-40ab93241/"
+                href="https://www.linkedin.com/in/suraj-singh-22844a257/"
                 id="contact-linkedin">
                 {" "}
                 Linkedin : Suraj Singh
