@@ -67,11 +67,11 @@ const Header = () => {
                 id="resume-link-1"
                 className="nav-link resume"
                 style={{color : "white", backgroundColor : "green"}}
-                // onClick={() =>
-                //   window.open(
-                //     "https://drive.google.com/file/d/1g2tkgrCUQsSTUqDaNkt3NtrajM-CyGiM/view?usp=share_link"
-                //   )
-                // }
+                onClick={() =>
+                  window.open(
+                    "https://drive.google.com/file/d/1KOvYbnMGJU_e-1_E_hkQRSAdEguKEMEF/view?usp=drive_link"
+                  )
+                }
               >
                 Resume
               </a>

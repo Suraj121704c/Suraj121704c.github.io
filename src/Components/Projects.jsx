@@ -6,6 +6,7 @@ import style from "../assests/stylesup.png";
 import frames from "../assests/lenskart.png";
 import { FaGithub, FaEye } from "react-icons/fa";
 import TypeWriter from "./TypeWriter";
+import baba from "../assests/Chattinbaba.png"
 
 // const Projects = () => {
 //   return (
@@ -242,6 +243,7 @@ const typeWriter1 = ["GlassWorld"];
 const typeWriter2 = ["Styles Up"];
 const typeWriter3 = ["Gojo Store"];
 const typeWriter4 = ["Pirated Store"];
+const typeWriter5 = ["Chating Baba"];
 
 const Projects = () => {
   return (
@@ -309,7 +311,8 @@ const Projects = () => {
                 period.
               </p>
               <p className="project-tech-stack">
-                <span>Tech-Stack : </span> HTML , CSS, JS, REACT, CHAKRA UI, REDUX
+                <span>Tech-Stack : </span> HTML , CSS, JS, REACT, CHAKRA UI,
+                REDUX
               </p>
               <div id="project-links">
                 <div className="project-deployed-link">
@@ -397,6 +400,44 @@ const Projects = () => {
                 <div className="project-github-link">
                   <a
                     href="https://github.com/Shahid77137/abundant-coat-8487"
+                    target="_blank"
+                    id="project-deployed-link">
+                    <i>
+                      <FaGithub />
+                    </i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="project-card">
+            <img src={baba} alt="" />
+            <div className="layer">
+              <h5 className="project-title">
+                <TypeWriter data={typeWriter5} />
+              </h5>
+              <p className="project-description">
+                <span>Description : </span> An Platform that helps in chating
+                real time. This website is not a clone just been created by my
+                own visualisation.
+              </p>
+              <p className="project-tech-stack">
+                <span>Tech-Stack : </span> HTML, CSS, JavaScript, NodeJs
+              </p>
+              <div id="project-links">
+                <div className="project-deployed-link">
+                  <a
+                    href="https://baba-vcqq.onrender.com/"
+                    target="_blank">
+                    <i>
+                      <FaEye />
+                    </i>
+                  </a>
+                </div>
+                <div className="project-github-link">
+                  <a
+                    href="https://github.com/Suraj121704c/chatBot/tree/main"
                     target="_blank"
                     id="project-deployed-link">
                     <i>
