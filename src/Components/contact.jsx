@@ -8,7 +8,10 @@ import { useToast } from "@chakra-ui/react";
 
 const Contact = () => {
   const [state, handleSubmit] = useForm("xayzadzz");
+  // useToast is from the chakra ui ohk 
   const toast = useToast();
+
+
 
   return (
     <>

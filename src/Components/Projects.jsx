@@ -316,7 +316,7 @@ const Projects = () => {
               </p>
               <div id="project-links">
                 <div className="project-deployed-link">
-                  <a href="https://styesup123112.netlify.app/" target="_blank">
+                  <a href="https://stylesup121.vercel.app/" target="_blank">
                     <i>
                       <FaEye />
                     </i>
