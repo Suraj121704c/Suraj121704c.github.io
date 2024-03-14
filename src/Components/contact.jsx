@@ -7,11 +7,9 @@ import { Button } from "@chakra-ui/react";
 import { useToast } from "@chakra-ui/react";
 
 const Contact = () => {
-  const [state, handleSubmit] = useForm("xayzadzz");
-  // useToast is from the chakra ui ohk 
+  const [state, handleSubmit] = useForm("portfolio");
+  // useToast is from the chakra ui ohk
   const toast = useToast();
-
-
 
   return (
     <>
@@ -31,7 +29,8 @@ const Contact = () => {
             <li id="contact-phone">
               <a
                 href="https://api.whatsapp.com/send?phone=+916387389485"
-                target="_blank">
+                target="_blank"
+              >
                 +91-6387389485
               </a>
             </li>
@@ -39,14 +38,16 @@ const Contact = () => {
               <a
                 href="mailto:surajsinghpatel2002@gmail.com"
                 id="contact-email"
-                target="_blank">
+                target="_blank"
+              >
                 surajsinghpatel2002@gmail.com{" "}
               </a>
             </li>
             <li>
               <a
                 href="https://www.linkedin.com/in/suraj-singh-22844a257/"
-                id="contact-linkedin">
+                id="contact-linkedin"
+              >
                 {" "}
                 Linkedin : Suraj Singh
               </a>
@@ -56,14 +57,16 @@ const Contact = () => {
             <a
               id="contact-github"
               href="https://github.com/Suraj121704c"
-              target="_blank">
+              target="_blank"
+            >
               <i>
                 <AiFillGithub />
               </i>
             </a>
             <a
               href="https://api.whatsapp.com/send?phone=+916387389485"
-              target="_blank">
+              target="_blank"
+            >
               <i>
                 <AiOutlineWhatsApp />
               </i>
@@ -71,7 +74,8 @@ const Contact = () => {
             <a
               id="contact-linkedin"
               href="https://www.linkedin.com/in/suraj-singh-22844a257/"
-              target="_blank">
+              target="_blank"
+            >
               <i>
                 <BsLinkedin />
               </i>
@@ -89,7 +93,8 @@ const Contact = () => {
               type="email"
               name="email"
               placeholder="enter email address"
-              border = "1px solid green"
+              border="1px solid green"
+              style={{ marginTop: "5px" }}
             />
             <ValidationError
               prefix="Email"
@@ -102,10 +107,16 @@ const Contact = () => {
                 marginTop: "10px",
                 marginBottom: "10px",
                 color: "var(--main-color)",
-              }}>
+              }}
+            >
               Type your message here
             </label>
-            <textarea id="message" name="message" placeholder="write here..." />
+            <textarea
+              id="message"
+              name="message"
+              placeholder="write here..."
+              style={{ marginTop: "5px" }}
+            />
             <ValidationError
               prefix="Message"
               field="message"
@@ -126,7 +137,8 @@ const Contact = () => {
                   isClosable: true,
                   position: "top",
                 })
-              }>
+              }
+            >
               Submit
             </Button>
           </form>
