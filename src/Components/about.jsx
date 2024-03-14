@@ -19,9 +19,9 @@ const About = () => {
 
           <h4 style={{ marginTop: "20px" }}>Mern Developer</h4>
           <p id="user-detail-intro" style={{ letterSpacing: "1px",gap : "5px" }}>
-            An enthusiastic Mern Developer with excellent hands-on experience in
+            An enthusiastic FrontEnd Developer with excellent hands-on experience in
             developing scalable websites and application using a wide range of
-            front-end and back-end skills like HTML, CSS, JavaScript, React,
+            front-end and a little in back-end .Skills like HTML, CSS, JavaScript, React,
             Redux and Node Js. Highly skilled in design, development and
             implementation of functional specifications, Ready for taking
             challenging roles..
@@ -34,7 +34,7 @@ const About = () => {
               target="_blank"
               onClick={() =>
                 window.open(
-                  "https://drive.google.com/file/d/1KOvYbnMGJU_e-1_E_hkQRSAdEguKEMEF/view?usp=drive_link"
+                  "https://drive.google.com/file/d/1M9WTkHdvJu4LpKQe5cq6kY8PBcf3w3gR/view?usp=sharing"
                 )
               }
             >

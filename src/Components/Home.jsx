@@ -3,7 +3,7 @@ import Suraj_Singh_Resume from "../assests/Suraj_Singh_Resume.pdf";
 import TypeWriter from "./TypeWriter";
 
 const typeWriter = ["Singh"];
-const typeWriter2 = ["I'm A Mern Developer...", "Ready to Work with you..."];
+const typeWriter2 = ["I'm A Frontend Developer...", "Ready to Work with you..."];
 
 const Home = () => {
   return (

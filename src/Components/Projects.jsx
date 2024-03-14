@@ -1,12 +1,13 @@
 import React from "react";
 import { Box, Button, SimpleGrid, useColorMode } from "@chakra-ui/react";
 import gojo from "../assests/gojo.png";
+import luffy from "../assests/Luffy_TV.png";
 import pirate from "../assests/pirate.png";
 import style from "../assests/stylesup.png";
 import frames from "../assests/lenskart.png";
 import { FaGithub, FaEye } from "react-icons/fa";
 import TypeWriter from "./TypeWriter";
-import baba from "../assests/Chattinbaba.png"
+import baba from "../assests/Chattinbaba.png";
 
 // const Projects = () => {
 //   return (
@@ -244,6 +245,7 @@ const typeWriter2 = ["Styles Up"];
 const typeWriter3 = ["Gojo Store"];
 const typeWriter4 = ["Pirated Store"];
 const typeWriter5 = ["Chating Baba"];
+const typeWriter6 = ["Luffy TV"];
 
 const Projects = () => {
   return (
@@ -278,7 +280,8 @@ const Projects = () => {
                 <div className="project-deployed-link">
                   <a
                     href="https://glassworldheaven.netlify.app/"
-                    target="_blank">
+                    target="_blank"
+                  >
                     <i>
                       <FaEye />
                     </i>
@@ -288,7 +291,8 @@ const Projects = () => {
                   <a
                     href="https://github.com/Suraj121704c/excellent-noise-5475"
                     target="_blank"
-                    id="project-deployed-link">
+                    id="project-deployed-link"
+                  >
                     <i>
                       <AiFillGithub />
                     </i>
@@ -326,7 +330,47 @@ const Projects = () => {
                   <a
                     href="https://github.com/Suraj121704c/-easy-rose-1070"
                     target="_blank"
-                    id="project-deployed-link">
+                    id="project-deployed-link"
+                  >
+                    <i>
+                      <AiFillGithub />
+                    </i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="project-card">
+            <img src={luffy} alt="" />
+            <div className="layer">
+              <h5 className="project-title">
+                <TypeWriter data={typeWriter6} />
+              </h5>
+              <p className="project-description">
+                <span>Description : </span> The Project is inspired from pirated
+                sites and trying to create a clone of pirated movie site.
+              </p>
+              <p className="project-tech-stack">
+                <span>Tech-Stack : </span> HTML, CSS, JS
+              </p>
+              <div id="project-links">
+                <div className="project-deployed-link">
+                  <a
+                    href="https://65f282ddd301167746000432--ephemeral-taffy-9ac928.netlify.app/"
+                    target="_blank"
+                  >
+                    <i>
+                      <FaEye />
+                    </i>
+                  </a>
+                </div>
+                <div className="project-github-link">
+                  <a
+                    href="https://github.com/Suraj121704c/Luffy-TV.git"
+                    target="_blank"
+                    id="project-deployed-link"
+                  >
                     <i>
                       <AiFillGithub />
                     </i>
@@ -353,7 +397,8 @@ const Projects = () => {
                 <div className="project-deployed-link">
                   <a
                     href="https://majestic-palmier-e45e65.netlify.app/"
-                    target="_blank">
+                    target="_blank"
+                  >
                     <i>
                       <FaEye />
                     </i>
@@ -363,7 +408,8 @@ const Projects = () => {
                   <a
                     href="https://github.com/Suraj121704c/divine-eggnog-8153"
                     target="_blank"
-                    id="project-deployed-link">
+                    id="project-deployed-link"
+                  >
                     <i>
                       <AiFillGithub />
                     </i>
@@ -391,7 +437,8 @@ const Projects = () => {
                 <div className="project-deployed-link">
                   <a
                     href="https://nimble-crostata-869bd1.netlify.app/"
-                    target="_blank">
+                    target="_blank"
+                  >
                     <i>
                       <FaEye />
                     </i>
@@ -401,7 +448,8 @@ const Projects = () => {
                   <a
                     href="https://github.com/Shahid77137/abundant-coat-8487"
                     target="_blank"
-                    id="project-deployed-link">
+                    id="project-deployed-link"
+                  >
                     <i>
                       <FaGithub />
                     </i>
@@ -427,9 +475,7 @@ const Projects = () => {
               </p>
               <div id="project-links">
                 <div className="project-deployed-link">
-                  <a
-                    href="https://baba-vcqq.onrender.com/"
-                    target="_blank">
+                  <a href="https://baba-vcqq.onrender.com/" target="_blank">
                     <i>
                       <FaEye />
                     </i>
@@ -439,7 +485,8 @@ const Projects = () => {
                   <a
                     href="https://github.com/Suraj121704c/chatBot/tree/main"
                     target="_blank"
-                    id="project-deployed-link">
+                    id="project-deployed-link"
+                  >
                     <i>
                       <FaGithub />
                     </i>

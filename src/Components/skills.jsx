@@ -8,6 +8,8 @@ import { DiNodejs } from "react-icons/di";
 import { SiTypescript } from "react-icons/si";
 import { TfiWrite } from "react-icons/tfi";
 import { DiMongodb } from "react-icons/di";
+import { TbBrandReactNative } from "react-icons/tb";
+import { FaAngular } from "react-icons/fa";
 
 const Skills = () => {
   return (
@@ -21,6 +23,28 @@ const Skills = () => {
         </div>
 
         <div className="nav-link skills" id="skills-part">
+          <div className="skills-card">
+            <div className="skills-card-img">
+              <TbBrandReactNative
+                style={{ height: "50px", width: "50px", margin: "auto" }}
+              />
+            </div>
+            <h3 className="skills-card-name" style={{ color: "#61dc14" }}>
+              React Native
+            </h3>
+          </div>
+
+          <div className="skills-card">
+            <div className="skills-card-img">
+              <FaAngular
+                style={{ height: "50px", width: "50px", margin: "auto" }}
+              />
+            </div>
+            <h3 className="skills-card-name" style={{ color: "#61dc14" }}>
+              Angular Cli
+            </h3>
+          </div>
+
           <div className="skills-card">
             <div className="skills-card-img">
               <FaReact
