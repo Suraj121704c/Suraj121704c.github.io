@@ -17,9 +17,9 @@ const About = () => {
             I'm <span>Suraj Singh</span> from Prayagraj, UttarPradesh
           </h2>
 
-          <h4 style={{ marginTop: "20px" }}>Mern Developer</h4>
+          <h4 style={{ marginTop: "20px" }}>Frontend Developer</h4>
           <p id="user-detail-intro" style={{ letterSpacing: "1px",gap : "5px" }}>
-            An enthusiastic FrontEnd Developer with excellent hands-on experience in
+            An enthusiastic Frontend Developer with excellent hands-on experience in
             developing scalable websites and application using a wide range of
             front-end and a little in back-end .Skills like HTML, CSS, JavaScript, React,
             Redux and Node Js. Highly skilled in design, development and
