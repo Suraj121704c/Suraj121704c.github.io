@@ -1,9 +1,10 @@
 {
   "files": {
     "main.css": "/static/css/main.366e8585.css",
-    "main.js": "/static/js/main.c64ddf2a.js",
+    "main.js": "/static/js/main.f5be5785.js",
     "static/js/787.2e9b76fa.chunk.js": "/static/js/787.2e9b76fa.chunk.js",
     "static/media/gojo.png": "/static/media/gojo.bd92558cba32f860d64a.png",
+    "static/media/Luffy_TV.png": "/static/media/Luffy_TV.11ae179df38ca79bd142.png",
     "static/media/lenskart.png": "/static/media/lenskart.d8a6ef2771a44f3df5e9.png",
     "static/media/stylesup.png": "/static/media/stylesup.40f8f76a52f7cd0cf927.png",
     "static/media/pirate.png": "/static/media/pirate.537cb84a2de4dd3da5b3.png",
@@ -12,11 +13,11 @@
     "static/media/Suraj_Singh.jpg": "/static/media/Suraj_Singh.a5632119ddce37f4c372.jpg",
     "index.html": "/index.html",
     "main.366e8585.css.map": "/static/css/main.366e8585.css.map",
-    "main.c64ddf2a.js.map": "/static/js/main.c64ddf2a.js.map",
+    "main.f5be5785.js.map": "/static/js/main.f5be5785.js.map",
     "787.2e9b76fa.chunk.js.map": "/static/js/787.2e9b76fa.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.366e8585.css",
-    "static/js/main.c64ddf2a.js"
+    "static/js/main.f5be5785.js"
   ]
 }
