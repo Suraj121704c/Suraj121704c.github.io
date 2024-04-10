@@ -39,7 +39,7 @@ const About = () => {
               target="_blank"
               onClick={() =>
                 window.open(
-                  "https://drive.google.com/file/d/1_IA7Jw1EGDXQ6qqQg4YDEsomCl8uS9W2/view?usp=sharing"
+                  "https://drive.google.com/file/d/1zysgnoKcfhEVe9rid1JWi5u2geTiHDt3/view?usp=sharing"
                 )
               }
             >
