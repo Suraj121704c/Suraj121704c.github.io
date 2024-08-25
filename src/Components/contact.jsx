@@ -45,7 +45,7 @@ const Contact = () => {
             </li>
             <li>
               <a
-                href="https://www.linkedin.com/in/suraj-singh-22844a257/"
+                href="https://www.linkedin.com/in/suraj-singh-b61aa1297/"
                 id="contact-linkedin"
               >
                 {" "}
