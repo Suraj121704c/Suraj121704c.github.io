@@ -40,7 +40,7 @@ const Contact = () => {
                 id="contact-email"
                 target="_blank"
               >
-                surajsinghpatel2002@gmail.com{" "}
+               nhb668912@gmail.com{" "}
               </a>
             </li>
             <li>
