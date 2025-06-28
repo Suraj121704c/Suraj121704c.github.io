@@ -1,58 +1,71 @@
 import React from "react";
-import me from "../assests/Suraj_Singh.jpg";
-import Suraj_Singh_Resume from "../assests/Suraj_Singh_Resume.pdf";
-
+import { Box, Flex, Image, Text } from "@chakra-ui/react";
 const About = () => {
   return (
     <>
-      <section className="about section" id="about">
-        <div className="about-img">
-          <img className="home-img" src={me} alt="home-image" />
-        </div>
-        <div className="nav-link about">
-          <h2 style={{ fontSize: "45px" }}>
-            About <span>Me</span>
-          </h2>
-          <h2 id="user-detail-name">
-            I'm <span>Suraj Singh</span> from Prayagraj, UttarPradesh
-          </h2>
+      <Text
+        fontSize="4xl"
+        fontWeight="600"
+        margin="auto"
+        textAlign="center"
+        id="about"
+        className="about section"
+      >
+        About me
+      </Text>
+      <Flex
+        height={{ base: "100%", md: "60vh", lg: "100%" }}
+        width="85%"
+        margin="auto"
+        id="about"
+        flexDir={{ base: "column", md: "row", lg: "row" }}
+        alignItems={"center"}
+      >
+        <Box
+          data-aos="fade-right"
+          width={{ base: "100%", md: "50%", lg: "35%" }}
+          marginTop={"30px"}
+        >
+          <abbr title="Md Faizan! A Full Stack Developer.">
+            <Image
+              className="home-img"
+              margin="auto"
+              // border="1px solid grey"
+              borderRadius="50%"
+              boxShadow={"-2px -2px 5px #fff, 2px 2px 5px #babecc"}
+              src="https://i.ibb.co/zG6mT2x/unnamed.jpg"
+              // src="https://avatars.githubusercontent.com/u/106812942?s=400&u=321d027478cef5cefe38c9a0237b7f260d6277ed&v=4"
+            />
+          </abbr>
 
-          <h4 style={{ marginTop: "20px", color: "#61dc14" }}>
-            Frontend Developer
-          </h4>
-          <p
-            id="user-detail-intro"
-            style={{ letterSpacing: "1px", gap: "5px" }}
-          >
-            An experienced Frontend Developer specializing in React Native and
-            Angular.io with approximately 10 months of hands-on experience.
-            Demonstrates a strong learning mindset, adept at crafting scalable
-            and responsive websites. Possesses a blend of creative flair and
-            analytical acumen, ensuring meticulous attention to detail in
-            team-oriented environments.
-          </p>
-          <button id="resume-button-2" style={{ marginTop: "30px" }}>
-            <a
-              href={Suraj_Singh_Resume}
-              download
-              id="resume-link-2"
-              target="_blank"
-              onClick={() =>
-                window.open(
-                  "https://drive.google.com/file/d/1_2W1hdhR-5JlIG3MmL58MaETkNqWCJgH/view?usp=sharing"
-                )
-              }
-            >
-              <span>
-                <i className="bx bx-download"></i>
-              </span>
-              Resume
-            </a>
-          </button>
-        </div>
-      </section>
+          {/* https://avatars.githubusercontent.com/u/106812942?v=4 */}
+        </Box>
+        <Box
+          padding={{ base: "0px", md: "40px", lg: "50px" }}
+          marginTop={{ base: "30px", md: "20px", lg: "30px" }}
+          alignItems="center"
+          alignContent="center"
+          height="100%"
+          width={{ base: "100%", md: "50%", lg: "65%" }}
+          fontSize={"1.3rem"}
+          data-aos="fade-left"
+        >
+          <Text id="user-detail-intro" textAlign={"start"}>
+            A Full-Stack Web Developer specializing in MERN Stack with good
+            proficiency in HTML, CSS, JS, ReactJS, Redux, NodeJS, ExpressJS,
+            MongoDB, Data Structures and Algorithms. Has a Problem-Solving
+            mindset and the ability to perform well in a team.
+            <br />
+            <br />
+            Acquired 1200+ hours of coding and hands-on experience in cloning
+            websites. Looking forward to working as an accountable and competent
+            professional in an exciting tech organization.
+          </Text>
+        </Box>
+      </Flex>
     </>
   );
 };
 
 export default About;
+//about

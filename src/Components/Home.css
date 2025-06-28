@@ -1,0 +1,47 @@
+@keyframes animateImage {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(0.6);
+  }
+  75% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animated-image {
+  animation: animateImage 6s infinite;
+}
+/* @keyframes complexAnimation {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  25% {
+    transform: scale(0.8) rotate(45deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(0.5) rotate(90deg);
+    opacity: 0.5;
+  }
+  75% {
+    transform: scale(0.8) rotate(135deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1) rotate(180deg);
+    opacity: 1;
+  }
+}
+
+.animated-image {
+  animation: complexAnimation 5s infinite; 
+} */

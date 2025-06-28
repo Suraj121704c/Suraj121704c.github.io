@@ -1,504 +1,406 @@
-import React from "react";
-import { Box, Button, SimpleGrid, useColorMode } from "@chakra-ui/react";
-import gojo from "../assests/gojo.png";
-import luffy from "../assests/Luffy_TV.png";
-import pirate from "../assests/pirate.png";
-import style from "../assests/stylesup.png";
-import frames from "../assests/lenskart.png";
-import { FaGithub, FaEye } from "react-icons/fa";
-import TypeWriter from "./TypeWriter";
-import baba from "../assests/Chattinbaba.png";
+import React, { useEffect } from "react";
+import "animate.css/animate.min.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { Button, Text } from "@chakra-ui/react";
+import styled from "styled-components";
+import { Badge } from "antd";
 
-// const Projects = () => {
-//   return (
-//     <Box className="nav-link projects" id="nav-link-projects">
-//       <div
-//         id="projects"
-//         className="main_container"
-//         style={{
-//           // backgroundColor: "#edf2f8",
-//           // backgroundColor: "#2c1e4a",
-//           backgroundColor: "var(--bg-color)",
-//           color: "white",
-//         }}
-//       >
-//         <div className="project_container">
-//           <div className="project_heading">
-//             <h2 className="title">Projects</h2>
-//           </div>
+export default function Projects() {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
 
-//           <div className="project_grid">
-//             <SimpleGrid
-//               columns={[1, 1, 2]}
-//               spacing={100}
-//             >
-//               <Box>
-//                 <div
-//                   className="project_box project-card"
-//                   style={{
-//                     backgroundColor: "#1a202c",
-//                   }}
-//                 >
-//                   <div className="project_image">
-//                     <img src={frames} alt="Learning management" />
-//                   </div>
+  let projectsarr = [
+    {
+      anim: "flip-right",
+      image:
+        "https://user-images.githubusercontent.com/106812942/278866276-08e3e6cb-0648-4adb-a9fa-891a98e27d33.png",
+      name: "Organic Store",
+      dis: "An Organic Products website, Where person can buy all the Organics Food products..--",
+      pro: "Individuel - Project",
+      tstack: "React,HTML,CSS,JS,Axios,Tailwind CSS",
+      github: "https://github.com/mdfaizan973/ZC_ORG",
+      link: "https://organicstore.vercel.app/",
+    },
+    {
+      anim: "flip-left",
+      image:
+        "https://github.com/mdfaizan973/EduHub-idea_clan/assets/106812942/ccee7c0f-1acd-4791-8208-b09b973f5cb1",
+      name: "Learning Management System",
+      dis: "Learning Management System (LMS): A platform for students to learn programming.--",
+      pro: "Individuel - Project",
+      tstack:
+        "React,HTML,CSS,JS,Ant Design(CSS), Node.js, Express.js, Mongo DB",
+      github: "https://github.com/mdfaizan973/EduHub-idea_clan",
+      link: "https://faizanlms.vercel.app/",
+    },
+    {
+      anim: "zoom-in",
+      image:
+        "https://user-images.githubusercontent.com/106812942/262247221-6b79b2f0-da86-4fcb-b4f7-8abe6439712e.png",
+      name: "FashionZone",
+      dis: "A FashionZone is a website,Where person can buy the clothes as per the choice with famous brands.--",
+      pro: "Individuel - Project",
+      tstack: "React,Axios,React-Router-Dom",
+      github: "https://github.com/mdfaizan973/FashioZone/",
+      link: "https://myfashionzonefz.netlify.app/",
+    },
+    {
+      anim: "flip-right",
+      image:
+        "https://user-images.githubusercontent.com/106812942/255404404-dc6669bc-a638-4d99-95ed-5c4cf2b40cb9.png",
+      name: "RentEZ",
+      dis: "Welcome to RentEZ: Simplifying home rentals. Explore apartments and houses for rent. Your perfect living space, just a RentEZ away!--",
+      pro: "Individuel - Project",
+      tstack: "HTML,CSS,Angular,Python, Flask,Bootstrap",
+      github: "https://github.com/mdfaizan973/NEBULA",
+      link: "https://yes-5otwzwn11-mdfaizan973.vercel.app/",
+    },
+    {
+      anim: "flip-right",
+      image:
+        "https://user-images.githubusercontent.com/106812942/260703096-29803c53-ca47-4921-84de-97235c984ff6.png",
+      name: " Fc Food",
+      dis: "An experience Fc Food: Your gateway to gourmet pizzas, juicy burgers, exotic biryanis, and more. Delight in every bite!.--",
+      pro: "Individuel - Project",
+      tstack: "HTML,CSS,JavaScript,Bootstrap",
+      github: "https://github.com/mdfaizan973/Food_Website",
+      link: "https://food-fz.netlify.app/",
+    },
+    // {
+    //   anim: "flip-right",
+    //   image:
+    //     "https://user-images.githubusercontent.com/106812942/215109393-cfcfb68a-7de0-4554-9380-7d3b65e4f9b6.png",
+    //   name: "Skin-Care",
+    //   dis: "An E-Commerce website,Where user can buy skin related products.--",
+    //   pro: "Individuel - Project",
+    //   tstack: "HTML,CSS,JS",
+    //   github: "https://github.com/mdfaizan973/SkinCare_Clone",
+    //   link: "https://my-skincares.netlify.app/",
+    // },
+    // {
+    //   anim: "flip-right",
+    //   image:
+    //     "https://user-images.githubusercontent.com/106812942/214018158-224d47c0-2f3e-4a72-bc00-53ea918e6fdf.png",
+    //   name: "Fz-Shoes",
+    //   dis: "An E-Commerce website,Where user can buy all the products related to shoes.--",
+    //   pro: "Individuel - Project",
+    //   tstack: "React,Axios,Json-Server,React-Router-Dom",
+    //   github:
+    //     "https://github.com/mdfaizan973/thoughtless-scarecrow-7735/tree/main/T-S-7735/fz_shoes",
+    //   link: "https://fzshoes.netlify.app/",
+    // },
+    {
+      anim: "zoom-out",
+      image:
+        "https://user-images.githubusercontent.com/106812942/221214462-36c35e3a-f00e-4c5f-a874-aadc6a6503d2.png",
+      name: "Sweets-Flowers",
+      dis: "An E-commerce website, Where user can buy flowers, chocolates and beautiful gifts for burthdays or party.--",
+      pro: "Individuel - Project",
+      tstack: "React,Axios,Json-Server,React-Router-Dom",
+      github: "https://github.com/mdfaizan973/interesting-vase-9902",
+      link: "https://flowerfz.netlify.app/",
+    },
+    // {
+    //   anim: "zoom-out",
+    //   image:
+    //     "https://user-images.githubusercontent.com/106812942/218271324-c3071ba5-560d-4029-bcfe-9263fb982e5d.png",
+    //   name: "Furniture-Stock",
+    //   dis: " An E-commerce website, Where user can buy home or furniture related products.--",
+    //   pro: "Group - Project",
+    //   tstack: "HTML,CSS,JS,Json,Server",
+    //   github: "https://github.com/deepakChourasiya-aj/amiable-place-6800",
+    //   link: "https://sensational-druid-3f736c.netlify.app/",
+    // },
+    {
+      anim: "flip-left",
+      image:
+        "https://user-images.githubusercontent.com/106812942/229482067-fc289bf3-4d15-478c-81ea-aebd54b5950e.jpg",
+      name: "SmileKart",
+      dis: "An E-Commerce website,Where user can buy all the A to Z products.--",
+      pro: "Group - Project",
+      tstack: "React,Axios,Json-Server,React-Router-Dom,Redux",
+      github: "https://github.com/narender24681/innate-partner-2755",
+      link: "https://incandescent-cassata-f56374.netlify.app/",
+    },
+    {
+      anim: "flip-left",
+      image:
+        "https://github.com/mdfaizan973/mdfaizan973/assets/106812942/4eac3e09-97c4-4145-9cff-ce4c4ea5c93f",
+      name: "Clotho",
+      dis: "A Clothes website,Where user can buy dresses for mens, womens and kids.--",
+      pro: "Group - Project",
+      tstack: "React,Axios,React-Router-Dom,Redux,Node.js,MongooDB",
+      github: "https://github.com/hrithikvishwakarma001/incredible-birth-7157",
+      link: "https://clotho.vercel.app/",
+    },
+    {
+      anim: "zoom-in",
+      image:
+        "https://github.com/mdfaizan973/mdfaizan973/assets/106812942/a3f0797e-71b4-4d55-a9f0-a48d058e1ddc",
+      name: "FitnessFuel",
+      dis: "A Fitness website,Where person can know about body health and fix his own daily routine.--",
+      pro: "Group - Project",
+      tstack: "React,Axios,React-Router-Dom,Redux,Node.js,MongooDB,Telwind CSS",
+      github: "https://github.com/VivekTomar03/FitnessFuel",
+      link: "https://frontend-iota-blond.vercel.app/",
+    },
+  ];
 
-//                   <div className="project_name project-title">
-//                     <h2>Frames Lobbey</h2>
-//                   </div>
-//                   <div className="project_desc project-description">
-//                     <p>
-//                       This is one of the best project that I have made. This whole
-//                       website divides in two parts admin and user page. This whole
-//                       website is created by only in 4 days.
-//                     </p>
-//                   </div>
-//                   <div className="project_tech_stack project-tech-stack">
-//                     <h5>
-//                       <span>Tech Stack :</span> JavaScript, HTML, CSS, React,
-//                       ChakraUi
-//                     </h5>
-//                   </div>
-//                   <div className="project_icon">
-//                     <div className="github_link project-github-link">
-//                       <a
-//                         href="https://github.com/Suraj121704c/excellent-noise-5475/tree/main/glassworld"
-//                         rel="noopener norefferer"
-//                         target="_blank"
-//                       >
-//                         <FaGithub />
-//                       </a>
-//                     </div>
-//                     <div className="deploy_link project-deployed-link">
-//                       <a
-//                         href="https://glassworldheaven.netlify.app/"
-//                         rel="noopener norefferer"
-//                         target="_blank"
-//                       >
-//                         <FaEye />
-//                       </a>
-//                     </div>
-//                   </div>
-//                 </div>
-//               </Box>
-//               <Box>
-//                 <div
-//                   className="project_box project-card"
-//                   style={{
-//                     backgroundColor: "#1a202c",
-//                   }}
-//                 >
-//                   <div className="project_image">
-//                     <img src={style} alt="Learning managemen" />
-//                   </div>
-
-//                   <div className="project_name project-title">
-//                     <h2>Styles Up</h2>
-//                   </div>
-//                   <div className="project_desc project-description">
-//                     <p>
-//                       An E-Commerce Website : Clone of Paytm Mall . It is group
-//                       project created by four peopls and I was the team Lead.
-//                     </p>
-//                   </div>
-//                   <div className="project_tech_stack project-tech-stack">
-//                     <h5>
-//                       <span>Tech Stack :</span> React, JavaScript, HTML, CSS,
-//                       Redux, ChakraUi
-//                     </h5>
-//                   </div>
-//                   <div className="project_icon">
-//                     <div className="github_link project-github-link">
-//                       <a
-//                         href="https://github.com/Suraj121704c/-easy-rose-1070/tree/main/paytm-mall"
-//                         rel="noopener norefferer"
-//                         target="_blank"
-//                       >
-//                         <FaGithub />
-//                       </a>
-//                     </div>
-//                     <div className="deploy_link project-deployed-link">
-//                       <a
-//                         href="https://styesup123112.netlify.app/"
-//                         rel="noopener norefferer"
-//                         target="_blank"
-//                       >
-//                         <FaEye />
-//                       </a>
-//                     </div>
-//                   </div>
-//                 </div>
-//               </Box>
-//               <Box>
-//                 <div
-//                   className="project_box project-card"
-//                   style={{
-//                     backgroundColor: "#1a202c",
-//                   }}
-//                 >
-//                   <div className="project_image">
-//                     <img src={gojo} alt="Learning managemen" />
-//                   </div>
-
-//                   <div className="project_name project-title">
-//                     <h2>Gojo Store</h2>
-//                   </div>
-//                   <div className="project_desc project-description">
-//                     <p>
-//                       Its an Indivisual Project completed withing 4 days and this
-//                       is my first project in Masai School.
-//                     </p>
-//                   </div>
-//                   <div className="project_tech_stack project-tech-stack">
-//                     <h5>
-//                       <span>Tech Stack :</span> JavaScript, HTML, CSS
-//                     </h5>
-//                   </div>
-//                   <div className="project_icon">
-//                     <div className="github_link project-github-link">
-//                       <a
-//                         href="https://github.com/Suraj121704c/divine-eggnog-8153"
-//                         rel="noopener norefferer"
-//                         target="_blank"
-//                       >
-//                         <FaGithub />
-//                       </a>
-//                     </div>
-//                     <div className="deploy_link project-deployed-link">
-//                       <a
-//                         href="https://glistening-sherbet-5d15f0.netlify.app/"
-//                         rel="noopener norefferer"
-//                         target="_blank"
-//                       >
-//                         <FaEye />
-//                       </a>
-//                     </div>
-//                   </div>
-//                 </div>
-//               </Box>
-//               <Box>
-//                 <div
-//                   className="project_box project-card"
-//                   style={{
-//                     backgroundColor: "#1a202c",
-//                   }}
-//                 >
-//                   <div className="project_image">
-//                     <img src={pirate} alt="Learning managemen" />
-//                   </div>
-
-//                   <div className="project_name project-title">
-//                     <h2>Pirated Store</h2>
-//                   </div>
-//                   <div className="project_desc project-description">
-//                     <p>
-//                       An Platform that helps in buying products. This website is a
-//                       clone of geeksbuying. Created by the group of 4.
-//                     </p>
-//                   </div>
-//                   <div className="project_tech_stack project-tech-stack">
-//                     <h5>
-//                       <span>Tech Stack :</span> Advance JavaScript, HTML, CSS
-//                     </h5>
-//                   </div>
-//                   <div className="project_icon">
-//                     <div className="github_link project-github-link">
-//                       <a
-//                         href="https://github.com/Shahid77137/abundant-coat-8487_"
-//                         rel="noopener norefferer"
-//                         target="_blank"
-//                       >
-//                         <FaGithub />
-//                       </a>
-//                     </div>
-//                     <div className="deploy_link project-deployed-link">
-//                       <a
-//                         href="https://nimble-crostata-869bd1.netlify.app/"
-//                         rel="noopener norefferer"
-//                         target="_blank"
-//                       >
-//                         <FaEye />
-//                       </a>
-//                     </div>
-//                   </div>
-//                 </div>
-//               </Box>
-//             </SimpleGrid>
-//           </div>
-//         </div>
-//       </div>
-//     </Box>
-//   );
-// };
-// export default Projects;
-
-// import React from "react";
-import geek from "../assests/pirate.png";
-import lens from "../assests/lenskart.png";
-import stale from "../assests/stylesup.png";
-import { SiNetlify } from "react-icons/si";
-// import gojo from "../assests/gojo.png";
-import { AiFillGithub } from "react-icons/ai";
-
-const typeWriter1 = ["GlassWorld"];
-const typeWriter2 = ["Styles Up"];
-const typeWriter3 = ["Gojo Store"];
-const typeWriter4 = ["Pirated Store"];
-const typeWriter5 = ["Chating Baba"];
-const typeWriter6 = ["Luffy TV"];
-
-const Projects = () => {
   return (
-    <>
-      <section id="projects">
-        <div className="main-text">
-          <h2>
-            <span>Projects</span>
-          </h2>
-          <p style={{ marginTop: "2%" }}>
-            Some of the things that i have built...
-          </p>
-        </div>
+    <DIV className="top" id="projects">
+      <h1
+        className="project-title"
+        style={{ fontSize: "3rem", marginTop: "5px" }}
+      >
+        PROJECTS
+      </h1>
 
-        <div className="nav-link projects" id="nav-link-projects">
-          <div className="project-card">
-            <img src={frames} alt="" />
-            <div className="layer">
-              <h5 className="project-title">
-                <TypeWriter data={typeWriter1} />
-              </h5>
-              <p className="project-description">
-                <span>Description : </span> GlassWorld is a online glass shop
-                inspired by lenskart.com, that follows the latest trends, aimed
-                at all the age group peoples of india.
-              </p>
-              <p className="project-tech-stack">
-                <span>Tech-Stack : </span> REACT, JS, HTML, CSS, CHAKRA
-                UI,CONTEXT-API
-              </p>
-              <div id="project-links">
-                <div className="project-deployed-link">
+      <div>
+        {projectsarr.map((ele, i) => (
+          <div className="animation project-card" data-aos="zoom-in-up">
+            <div className="pro-img">
+              <img src={ele.image} data-aos="fade-up-right" alt="pro_img" />
+            </div>{" "}
+            <div className="pro-dis">
+              <h1 className="title-pro project-title">{ele.name}</h1>
+              <h1 className="project-description">
+                {ele.dis}
+                <span style={{ fontSize: "1rem", color: "teal" }}>
+                  {ele.pro}
+                </span>
+              </h1>
+
+              <Text
+                style={{ fontSize: "1rem", fontWeight: "700" }}
+                className="project-tech-stack"
+              >
+                {ele.tstack}
+              </Text>
+              <div className="dep-btn">
+                <Button data-aos="fade-down-right">
                   <a
-                    href="https://glassworldheaven.netlify.app/"
+                    className="project-github-link"
+                    href={ele.github}
                     target="_blank"
+                    rel="noreferrer"
                   >
-                    <i>
-                      <FaEye />
-                    </i>
+                    Github
                   </a>
-                </div>
-                <div className="project-github-link">
+                </Button>
+                <Button data-aos="fade-down-left">
                   <a
-                    href="https://github.com/Suraj121704c/excellent-noise-5475"
+                    className="project-deployed-link"
+                    href={ele.link}
                     target="_blank"
-                    id="project-deployed-link"
+                    rel="noreferrer"
                   >
-                    <i>
-                      <AiFillGithub />
-                    </i>
+                    Live
                   </a>
-                </div>
+                </Button>
               </div>
             </div>
           </div>
-
-          <div className="project-card">
-            <img src={style} alt="" />
-            <div className="layer">
-              <h5 className="project-title">
-                <TypeWriter data={typeWriter2} />
-              </h5>
-              <p className="project-description">
-                <span>Description : </span> An E-Commerce Website : Clone of
-                Paytm Mall . It is group project created by four peopls and I
-                was the team Lead. We created this website in 4 days time
-                period.
-              </p>
-              <p className="project-tech-stack">
-                <span>Tech-Stack : </span> HTML , CSS, JS, REACT, CHAKRA UI,
-                REDUX
-              </p>
-              <div id="project-links">
-                <div className="project-deployed-link">
-                  <a href="https://stylesup121.vercel.app/" target="_blank">
-                    <i>
-                      <FaEye />
-                    </i>
-                  </a>
-                </div>
-                <div className="project-github-link">
-                  <a
-                    href="https://github.com/Suraj121704c/-easy-rose-1070"
-                    target="_blank"
-                    id="project-deployed-link"
-                  >
-                    <i>
-                      <AiFillGithub />
-                    </i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="project-card">
-            <img src={luffy} alt="" />
-            <div className="layer">
-              <h5 className="project-title">
-                <TypeWriter data={typeWriter6} />
-              </h5>
-              <p className="project-description">
-                <span>Description : </span> The Project is inspired from pirated
-                sites and trying to create a clone of pirated movie site.
-              </p>
-              <p className="project-tech-stack">
-                <span>Tech-Stack : </span> HTML, CSS, JS
-              </p>
-              <div id="project-links">
-                <div className="project-deployed-link">
-                  <a
-                    href="https://65f282ddd301167746000432--ephemeral-taffy-9ac928.netlify.app/"
-                    target="_blank"
-                  >
-                    <i>
-                      <FaEye />
-                    </i>
-                  </a>
-                </div>
-                <div className="project-github-link">
-                  <a
-                    href="https://github.com/Suraj121704c/Luffy-TV.git"
-                    target="_blank"
-                    id="project-deployed-link"
-                  >
-                    <i>
-                      <AiFillGithub />
-                    </i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="project-card">
-            <img src={gojo} alt="" />
-            <div className="layer">
-              <h5 className="project-title">
-                <TypeWriter data={typeWriter3} />
-              </h5>
-              <p className="project-description">
-                <span>Description : </span> The Project is inspired from Yoox
-                which is a major foreign fashion e-commerce company.
-              </p>
-              <p className="project-tech-stack">
-                <span>Tech-Stack : </span> HTML, CSS, JS
-              </p>
-              <div id="project-links">
-                <div className="project-deployed-link">
-                  <a
-                    href="https://majestic-palmier-e45e65.netlify.app/"
-                    target="_blank"
-                  >
-                    <i>
-                      <FaEye />
-                    </i>
-                  </a>
-                </div>
-                <div className="project-github-link">
-                  <a
-                    href="https://github.com/Suraj121704c/divine-eggnog-8153"
-                    target="_blank"
-                    id="project-deployed-link"
-                  >
-                    <i>
-                      <AiFillGithub />
-                    </i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="project-card">
-            <img src={pirate} alt="" />
-            <div className="layer">
-              <h5 className="project-title">
-                <TypeWriter data={typeWriter4} />
-              </h5>
-              <p className="project-description">
-                <span>Description : </span> An Platform that helps in buying
-                products. This website is a clone of geeksbuying. Created by the
-                group of 4..
-              </p>
-              <p className="project-tech-stack">
-                <span>Tech-Stack : </span> HTML, CSS, Advance Js
-              </p>
-              <div id="project-links">
-                <div className="project-deployed-link">
-                  <a
-                    href="https://nimble-crostata-869bd1.netlify.app/"
-                    target="_blank"
-                  >
-                    <i>
-                      <FaEye />
-                    </i>
-                  </a>
-                </div>
-                <div className="project-github-link">
-                  <a
-                    href="https://github.com/Shahid77137/abundant-coat-8487"
-                    target="_blank"
-                    id="project-deployed-link"
-                  >
-                    <i>
-                      <FaGithub />
-                    </i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="project-card">
-            <img src={baba} alt="" />
-            <div className="layer">
-              <h5 className="project-title">
-                <TypeWriter data={typeWriter5} />
-              </h5>
-              <p className="project-description">
-                <span>Description : </span> An Platform that helps in chating
-                real time. This website is not a clone just been created by my
-                own visualisation.
-              </p>
-              <p className="project-tech-stack">
-                <span>Tech-Stack : </span> HTML, CSS, JavaScript, NodeJs
-              </p>
-              <div id="project-links">
-                <div className="project-deployed-link">
-                  <a href="https://baba-vcqq.onrender.com/" target="_blank">
-                    <i>
-                      <FaEye />
-                    </i>
-                  </a>
-                </div>
-                <div className="project-github-link">
-                  <a
-                    href="https://github.com/Suraj121704c/chatBot/tree/main"
-                    target="_blank"
-                    id="project-deployed-link"
-                  >
-                    <i>
-                      <FaGithub />
-                    </i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
+        ))}
+      </div>
+      <br />
+      <hr />
+    </DIV>
   );
-};
+}
 
-export default Projects;
+const DIV = styled.div`
+  margin-top: 50px;
+
+  .animation {
+    width: 50%;
+    height: 100%;
+    margin: 20px auto;
+    //  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15),
+      0 4px 12px rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #e8e8e8;
+  }
+
+  .proj-title {
+    font-size: 3rem;
+    margin: 5px 0;
+  }
+
+  .title-pro {
+    font-size: 1.6rem;
+  }
+
+  .animation div {
+    width: 50%;
+  }
+
+  .pro-dis {
+    text-align: center;
+    justify-content: center;
+    line-height: 1.6;
+    font-size: 1.1rem;
+  }
+
+  .dep-btn {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  img {
+    border-radius: 10px;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; */
+  }
+
+  img:hover {
+    box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+  }
+
+  @media screen and (max-width: 768px) {
+    .animation {
+      width: 95%;
+      margin: 15px auto;
+      flex-direction: column;
+      padding: 0 !important;
+    }
+
+    .proj-title {
+      font-size: 1.5rem;
+    }
+
+    .title-pro {
+      font-size: 1.2rem;
+    }
+
+    .pro-img {
+      width: 95% !important;
+    }
+
+    .dep-btn {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .dep-btn button {
+      margin: 5px;
+      font-size: 0.8rem;
+    }
+
+    .pro-img img {
+      width: 100%;
+    }
+
+    .pro-dis {
+      line-height: 1.2;
+      font-size: 0.8rem;
+      width: 90% !important;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    .animation {
+      width: 90%;
+    }
+
+    .proj-title {
+      font-size: 1.9rem;
+    }
+
+    .title-pro {
+      font-size: 1.4rem;
+    }
+
+    .pro-dis {
+      font-size: 1rem;
+    }
+  }
+
+  /* .animation {
+    width: 50%;
+    height: 100%;
+    margin: 20px auto;
+    box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .proj-title {
+    font-size: 3rem;
+    margin: 5px 0;
+  }
+  .title-pro {
+    font-size: 1.6rem;
+  }
+  .animation div {
+    width: 50%;
+  }
+  .pro-dis {
+    text-align: center;
+    justify-content: center;
+    line-height: 1.6;
+    font-size: 1.1rem;
+  }
+  .dep-btn {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 10px auto;
+  }
+  img {
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  }
+  img:hover {
+    box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+  }
+  @media screen and (min-width: 100px) and (max-width: 450px) {
+    width: 90%;
+    margin: auto;
+    .animation {
+      display: flex;
+      flex-direction: column;
+      padding: 0 !important;
+      width: 100%;
+    }
+   
+    .title-pro {
+      font-size: 1rem;
+    }
+    .pro-img {
+      width: 95% !important;
+    }
+    .pro-img img {
+      width: 100%;
+    }
+    .animation:hover {
+      width: 100%;
+      border-radius: 20px;
+    }
+    .pro-dis {
+      line-height: 1.2;
+      font-size: 0.7rem;
+    }
+  } */
+`;
+// {
+//   anim: "",
+//   image: "",
+//   name: "",
+//   dis: "",
+//   pro: "",
+//   tstack: "",
+//   github: "",
+//   link: "",
+// },
