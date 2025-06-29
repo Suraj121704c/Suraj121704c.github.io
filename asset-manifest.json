@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Suraj121704c/static/css/main.c70df9fd.css",
-    "main.js": "/Suraj121704c/static/js/main.c392880e.js",
-    "static/js/787.55722989.chunk.js": "/Suraj121704c/static/js/787.55722989.chunk.js",
-    "static/media/Md_Faizan_resumenew.pdf": "/Suraj121704c/static/media/Md_Faizan_resumenew.ccc5a2acd40b17326d60.pdf",
-    "static/media/Suraj_Singh_CV.pdf": "/Suraj121704c/static/media/Suraj_Singh_CV.2ca272b7fc29d16981f4.pdf",
-    "static/media/photo.jpg": "/Suraj121704c/static/media/photo.11faf30452e3816f63ef.jpg",
-    "static/media/Suraj_Singh.jpg": "/Suraj121704c/static/media/Suraj_Singh.a5632119ddce37f4c372.jpg",
-    "index.html": "/Suraj121704c/index.html",
-    "main.c70df9fd.css.map": "/Suraj121704c/static/css/main.c70df9fd.css.map",
-    "main.c392880e.js.map": "/Suraj121704c/static/js/main.c392880e.js.map",
-    "787.55722989.chunk.js.map": "/Suraj121704c/static/js/787.55722989.chunk.js.map"
+    "main.css": "/static/css/main.c70df9fd.css",
+    "main.js": "/static/js/main.694be103.js",
+    "static/js/787.55722989.chunk.js": "/static/js/787.55722989.chunk.js",
+    "static/media/Md_Faizan_resumenew.pdf": "/static/media/Md_Faizan_resumenew.ccc5a2acd40b17326d60.pdf",
+    "static/media/Suraj_Singh_CV.pdf": "/static/media/Suraj_Singh_CV.2ca272b7fc29d16981f4.pdf",
+    "static/media/photo.jpg": "/static/media/photo.11faf30452e3816f63ef.jpg",
+    "static/media/Suraj_Singh.jpg": "/static/media/Suraj_Singh.a5632119ddce37f4c372.jpg",
+    "index.html": "/index.html",
+    "main.c70df9fd.css.map": "/static/css/main.c70df9fd.css.map",
+    "main.694be103.js.map": "/static/js/main.694be103.js.map",
+    "787.55722989.chunk.js.map": "/static/js/787.55722989.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c70df9fd.css",
-    "static/js/main.c392880e.js"
+    "static/js/main.694be103.js"
   ]
 }
