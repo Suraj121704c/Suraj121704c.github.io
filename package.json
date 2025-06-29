@@ -1,6 +1,6 @@
 {
-  "homepage": "https://mdfaizan973.github.io",
-  "name": "faizans-portfolios",
+  "homepage": "https://github.com/Suraj121704c",
+  "name": "suraj-portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -65,5 +65,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
