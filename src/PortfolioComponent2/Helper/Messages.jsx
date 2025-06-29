@@ -17,7 +17,7 @@ export default function Messages() {
     }
 
     const emailParams = {
-      to_name: "Md Faizan",
+      to_name: "Suraj Singh",
       from_name: values.email,
       message: values.messages,
       from_email: values.email,
@@ -25,7 +25,7 @@ export default function Messages() {
 
     emailjs
       .send(
-        "faizanservice11",
+        "surajservice11",
         "template_t8n37l5",
         { ...emailParams },
         "nofDJb3u1FkZQ7btt"

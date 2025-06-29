@@ -1,0 +1,144 @@
+.contact-wrapper {
+  padding: 20px;
+  /* background-color: #f9f9f9; */
+}
+
+@media (max-width: 768px) {
+  .contact-wrapper {
+    padding: 15px;
+  }
+}
+
+.content-wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+}
+
+.contact-list {
+  background-color: #daf7f1;
+  width: 50%;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .contact-list {
+    width: 100%;
+  }
+}
+
+.map-section {
+  background-color: #d7def1;
+  width: 320px;
+  height: 320px; /* Maintain 1:1 aspect ratio for the circle */
+  border-radius: 50%; /* Creates the circular shape */
+  padding: 10px;
+  margin: 0 auto; /* Center horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centers the content inside */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .map-section {
+    width: 240px;
+    height: 240px;
+  }
+}
+
+.styled-contact {
+  display: flex;
+  align-items: center;
+  background-color: #48a3a6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 15px 20px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-bottom: 15px;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.styled-contact:hover {
+  background-color: #367d82;
+  transform: translateY(-3px);
+}
+
+.styled-contact span {
+  margin-left: 12px;
+  font-size: 18px;
+  color: #f0f0f0;
+}
+
+.styled-contact svg {
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  .styled-contact {
+    padding: 10px 15px;
+    font-size: 16px;
+  }
+  
+  .styled-contact span {
+    font-size: 16px;
+  }
+}
+
+.social-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.social-link {
+  background-color: #daf7f1;
+  color: white;
+  border-radius: 50%;
+  padding: 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+  color: black;
+}
+
+.social-link:hover {
+  background-color: #367d82;
+  transform: translateY(-3px);
+}
+
+.social-link svg {
+  font-size: 1.2rem;
+}
+
+.thank-you-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thank-you-image {
+  margin-left: 25px;
+}
+
+.contact-photo {
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+} 
