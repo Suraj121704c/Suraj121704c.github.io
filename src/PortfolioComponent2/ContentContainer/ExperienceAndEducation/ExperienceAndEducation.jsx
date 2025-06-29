@@ -1,9 +1,12 @@
 import React from "react";
+import { useColorMode } from "@chakra-ui/react";
 import HeaderSection from "../../Helper/HeaderSection";
 import styled from "@emotion/styled";
 import EducationTimelineCard from "./EducationTimelineCard";
 
 export default function ExperienceAndEducation() {
+  const { colorMode } = useColorMode();
+
   // Combined timeline data
   const timelineData = [
     {
@@ -37,7 +40,7 @@ export default function ExperienceAndEducation() {
   ];
 
   return (
-    <EducationExperienceStyled id="Expe_Edu">
+    <EducationExperienceStyled id="Expe_Edu" colorMode={colorMode}>
       <HeaderSection title="Experience & Education" />
       <TimelineContainer>
         <EducationTimelineCard data={timelineData} combined />
@@ -48,6 +51,8 @@ export default function ExperienceAndEducation() {
 
 const EducationExperienceStyled = styled.div`
   margin-top: 10px;
+  color: ${({ colorMode }) => (colorMode === "dark" ? "white" : "black")};
+  transition: color 0.3s ease;
   animation: fadeIn 0.6s ease-out;
   @keyframes fadeIn {
     from {

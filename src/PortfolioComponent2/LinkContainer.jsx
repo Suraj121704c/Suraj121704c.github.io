@@ -1,12 +1,16 @@
 import styled from "@emotion/styled";
 import React from "react";
+import { useColorMode } from "@chakra-ui/react";
 import { FaGithub, FaUserAstronaut } from "react-icons/fa";
 import { RiProjector2Fill } from "react-icons/ri";
 import { FaFileAlt } from "react-icons/fa";
 import { MdContactPhone } from "react-icons/md";
 import { GiSkills } from "react-icons/gi";
 import { MdWorkHistory } from "react-icons/md";
+
 export default function LinkContainer() {
+  const { colorMode } = useColorMode();
+
   return (
     <MainLinkContainer>
       <div className="inner_container">
@@ -15,6 +19,7 @@ export default function LinkContainer() {
             background={ele.background}
             title={ele.text}
             key={i}
+            colorMode={colorMode}
           >
             <a href={`#${ele.id}`}>{ele.icons}</a>
 
@@ -83,7 +88,7 @@ const MainLinkContainer = styled.div`
     margin: auto;
   }
 `;
-export const LinkContainerStyled = styled.div(({ background }) => ({
+export const LinkContainerStyled = styled.div(({ background, colorMode }) => ({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -93,8 +98,9 @@ export const LinkContainerStyled = styled.div(({ background }) => ({
   fontSize: "1.5rem",
   marginTop: "10px",
   cursor: "pointer",
-  background: "#daf7f1",
-  transition: "transform 0.7s ease",
+  background: colorMode === "dark" ? "#2d3748" : "#daf7f1",
+  color: colorMode === "dark" ? "white" : "black",
+  transition: "transform 0.7s ease, background-color 0.3s ease",
   textAlign: "center",
   fontWeight: "bold",
   borderRadius: "66% 34% 41% 59% / 55% 38% 62% 45% ",
@@ -102,7 +108,7 @@ export const LinkContainerStyled = styled.div(({ background }) => ({
     transform: "scale(1.1)",
     boxShadow:
       "rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset",
-    // background: background || "#daf7f1",
+    background: background || (colorMode === "dark" ? "#4a5568" : "#daf7f1"),
     // color: "white",
   },
 }));

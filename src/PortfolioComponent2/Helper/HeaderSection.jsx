@@ -1,9 +1,12 @@
 import styled from "@emotion/styled";
 import React from "react";
+import { useColorMode } from "@chakra-ui/react";
 
 export default function HeaderSection({ title }) {
+  const { colorMode } = useColorMode();
+
   return (
-    <HeaderDivStyled>
+    <HeaderDivStyled colorMode={colorMode}>
       <div className="title_container">
         <h1 className="header_title">{title}</h1>
         <div className="header_line"></div>
@@ -24,10 +27,14 @@ const HeaderDivStyled = styled.div`
   }
   .header_title {
     font-size: 2rem;
+    color: ${({ colorMode }) => (colorMode === "dark" ? "white" : "black")};
+    transition: color 0.3s ease;
   }
   .header_line {
     width: 50%;
     height: 4px;
-    background-color: #daf7f1;
+    background-color: ${({ colorMode }) =>
+      colorMode === "dark" ? "#2d3748" : "#daf7f1"};
+    transition: background-color 0.3s ease;
   }
 `;

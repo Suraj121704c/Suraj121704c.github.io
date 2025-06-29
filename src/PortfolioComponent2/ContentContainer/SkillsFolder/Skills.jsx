@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useColorMode } from "@chakra-ui/react";
 import HeaderSection from "../../Helper/HeaderSection";
 import styled from "@emotion/styled";
 import FrontEndSkills from "./FrontEndSkills";
@@ -8,6 +9,7 @@ import TabSelection from "../../Helper/TabSelection";
 import MobileSkills from "./MobileSkills";
 
 export default function Skills() {
+  const { colorMode } = useColorMode();
   const tabsNames = [
     {
       tabName: "Mobile",
@@ -43,7 +45,9 @@ export default function Skills() {
           ))}
       </TabsContainerStyled>
 
-      <TabComponentStyled>{selectedTab.component}</TabComponentStyled>
+      <TabComponentStyled colorMode={colorMode}>
+        {selectedTab.component}
+      </TabComponentStyled>
     </SkillsContainerStyled>
   );
 }
@@ -60,5 +64,6 @@ export const TabsContainerStyled = styled.div`
 export const TabComponentStyled = styled.div`
   width: 95%;
   margin: 20px auto;
-  color: #75797c;
+  color: ${({ colorMode }) => (colorMode === "dark" ? "#e2e8f0" : "#75797c")};
+  transition: color 0.3s ease;
 `;

@@ -4,6 +4,7 @@ import { MdEmail, MdLocationOn, MdWhatsapp } from "react-icons/md";
 import { ImLinkedin } from "react-icons/im";
 import { FaGithub, FaYoutube } from "react-icons/fa";
 import { BsTwitter } from "react-icons/bs";
+import { useColorMode } from "@chakra-ui/react";
 
 // user defined imports
 import ContactSection from "./SidebarContent/ContactSection";
@@ -13,6 +14,8 @@ import { Suraj_Singh } from "../utils/images.js";
 import SURAJ_SINGH_CV from "../assets/Suraj_Singh_CV.pdf";
 
 export default function Sidebar() {
+  const { colorMode } = useColorMode();
+
   const contectArray = [
     {
       icon: <MdWhatsapp />,
@@ -61,7 +64,7 @@ export default function Sidebar() {
   ];
   return (
     <>
-      <SidebarContainerStyled>
+      <SidebarContainerStyled colorMode={colorMode}>
         <div className="profile_image">
           <img src={Suraj_Singh} alt="profile" />
         </div>
@@ -116,7 +119,8 @@ const SidebarContainerStyled = styled.div`
     margin-top: -100px;
     margin-bottom: 20px;
     border-radius: 43% 57% 55% 45% / 27% 44% 56% 73%;
-    border: 2px solid #000;
+    border: 2px solid
+      ${({ colorMode }) => (colorMode === "dark" ? "#e2e8f0" : "#000")};
   }
   .profile_image img {
     object-fit: cover;
@@ -125,13 +129,17 @@ const SidebarContainerStyled = styled.div`
   .name {
     font-size: 1.7rem;
     padding: 5px;
+    color: ${({ colorMode }) => (colorMode === "dark" ? "white" : "black")};
   }
 
   .border_card {
     width: 70%;
     margin: auto;
     border-radius: 5px;
-    background-color: #f4f6f5;
+    background-color: ${({ colorMode }) =>
+      colorMode === "dark" ? "#2d3748" : "#f4f6f5"};
+    color: ${({ colorMode }) => (colorMode === "dark" ? "white" : "black")};
+    transition: all 0.3s ease;
   }
   .socialmedia_section {
     width: 75%;

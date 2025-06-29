@@ -1,11 +1,13 @@
 import styled from "@emotion/styled";
 import React from "react";
+import { useColorMode } from "@chakra-ui/react";
 
 export default function TabSelection({ allTabs, onTabCLick }) {
+  const { colorMode } = useColorMode();
   const { tabName } = allTabs;
 
   return (
-    <TabsContainerStyled>
+    <TabsContainerStyled colorMode={colorMode}>
       <div className="tabs" onClick={onTabCLick}>
         {tabName && tabName}
       </div>
@@ -22,6 +24,8 @@ const TabsContainerStyled = styled.div`
     position: relative;
     display: inline-block;
     text-decoration: none;
+    color: ${({ colorMode }) => (colorMode === "dark" ? "white" : "black")};
+    transition: color 0.3s ease;
   }
 
   .tabs::after {
@@ -31,7 +35,8 @@ const TabsContainerStyled = styled.div`
     bottom: 0;
     height: 2px;
     width: 0;
-    background-color: black;
+    background-color: ${({ colorMode }) =>
+      colorMode === "dark" ? "white" : "black"};
     transition: width 0.3s ease;
   }
 

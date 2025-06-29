@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "@emotion/styled";
 import AnimatedCursor from "react-animated-cursor";
+import { useColorMode, IconButton } from "@chakra-ui/react";
+import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
 // user defined imports
 import MiddleContaner from "../PortfolioComponent2/MiddleContaner";
@@ -11,6 +13,8 @@ import Messages from "../PortfolioComponent2/Helper/Messages";
 import Sidebar from "../PortfolioComponent2/Sidebar";
 
 export default function PortfolioVersion2() {
+  const { colorMode, toggleColorMode } = useColorMode();
+
   return (
     <>
       <AnimatedCursor />
@@ -22,7 +26,19 @@ export default function PortfolioVersion2() {
         <Messages />
       </MessageStickyContainer>
 
-      <MainPortfolioTwoContainer>
+      {/* Theme Toggle Button */}
+      <ThemeToggleContainer>
+        <IconButton
+          aria-label="Toggle theme"
+          icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+          onClick={toggleColorMode}
+          size="md"
+          borderRadius="full"
+          colorScheme={colorMode === "light" ? "gray" : "yellow"}
+        />
+      </ThemeToggleContainer>
+
+      <MainPortfolioTwoContainer colorMode={colorMode}>
         <div className="sidebarcontainer">
           <Sidebar />
         </div>
@@ -56,8 +72,11 @@ const MainPortfolioTwoContainer = styled.div`
     height: 38rem;
     position: fixed;
     left: 5%;
-    background-color: white;
+    background-color: ${({ colorMode }) =>
+      colorMode === "dark" ? "#1a202c" : "white"};
+    color: ${({ colorMode }) => (colorMode === "dark" ? "white" : "black")};
     border-radius: 20px;
+    transition: all 0.3s ease;
   }
 
   .maincontainer {
@@ -66,8 +85,11 @@ const MainPortfolioTwoContainer = styled.div`
     /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
     margin-left: 27%;
     overflow-y: auto;
-    background-color: white;
+    background-color: ${({ colorMode }) =>
+      colorMode === "dark" ? "#1a202c" : "white"};
+    color: ${({ colorMode }) => (colorMode === "dark" ? "white" : "black")};
     border-radius: 20px;
+    transition: all 0.3s ease;
   }
 
   .linkcontainer {
@@ -76,8 +98,11 @@ const MainPortfolioTwoContainer = styled.div`
     height: 35rem;
     position: fixed;
     right: 5%;
-    background-color: white;
+    background-color: ${({ colorMode }) =>
+      colorMode === "dark" ? "#1a202c" : "white"};
+    color: ${({ colorMode }) => (colorMode === "dark" ? "white" : "black")};
     border-radius: 20px;
+    transition: all 0.3s ease;
   }
 
   @media (min-width: 100px) and (max-width: 1000px) {
@@ -111,5 +136,12 @@ const MessageStickyContainer = styled.div`
   position: fixed;
   top: 30px;
   left: 30px;
+  z-index: 9999 !important;
+`;
+
+const ThemeToggleContainer = styled.div`
+  position: fixed;
+  top: 30px;
+  right: 30px;
   z-index: 9999 !important;
 `;

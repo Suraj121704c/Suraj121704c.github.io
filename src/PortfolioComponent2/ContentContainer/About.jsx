@@ -1,9 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useColorMode } from "@chakra-ui/react";
 import HeaderSection from "../Helper/HeaderSection";
 import styled from "@emotion/styled";
 import Typed from "typed.js";
 
 export default function About() {
+  const { colorMode } = useColorMode();
   const typedElementRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -35,7 +37,7 @@ export default function About() {
   }, []);
 
   return (
-    <AboutContainerStyled id="About">
+    <AboutContainerStyled id="About" colorMode={colorMode}>
       <HeaderSection title={"About"} />
 
       <div className={`about_content ${isVisible ? "visible" : ""}`}>
@@ -82,7 +84,7 @@ export default function About() {
 const AboutContainerStyled = styled.div`
   .about_content {
     text-align: start;
-    color: #75797c;
+    color: ${({ colorMode }) => (colorMode === "dark" ? "#e2e8f0" : "#75797c")};
     font-size: 1.05rem;
     opacity: 0;
     transform: translateY(30px);
@@ -104,7 +106,7 @@ const AboutContainerStyled = styled.div`
   .multiple-text {
     font-size: 1.8rem;
     font-weight: 600;
-    color: #2c3e50;
+    color: ${({ colorMode }) => (colorMode === "dark" ? "#f7fafc" : "#2c3e50")};
     text-align: center;
     width: 100%;
 
@@ -154,7 +156,7 @@ const AboutContainerStyled = styled.div`
 
   .keyword-highlight {
     position: relative;
-    color: #3498db;
+    color: ${({ colorMode }) => (colorMode === "dark" ? "#63b3ed" : "#3498db")};
     transition: all 0.3s ease;
 
     &::after {
@@ -164,12 +166,17 @@ const AboutContainerStyled = styled.div`
       left: 0;
       width: 0;
       height: 2px;
-      background: linear-gradient(90deg, #3498db, #2980b9);
+      background: linear-gradient(
+        90deg,
+        ${({ colorMode }) => (colorMode === "dark" ? "#63b3ed" : "#3498db")},
+        ${({ colorMode }) => (colorMode === "dark" ? "#3182ce" : "#2980b9")}
+      );
       transition: width 0.3s ease;
     }
 
     &:hover {
-      color: #2980b9;
+      color: ${({ colorMode }) =>
+        colorMode === "dark" ? "#3182ce" : "#2980b9"};
       transform: translateY(-1px);
 
       &::after {

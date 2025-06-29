@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import React from "react";
+import { useColorMode } from "@chakra-ui/react";
 import { Tag } from "antd";
 
 // Main projects array (from BigProject)
@@ -126,25 +127,30 @@ const mini_project_list = [
 ];
 
 export default function Projects() {
+  const { colorMode } = useColorMode();
+
   return (
     <>
-      <SectionTitle>Projects</SectionTitle>
+      <SectionTitle colorMode={colorMode}>Projects</SectionTitle>
       <ProjectGrid>
         {main_projects.map((ele, i) => (
-          <ProjectCardStyled key={i} bg={ele.bg}>
+          <ProjectCardStyled key={i} bg={ele.bg} colorMode={colorMode}>
             <CardOverlay>
               <CardContent>
                 <CardHeader>
-                  <Title>{ele.title}</Title>
+                  <Title colorMode={colorMode}>{ele.title}</Title>
                 </CardHeader>
-                <Description>
+                <Description colorMode={colorMode}>
                   {ele.description.length > 100
                     ? ele.description.slice(0, 100) + "..."
                     : ele.description}
                 </Description>
-                <TechStack>
+                <TechStack colorMode={colorMode}>
                   {ele.techStack.map((tech, index) => (
-                    <Tag key={index} color={"black"}>
+                    <Tag
+                      key={index}
+                      color={colorMode === "dark" ? "blue" : "black"}
+                    >
                       {tech.name}
                     </Tag>
                   ))}
@@ -163,23 +169,26 @@ export default function Projects() {
           </ProjectCardStyled>
         ))}
       </ProjectGrid>
-      <SectionTitle>Mini Projects</SectionTitle>
+      <SectionTitle colorMode={colorMode}>Mini Projects</SectionTitle>
       <ProjectGrid>
         {mini_project_list.map((ele, i) => (
-          <ProjectCardStyled key={i} bg={ele.bg}>
+          <ProjectCardStyled key={i} bg={ele.bg} colorMode={colorMode}>
             <CardOverlay>
               <CardContent>
                 <CardHeader>
-                  <Title>{ele.title}</Title>
+                  <Title colorMode={colorMode}>{ele.title}</Title>
                 </CardHeader>
-                <Description>
+                <Description colorMode={colorMode}>
                   {ele.description.length > 100
                     ? ele.description.slice(0, 100) + "..."
                     : ele.description}
                 </Description>
-                <TechStack>
+                <TechStack colorMode={colorMode}>
                   {ele.techStack.map((tech, index) => (
-                    <Tag key={index} color={"black"}>
+                    <Tag
+                      key={index}
+                      color={colorMode === "dark" ? "blue" : "black"}
+                    >
                       {tech.name}
                     </Tag>
                   ))}
@@ -206,7 +215,8 @@ const SectionTitle = styled.h2`
   font-size: 2rem;
   font-weight: 700;
   margin: 32px 0 16px 0;
-  color: #222;
+  color: ${({ colorMode }) => (colorMode === "dark" ? "white" : "#222")};
+  transition: color 0.3s ease;
 `;
 
 const ProjectGrid = styled.div`
@@ -220,18 +230,25 @@ const ProjectCardStyled = styled.div`
   width: 300px;
   height: 350px;
   border-radius: 12px;
-  background: ${({ bg }) => bg || "#daf7f1"};
+  background: ${({ bg, colorMode }) =>
+    colorMode === "dark" ? "#2d3748" : bg || "#daf7f1"};
   background-size: cover;
   background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 5px;
-  transition: box-shadow 0.3s ease-in-out;
+  box-shadow: ${({ colorMode }) =>
+    colorMode === "dark"
+      ? "rgba(255, 255, 255, 0.1) 0px 3px 5px"
+      : "rgba(0, 0, 0, 0.1) 0px 3px 5px"};
+  transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease;
   overflow: hidden;
   cursor: pointer;
   &:hover {
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 12px;
+    box-shadow: ${({ colorMode }) =>
+      colorMode === "dark"
+        ? "rgba(255, 255, 255, 0.2) 0px 6px 12px"
+        : "rgba(0, 0, 0, 0.2) 0px 6px 12px"};
   }
 `;
 
@@ -262,17 +279,19 @@ const Title = styled.h3`
   font-size: 1.25rem;
   font-weight: 600;
   text-align: start;
-  color: black;
+  color: ${({ colorMode }) => (colorMode === "dark" ? "white" : "black")};
+  transition: color 0.3s ease;
 `;
 
 const Description = styled.p`
   font-size: 0.9rem;
-  color: black;
+  color: ${({ colorMode }) => (colorMode === "dark" ? "#e2e8f0" : "black")};
   margin-bottom: -10px;
   text-align: start;
   white-space: normal;
   overflow: hidden;
   text-overflow: ellipsis;
+  transition: color 0.3s ease;
 `;
 
 const TechStack = styled.p`
@@ -282,10 +301,11 @@ const TechStack = styled.p`
   white-space: normal;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: black;
+  color: ${({ colorMode }) => (colorMode === "dark" ? "#e2e8f0" : "black")};
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  transition: color 0.3s ease;
 `;
 
 const ButtonGroup = styled.div`
