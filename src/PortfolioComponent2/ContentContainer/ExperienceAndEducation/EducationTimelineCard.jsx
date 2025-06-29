@@ -7,10 +7,17 @@ export default function EducationTimelineCard({ data }) {
       <ul>
         {data &&
           data.map((ele, i) => (
-            <li style={{ "--accent-color": `${ele.color}` }} key={i}>
+            <li
+              style={{
+                "--accent-color": `${ele.color}`,
+                animationDelay: `${i * 0.2}s`,
+              }}
+              key={i}
+              className="timeline-item"
+            >
               <div class="date">{ele.date}</div>
-              <div class="title">{ele.instituteName}</div>
-              <div class="descr">{ele.courseName}</div>
+              <div class="title">{ele.title || ele.instituteName}</div>
+              <div class="descr">{ele.subtitle || ele.courseName}</div>
             </li>
           ))}
       </ul>
@@ -37,8 +44,18 @@ const EducationExperienceTimelineStyled = styled.div`
     content: "";
     grid-column: 1;
     grid-row: 1 / span 20;
-    /* background: rgb(225, 225, 225); */
+    background: linear-gradient(180deg, #41516c 0%, #f94449 100%);
     border-radius: calc(var(--line-w) / 2);
+    animation: lineGrow 1.5s ease-out;
+  }
+
+  @keyframes lineGrow {
+    from {
+      height: 0;
+    }
+    to {
+      height: 100%;
+    }
   }
 
   /* columns*/
@@ -58,6 +75,22 @@ const EducationExperienceTimelineStyled = styled.div`
     grid-template-rows: min-content min-content min-content;
     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
     border-radius: 12px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideInUp 0.8s ease-out forwards;
+    transition: all 0.3s ease;
+  }
+
+  ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 25px;
+  }
+
+  @keyframes slideInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   /* date */
@@ -78,6 +111,11 @@ const EducationExperienceTimelineStyled = styled.div`
     position: relative;
 
     border-radius: calc(var(--dateH) / 2) 0 0 calc(var(--dateH) / 2);
+    transition: all 0.3s ease;
+  }
+
+  ul li:hover .date {
+    transform: scale(1.05);
   }
 
   /* date flap */
@@ -107,6 +145,19 @@ const EducationExperienceTimelineStyled = styled.div`
 
     transform: translate(50%, -50%);
     right: calc(100% + var(--col-gap) + var(--line-w) / 2);
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%,
+    100% {
+      transform: translate(50%, -50%) scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: translate(50%, -50%) scale(1.1);
+      opacity: 0.8;
+    }
   }
 
   /* title descr */
@@ -121,10 +172,17 @@ const EducationExperienceTimelineStyled = styled.div`
     padding-block-start: 1.5rem;
     padding-block-end: 1rem;
     font-weight: bold;
+    transition: color 0.3s ease;
   }
   ul li .descr {
     padding-block-end: 1.5rem;
     font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  ul li:hover .title,
+  ul li:hover .descr {
+    color: var(--accent-color);
   }
 
   /* shadows */

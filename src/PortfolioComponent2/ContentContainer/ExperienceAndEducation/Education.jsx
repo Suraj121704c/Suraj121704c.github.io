@@ -5,28 +5,16 @@ import EducationTimelineCard from "./EducationTimelineCard";
 export default function Education() {
   const EducationArr = [
     {
-      date: "August 2023 - Present",
-      courseName: "BCA",
-      instituteName: "Binod Bihari Mahto Koyalanchal University",
+      date: "2024 – present",
+      courseName: "Masters of Computer Application (MCA)",
+      instituteName: "Kurushetra University",
       color: "#41516C",
     },
     {
-      date: "August 2022 - July 2023",
-      courseName: "Full Stack Web Developement",
-      instituteName: "Masai School Banglore",
+      date: "2021 – 2023",
+      courseName: "Bachelors",
+      instituteName: "Allahabad State University",
       color: "#f94449",
-    },
-    {
-      date: "June 2020 - July 2022",
-      courseName: "Intermediate (12th)",
-      instituteName: "High School Gomia",
-      color: "#3a90dc",
-    },
-    {
-      date: "April 2010 - May 2020",
-      courseName: "Matriculation (10th)",
-      instituteName: "Loyola School Gomia",
-      color: "#4CADAD",
     },
   ];
   return (
@@ -38,4 +26,16 @@ export default function Education() {
 
 const EducationExperienceStyled = styled.div`
   text-align: start;
+  animation: fadeInUp 0.8s ease-out;
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 `;

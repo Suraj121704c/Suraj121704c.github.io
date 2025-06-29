@@ -1,52 +1,66 @@
-import React, { useState } from "react";
+import React from "react";
 import HeaderSection from "../../Helper/HeaderSection";
 import styled from "@emotion/styled";
-import TabSelection from "../../Helper/TabSelection";
-import {
-  TabComponentStyled,
-  TabsContainerStyled,
-} from "../SkillsFolder/Skills";
-import Education from "./Education";
-import Experience from "./Experience";
+import EducationTimelineCard from "./EducationTimelineCard";
 
 export default function ExperienceAndEducation() {
-  const eduxpeTabArray = [
+  // Combined timeline data
+  const timelineData = [
     {
-      tabName: "Experience",
-      component: <Experience />,
+      type: "Experience",
+      date: "May 2024 – Oct 2024",
+      title: "Imfacto DigiFin | Bangalore, India",
+      subtitle: "Mobile App Developer",
+      color: "#FF6B6B",
     },
     {
-      tabName: "Education",
-      component: <Education />,
+      type: "Experience",
+      date: "Jul 2022 – Mar 2024",
+      title: "Skiivia Innovation | Chandigarh, India",
+      subtitle: "Mobile App Developer",
+      color: "#4ECDC4",
+    },
+    {
+      type: "Education",
+      date: "2024 – present",
+      title: "Kurushetra University",
+      subtitle: "Masters of Computer Application (MCA)",
+      color: "#41516C",
+    },
+    {
+      type: "Education",
+      date: "2021 – 2023",
+      title: "Allahabad State University",
+      subtitle: "Bachelors",
+      color: "#f94449",
     },
   ];
 
-  const [selectedTab, setSelectedTab] = useState(eduxpeTabArray[0]);
-
-  const handleTabClick = (tab) => {
-    setSelectedTab(tab);
-  };
-
-  console.log(30, selectedTab);
   return (
     <EducationExperienceStyled id="Expe_Edu">
-      <HeaderSection title={selectedTab.tabName} />
-      <TabsContainerStyled>
-        {eduxpeTabArray &&
-          eduxpeTabArray.map((ele, i) => (
-            <TabSelection
-              allTabs={ele}
-              key={i}
-              onTabCLick={() => handleTabClick(ele)}
-            />
-          ))}
-      </TabsContainerStyled>
-
-      <TabComponentStyled>{selectedTab.component}</TabComponentStyled>
+      <HeaderSection title="Experience & Education" />
+      <TimelineContainer>
+        <EducationTimelineCard data={timelineData} combined />
+      </TimelineContainer>
     </EducationExperienceStyled>
   );
 }
 
 const EducationExperienceStyled = styled.div`
   margin-top: 10px;
+  animation: fadeIn 0.6s ease-out;
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+`;
+
+const TimelineContainer = styled.div`
+  margin-top: 2rem;
 `;
