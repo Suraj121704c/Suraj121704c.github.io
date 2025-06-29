@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.c70df9fd.css",
-    "main.js": "/static/js/main.48b071c2.js",
+    "main.css": "/static/css/main.b37d27fc.css",
+    "main.js": "/static/js/main.be1fcd93.js",
     "static/js/787.55722989.chunk.js": "/static/js/787.55722989.chunk.js",
     "static/media/Md_Faizan_resumenew.pdf": "/static/media/Md_Faizan_resumenew.ccc5a2acd40b17326d60.pdf",
     "static/media/Suraj_Singh_CV.pdf": "/static/media/Suraj_Singh_CV.2ca272b7fc29d16981f4.pdf",
     "static/media/photo.jpg": "/static/media/photo.11faf30452e3816f63ef.jpg",
     "static/media/Suraj_Singh.jpg": "/static/media/Suraj_Singh.a5632119ddce37f4c372.jpg",
     "index.html": "/index.html",
-    "main.c70df9fd.css.map": "/static/css/main.c70df9fd.css.map",
-    "main.48b071c2.js.map": "/static/js/main.48b071c2.js.map",
+    "main.b37d27fc.css.map": "/static/css/main.b37d27fc.css.map",
+    "main.be1fcd93.js.map": "/static/js/main.be1fcd93.js.map",
     "787.55722989.chunk.js.map": "/static/js/787.55722989.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c70df9fd.css",
-    "static/js/main.48b071c2.js"
+    "static/css/main.b37d27fc.css",
+    "static/js/main.be1fcd93.js"
   ]
 }
