@@ -28,7 +28,7 @@ export const backEndArray = [
   {
     image:
       "https://user-images.githubusercontent.com/106812942/255087494-28073997-96d4-48ce-9bb6-c46f9cbe48b9.png",
-    text: "Node js",
+    text: "Node Js",
   },
   {
     image:
@@ -39,5 +39,19 @@ export const backEndArray = [
     image:
       "https://user-images.githubusercontent.com/106812942/255086972-9cb90d62-a556-474f-920f-aba5a0e9684d.png",
     text: "Mongo DB",
+  },
+  {
+    image:
+      "https://user-images.githubusercontent.com/106812942/255086458-7f6be61d-ffe1-4096-af30-2a39e7b3ed6f.png",
+    text: "TypeScript",
+  },
+  {
+    image:
+      "https://seeklogo.com/images/S/supabase-logo-DCC676FFE2-seeklogo.com.png",
+    text: "Supabase",
+  },
+  {
+    image: "https://cdn-icons-png.flaticon.com/512/3064/3064155.png",
+    text: "Auth",
   },
 ];

@@ -5,20 +5,21 @@ import FrontEndSkills from "./FrontEndSkills";
 import Tools from "./Tools";
 import BackendSkills from "./BackendSkills";
 import TabSelection from "../../Helper/TabSelection";
+import MobileSkills from "./MobileSkills";
 
 export default function Skills() {
   const tabsNames = [
     {
-      tabName: "FrontEnd",
+      tabName: "Mobile",
+      component: <MobileSkills />,
+    },
+    {
+      tabName: "Web",
       component: <FrontEndSkills />,
     },
     {
-      tabName: "BackEnd",
+      tabName: "Backend",
       component: <BackendSkills />,
-    },
-    {
-      tabName: "Tools",
-      component: <Tools />,
     },
   ];
 

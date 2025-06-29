@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { MdEmail, MdLocationOn, MdWhatsapp } from "react-icons/md";
 import { FaGithub } from "react-icons/fa";
 import { ImLinkedin } from "react-icons/im";
@@ -10,6 +10,35 @@ import { Photo } from "../../../utils/images";
 import "./Contact.css";
 
 export default function Contact() {
+  const contactListRef = useRef(null);
+  const socialLinksRef = useRef(null);
+  const photoRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-in");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (contactListRef.current) {
+      observer.observe(contactListRef.current);
+    }
+    if (socialLinksRef.current) {
+      observer.observe(socialLinksRef.current);
+    }
+    if (photoRef.current) {
+      observer.observe(photoRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   const contactList = [
     {
       icon: <MdWhatsapp color="white" size="24px" />,
@@ -48,29 +77,34 @@ export default function Contact() {
     <div className="contact-wrapper" id="Contacts">
       <HeaderSection title={"Contacts"} />
       <div className="content-wrapper">
-        <div className="contact-list">
+        <div className="contact-list" ref={contactListRef}>
           {contactList.map((ele, i) => (
-            <button key={i} className="styled-contact">
-              {ele.icon}
+            <button
+              key={i}
+              className="styled-contact contact-item"
+              style={{ animationDelay: `${i * 0.2}s` }}
+            >
+              <div className="contact-icon-wrapper">{ele.icon}</div>
               <span>{ele.text}</span>
             </button>
           ))}
         </div>
-        <div className="map-section">
+        <div className="map-section" ref={photoRef}>
           <img className="contact-photo" src={Photo} />
         </div>
       </div>
       <br />
-      <div className="social-container">
+      <div className="social-container" ref={socialLinksRef}>
         {socialLinks.map((link, index) => (
           <a
             key={index}
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="social-link"
+            className="social-link social-item"
+            style={{ animationDelay: `${index * 0.1}s` }}
           >
-            {link.icon}
+            <div className="social-icon-wrapper">{link.icon}</div>
           </a>
         ))}
       </div>

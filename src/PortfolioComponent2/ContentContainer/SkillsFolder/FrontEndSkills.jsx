@@ -15,6 +15,10 @@ export default function FrontEndSkills() {
       text: "CSS",
     },
     {
+      image: "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png",
+      text: "GIT Control",
+    },
+    {
       image:
         "https://user-images.githubusercontent.com/106812942/255094159-1381596d-06ae-422b-9321-94903c9c6cb3.png",
       text: "JavaScript",
@@ -26,39 +30,41 @@ export default function FrontEndSkills() {
     },
     {
       image:
+        "https://cdn.iconscout.com/icon/free/png-256/bitbucket-3521422-2945027.png",
+      text: "Bitbucket",
+    },
+    {
+      image: "https://cdn-icons-png.flaticon.com/512/5968/5968292.png",
+      text: "Rest Apis",
+    },
+    {
+      image: "https://cdn-icons-png.flaticon.com/512/1006/1006771.png",
+      text: "Responsive UI",
+    },
+    { image: "https://jestjs.io/img/opengraph.png", text: "Jest Testing" },
+    {
+      image:
+        "https://firebase.google.com/downloads/brand-guidelines/PNG/logo-vertical.png",
+      text: "Firebase",
+    },
+    {
+      image:
         "https://user-images.githubusercontent.com/106812942/255093713-fc4acefd-5ae5-469a-ac28-75fff76f758a.png",
-      text: "React js",
+      text: "React JS",
     },
     {
-      image:
-        "https://user-images.githubusercontent.com/106812942/278868564-8627170b-5eb9-4d18-84e8-4d7096bb4079.png",
-      text: "Angular",
+      image: "https://cdn.worldvectorlogo.com/logos/nextjs-2.svg",
+      text: "Next JS",
     },
     {
-      image:
-        "https://d2eip9sf3oo6c2.cloudfront.net/playlists/square_covers/000/505/265/square_480/chakra-lv1.png",
-      text: "Chakra UI",
+      image: "https://cdn-icons-png.flaticon.com/512/5968/5968381.png",
+      text: "Unit Testing",
     },
-    {
-      image:
-        "https://static-00.iconduck.com/assets.00/ant-design-icon-2048x2046-dl3neb73.png",
-      text: "Ant Design",
-    },
+    { image: "https://vuejs.org/images/logo.png", text: "Vue JS" },
     {
       image:
         "https://user-images.githubusercontent.com/106812942/255088544-e2550044-1df8-440b-baf1-6dca2ba9165e.png",
-      text: "Tailwind CSS",
-    },
-    {
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaTyuFXQDDOUPdafq8kkiBQ1Ai-ovU_avXecDIkszkPTeOxZ5R8H8g99xl6vRfQH-w4BA&usqp=CAU",
-      text: "Axios",
-    },
-
-    {
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwLq7oAaEf0OSnwEjISs6UZbZBkbkwIUV7Rw&usqp=CAU",
-      text: "React Router",
+      text: "Tailwind Css",
     },
   ];
   return (

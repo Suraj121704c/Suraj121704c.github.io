@@ -5,16 +5,26 @@ import React from "react";
 export default function SkillsCard({ imageLink, text }) {
   return (
     <ImageContainerSkill>
-      <Ribbon text={text}>
-        <div className="imageContainer">
-          <img src={imageLink} alt={text} />
-        </div>
-      </Ribbon>
+      <div className="imageContainer">
+        <img src={imageLink} alt={text} />
+      </div>
+      {text && <div className="labelBelow">{text}</div>}
     </ImageContainerSkill>
   );
 }
 
 const ImageContainerSkill = styled.div`
+  animation: fadeIn 0.8s ease;
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
   .imageContainer {
     height: 95px;
     width: 95px;
@@ -25,6 +35,10 @@ const ImageContainerSkill = styled.div`
     border-radius: 12px;
     cursor: pointer;
     overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .imageContainer img {
@@ -34,5 +48,13 @@ const ImageContainerSkill = styled.div`
   }
   .imageContainer img:hover {
     transform: scale(1.1);
+  }
+  .labelBelow {
+    margin-top: 8px;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #222;
+    font-weight: 500;
+    letter-spacing: 0.01em;
   }
 `;
