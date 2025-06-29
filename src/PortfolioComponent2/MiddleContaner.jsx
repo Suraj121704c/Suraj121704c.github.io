@@ -33,6 +33,5 @@ const MiddleContainerStyled = styled.div`
 
   @media (min-width: 100px) and (max-width: 600px) {
     width: 100%;
-    border: 1px solid green;
   }
 `;
