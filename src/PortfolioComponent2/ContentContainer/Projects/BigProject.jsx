@@ -9,106 +9,127 @@ export default function BigProject() {
 
   const projects = [
     {
-      title: "Organic Store",
+      title: "Qwik - Loan for All",
       description:
-        "An Organic Products website, Where person can buy all the Organics Food products.",
+        "This application is designed to provide student loans to university students in the U.S., especially those with low or limited credit (CIBIL) scores. It features a robust KYC verification system, real-time location tracking, and seamless credit score checks to ensure secure and responsible lending. In addition to lending, the app includes tools for expense management and personalized credit-building guidance to help users improve their financial profiles. Users can access both virtual and physical credit cards issued through the app, enabling secure and flexible spending. The platform also supports QR-based transactions for fast and convenient payments.",
       techStack: [
-        { name: "React" },
-        { name: "HTML" },
-        { name: "CSS" },
-        { name: "JS" },
-        { name: "Tailwind CSS" },
-        { name: "Axios" },
+        { name: "React Native" },
+        { name: "Redux Toolkit" },
+        { name: "Jest Testing" },
+        { name: "QR Code" },
+        { name: "Payment Gateway" },
+        { name: "Document Upload" },
+        { name: "PDF Viewer" },
+        { name: "App Security" },
+        { name: "Push Notifications" },
+        { name: "Deep Linking" },
       ],
       backgroundImage:
         "https://user-images.githubusercontent.com/106812942/278866276-08e3e6cb-0648-4adb-a9fa-891a98e27d33.png",
-      githubURL: "https://github.com/mdfaizan973/ZC_ORG",
-      liveURL: "https://organicstore.vercel.app/",
-      bg: "#daf7f1",
-      madeBy: "Individuel - Project",
+      githubURL: "",
+      liveURL: "",
+      bg: "#e8f5e8",
+      madeBy: "Under Development - Mar 2025 – present",
     },
 
     {
-      title: "Learning Management System",
+      title: "MyWeels - Pick and Drop",
       description:
-        "Learning Management System (LMS): A platform for students to learn programming.",
+        "A convenient pick-and-drop mobility platform that connects passengers with nearby drivers for safe and reliable transportation, using real-time location tracking to ensure quick pickups and smooth rides—just like Ola or Uber.",
       techStack: [
-        { name: "React" },
-        { name: "HTML" },
-        { name: "Node JS" },
-        { name: "CSS" },
-        { name: "JS" },
-        { name: "Ant Design(CSS)" },
-        { name: "Express JS" },
-        { name: "Mongo DB" },
+        { name: "React Native" },
+        { name: "Redux Toolkit" },
+        { name: "Jest Testing" },
+        { name: "Real-time Location" },
+        { name: "Payment Integration" },
+        { name: "Push Notifications" },
       ],
       backgroundImage:
-        "https://github.com/mdfaizan973/EduHub-idea_clan/assets/106812942/ccee7c0f-1acd-4791-8208-b09b973f5cb1",
-      githubURL: "https://github.com/mdfaizan973/EduHub-idea_clan",
-      liveURL: "https://faizanlms.vercel.app/",
-      bg: "#B0E0E6",
-      madeBy: "Individuel - Project",
+        "https://user-images.githubusercontent.com/106812942/278866276-08e3e6cb-0648-4adb-a9fa-891a98e27d33.png",
+      githubURL: "",
+      liveURL: "",
+      bg: "#fff3cd",
+      madeBy: "May 2024 – Oct 2024",
     },
 
     {
-      title: "DropDock",
+      title: "Couple Bible",
       description:
-        "A secure and seamless document management platform where users can upload PDFs!",
+        "A Spiritual Connection and Learning Platform. The app combines spiritual guidance with modern technology to create an immersive and meaningful experience for individuals and couples seeking to strengthen their faith and biblical understanding. Whether users are looking for daily inspiration, deep biblical study, or ways to grow spiritually with their partner, Bible Bonding provides the tools and content to support their journey.",
       techStack: [
-        { name: "React.js" },
-        { name: "Tailwind CSS" },
-        { name: "Node.js" },
-        { name: "Express.js" },
-        { name: "Mongo DB" },
-        { name: "Multer" },
-        { name: "React Router Dom" },
-        { name: "Axios" },
+        { name: "React Native" },
+        { name: "Redux Toolkit" },
+        { name: "Supabase" },
+        { name: "Push Notifications" },
       ],
       backgroundImage:
-        "https://private-user-images.githubusercontent.com/106812942/420195799-225689b0-2279-47ce-86e2-9dbbf206bc6e.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDI0MjgwNjMsIm5iZiI6MTc0MjQyNzc2MywicGF0aCI6Ii8xMDY4MTI5NDIvNDIwMTk1Nzk5LTIyNTY4OWIwLTIyNzktNDdjZS04NmUyLTlkYmJmMjA2YmM2ZS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMzE5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDMxOVQyMzQyNDNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1iYzU2NDc0YjJkNGVmYzY5NjhlNTVlMDUzY2JhODU1OTdlYmRlZjE0NTc0Mzk2YmUzZTE0ZDJmMzMyZDUzZmJiJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.M60zzGzgo2LZ2hZ8xW3MLOlzE8V8SyUgq-tylkTR99k",
-      githubURL: "https://github.com/mdfaizan973/PDF_Uploader",
-      liveURL: "https://pdf-dropdock.vercel.app/",
-      bg: "#FFB6C1",
-      madeBy: "Individuel - Project",
+        "https://user-images.githubusercontent.com/106812942/278866276-08e3e6cb-0648-4adb-a9fa-891a98e27d33.png",
+      githubURL: "",
+      liveURL: "",
+      bg: "#f8d7da",
+      madeBy: "May 2025 – present",
     },
 
-    // {
-    //   title: "FashionZone",
-    //   description:
-    //     "FashionZone is a website where a person can buy clothes of their choice with famous brands.",
-    //   techStack: [
-    //     { name: "React" },
-    //     { name: "Axios" },
-    //     { name: "React-Router-Dom" },
-    //   ],
-    //   backgroundImage:
-    //     "https://user-images.githubusercontent.com/106812942/262247221-6b79b2f0-da86-4fcb-b4f7-8abe6439712e.png",
-    //   githubURL: "https://github.com/mdfaizan973/FashioZone/",
-    //   liveURL: "https://myfashionzonefz.netlify.app/",
-    // bg:"red",
-    // madeBy: "Individuel - Project",
-    // },
-
     {
-      title: "Clotho",
+      title: "Sai Alerts - Grocery Shop Management",
       description:
-        "A clothes website where users can buy dresses for men, women, and kids.",
+        "There are around 10 plus application that are designed to prevent theft in shops. Users can automatically generate bills using the app while shopping. In the event of an attempted theft, the app sends a notification directly to the user's mobile device. Additionally, the application helps with crowd management by detecting queues through the shop's camera system and notifying users about them.",
       techStack: [
-        { name: "React" },
+        { name: "React Native" },
         { name: "Node.js" },
         { name: "MongoDB" },
-        { name: "Redux" },
-        { name: "React-Router-Dom" },
-        { name: "Axios" },
         { name: "Express.js" },
+        { name: "Computer Vision" },
+        { name: "Real-time Notifications" },
+        { name: "Billing System" },
       ],
       backgroundImage:
-        "https://github.com/mdfaizan973/mdfaizan973/assets/106812942/4eac3e09-97c4-4145-9cff-ce4c4ea5c93f",
-      githubURL:
-        "https://github.com/hrithikvishwakarma001/incredible-birth-7157",
-      liveURL: "https://clotho.vercel.app/",
-      bg: "#D8BFD8",
-      madeBy: "Group - Project",
+        "https://user-images.githubusercontent.com/106812942/278866276-08e3e6cb-0648-4adb-a9fa-891a98e27d33.png",
+      githubURL: "",
+      liveURL: "",
+      bg: "#d1ecf1",
+      madeBy: "Nov 2024 – present",
+    },
+
+    {
+      title: "DigiApp - Payment Gateway (Trinidad and Tobago)",
+      description:
+        "This is a payment gateway app for a Trinidad and Tobago bank. The app is built using the latest React Native version 0.73 with Redux Toolkit for state management. It is available on both Android and iOS platforms. The app includes an authentication flow with notification deep linking, QR code generation and scanning, allowing users to complete payments via QR code in less than 10 seconds. It also supports document upload for loan creation using multipart file uploads, and includes a PDF view for loan. Also written Unit test cases in Jest.",
+      techStack: [
+        { name: "React Native 0.73" },
+        { name: "Redux Toolkit" },
+        { name: "Jest Testing" },
+        { name: "QR Code Generation" },
+        { name: "Payment Gateway" },
+        { name: "Document Upload" },
+        { name: "PDF Viewer" },
+      ],
+      backgroundImage:
+        "https://user-images.githubusercontent.com/106812942/278866276-08e3e6cb-0648-4adb-a9fa-891a98e27d33.png",
+      githubURL: "",
+      liveURL: "",
+      bg: "#d4edda",
+      madeBy: "May 2024 – Nov 2024",
+    },
+
+    {
+      title: "IAF eRading - Indian AirForce War Information",
+      description:
+        "This application serves as a comprehensive repository for all information pertaining to the Indian Air Force. Designed to be fully responsive, it seamlessly supports multiple mobile devices, including Android, iOS, and tablets. Users can access a range of information related to wars, as well as details about organised events within the Indian Air Force.",
+      techStack: [
+        { name: "React Native" },
+        { name: "Responsive Design" },
+        { name: "Cross-platform" },
+        { name: "Content Management" },
+        { name: "Information Repository" },
+        { name: "Event Management" },
+      ],
+      backgroundImage:
+        "https://user-images.githubusercontent.com/106812942/278866276-08e3e6cb-0648-4adb-a9fa-891a98e27d33.png",
+      githubURL: "",
+      liveURL: "",
+      bg: "#f8f9fa",
+      madeBy: "Jun 2022 – Mar 2023",
     },
   ];
 

@@ -2,8 +2,15 @@ import styled from "@emotion/styled";
 import { Collapse } from "antd";
 import React from "react";
 import { mini_project_list } from "./Projects";
+import { EyeOutlined } from "@ant-design/icons";
 
 export default function MiniProjectList() {
+  const handleEyeClick = (url) => {
+    if (url) {
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
+  };
+
   return (
     <Wrapper>
       {mini_project_list.map((ele, i) => (
@@ -18,10 +25,14 @@ export default function MiniProjectList() {
                 children: (
                   <Content>
                     <Image src={ele.image} alt={ele.name} />
-
-                    <Button target="_blank" href={ele.live}>
-                      Live
-                    </Button>
+                    <ButtonContainer>
+                      <Button target="_blank" href={ele.live}>
+                        Live
+                      </Button>
+                      <EyeButton onClick={() => handleEyeClick(ele.live)}>
+                        <EyeOutlined />
+                      </EyeButton>
+                    </ButtonContainer>
                   </Content>
                 ),
               },
@@ -111,4 +122,32 @@ const StyledLabel = styled.div`
   font-size: 14px;
   font-weight: bold;
   text-align: left;
+`;
+
+const ButtonContainer = styled.div`
+  display: flex;
+  gap: 8px;
+  align-items: center;
+`;
+
+const EyeButton = styled.button`
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  box-shadow: 0px 3px 6px rgba(0, 123, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: #0056b3;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 10px rgba(0, 123, 255, 0.5);
+  }
 `;
