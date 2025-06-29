@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import React from "react";
+import React, { useState } from "react";
 import { useColorMode } from "@chakra-ui/react";
 import { Tag } from "antd";
 
@@ -63,9 +63,10 @@ const main_projects = [
     techStack: [
       { name: "React Native" },
       { name: "Redux Toolkit" },
-      { name: "Jest Testing" },
       { name: "Notification Deep Linking" },
       { name: "Real-time Notifications" },
+      { name: "Web Sockets" },
+      { name: "Push Notifications" },
     ],
     bg: "#d1ecf1",
     liveURL: "https://apps.apple.com/in/app/sai-alerts/id1582185206",
@@ -128,13 +129,47 @@ const mini_project_list = [
 
 export default function Projects() {
   const { colorMode } = useColorMode();
+  const [hoveredCard, setHoveredCard] = useState(null);
+
+  const handleMouseMove = (e, index) => {
+    const card = e.currentTarget;
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+
+    const rotateX = (y - centerY) / 10;
+    const rotateY = (centerX - x) / 10;
+
+    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1.05)`;
+  };
+
+  const handleMouseLeave = (e, index) => {
+    e.currentTarget.style.transform =
+      "perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
+    setHoveredCard(null);
+  };
+
+  const handleMouseEnter = (index) => {
+    setHoveredCard(index);
+  };
 
   return (
     <>
       <SectionTitle colorMode={colorMode}>Projects</SectionTitle>
       <ProjectGrid>
         {main_projects.map((ele, i) => (
-          <ProjectCardStyled key={i} bg={ele.bg} colorMode={colorMode}>
+          <ProjectCardStyled
+            key={i}
+            bg={ele.bg}
+            colorMode={colorMode}
+            onMouseMove={(e) => handleMouseMove(e, i)}
+            onMouseLeave={(e) => handleMouseLeave(e, i)}
+            onMouseEnter={() => handleMouseEnter(i)}
+            isHovered={hoveredCard === i}
+          >
             <CardOverlay>
               <CardContent>
                 <CardHeader>
@@ -172,7 +207,15 @@ export default function Projects() {
       <SectionTitle colorMode={colorMode}>Mini Projects</SectionTitle>
       <ProjectGrid>
         {mini_project_list.map((ele, i) => (
-          <ProjectCardStyled key={i} bg={ele.bg} colorMode={colorMode}>
+          <ProjectCardStyled
+            key={i + main_projects.length}
+            bg={ele.bg}
+            colorMode={colorMode}
+            onMouseMove={(e) => handleMouseMove(e, i + main_projects.length)}
+            onMouseLeave={(e) => handleMouseLeave(e, i + main_projects.length)}
+            onMouseEnter={() => handleMouseEnter(i + main_projects.length)}
+            isHovered={hoveredCard === i + main_projects.length}
+          >
             <CardOverlay>
               <CardContent>
                 <CardHeader>
@@ -217,6 +260,19 @@ const SectionTitle = styled.h2`
   margin: 32px 0 16px 0;
   color: ${({ colorMode }) => (colorMode === "dark" ? "white" : "#222")};
   transition: color 0.3s ease;
+  transform: translateZ(0);
+  animation: slideInFromLeft 0.8s ease-out;
+
+  @keyframes slideInFromLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px) translateZ(0);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0) translateZ(0);
+    }
+  }
 `;
 
 const ProjectGrid = styled.div`
@@ -224,6 +280,7 @@ const ProjectGrid = styled.div`
   flex-wrap: wrap;
   gap: 32px;
   justify-content: flex-start;
+  perspective: 1000px;
 `;
 
 const ProjectCardStyled = styled.div`
@@ -241,14 +298,54 @@ const ProjectCardStyled = styled.div`
     colorMode === "dark"
       ? "rgba(255, 255, 255, 0.1) 0px 3px 5px"
       : "rgba(0, 0, 0, 0.1) 0px 3px 5px"};
-  transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
   cursor: pointer;
+  transform-style: preserve-3d;
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);
+  animation: cardFloatIn 0.6s ease-out ${({ index }) => index * 0.1}s both;
+
   &:hover {
     box-shadow: ${({ colorMode }) =>
       colorMode === "dark"
-        ? "rgba(255, 255, 255, 0.2) 0px 6px 12px"
-        : "rgba(0, 0, 0, 0.2) 0px 6px 12px"};
+        ? "rgba(255, 255, 255, 0.2) 0px 20px 40px, 0 0 0 1px rgba(255, 255, 255, 0.1)"
+        : "rgba(0, 0, 0, 0.2) 0px 20px 40px, 0 0 0 1px rgba(0, 0, 0, 0.1)"};
+  }
+
+  @keyframes cardFloatIn {
+    from {
+      opacity: 0;
+      transform: perspective(1000px) rotateX(20deg) rotateY(-20deg)
+        translateY(50px) scale3d(0.8, 0.8, 0.8);
+    }
+    to {
+      opacity: 1;
+      transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)
+        scale3d(1, 1, 1);
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.05) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    border-radius: 12px;
+  }
+
+  &:hover::before {
+    opacity: 1;
   }
 `;
 
@@ -260,6 +357,8 @@ const CardOverlay = styled.div`
   flex-direction: column;
   justify-content: space-between;
   border-radius: 12px;
+  transform: translateZ(20px);
+  transition: transform 0.3s ease;
 `;
 
 const CardContent = styled.div`
@@ -268,19 +367,27 @@ const CardContent = styled.div`
   justify-content: space-between;
   height: 100%;
   color: #ffffff;
+  transform: translateZ(10px);
 `;
 
 const CardHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transform: translateZ(15px);
 `;
+
 const Title = styled.h3`
   font-size: 1.25rem;
   font-weight: 600;
   text-align: start;
   color: ${({ colorMode }) => (colorMode === "dark" ? "white" : "black")};
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  transform: translateZ(5px);
+
+  &:hover {
+    transform: translateZ(5px) scale(1.05);
+  }
 `;
 
 const Description = styled.p`
@@ -291,7 +398,8 @@ const Description = styled.p`
   white-space: normal;
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  transform: translateZ(5px);
 `;
 
 const TechStack = styled.p`
@@ -305,32 +413,72 @@ const TechStack = styled.p`
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  transform: translateZ(5px);
+
+  .ant-tag {
+    transition: all 0.3s ease;
+    transform: translateZ(2px);
+
+    &:hover {
+      transform: translateZ(2px) scale(1.1) rotateY(10deg);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  }
 `;
 
 const ButtonGroup = styled.div`
   display: flex;
   justify-content: flex-start;
   gap: 10px;
+  transform: translateZ(10px);
 `;
 
 const Button = styled.a`
-  background-color: #28a745;
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
   color: #ffffff;
   padding: 8px 16px;
   border-radius: 6px;
   text-decoration: none;
   font-size: 0.85rem;
-  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0px 3px 6px rgba(40, 167, 69, 0.3);
   display: inline-block;
   text-align: center;
   pointer-events: ${({ disabled }) => (disabled ? "none" : "auto")};
   opacity: ${({ disabled }) => (disabled ? 0.5 : 1)};
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
+  transform: translateZ(5px);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
+    transition: left 0.5s ease;
+  }
+
   &:hover {
-    background-color: #218838;
-    transform: translateY(-3px);
-    box-shadow: 0px 6px 10px rgba(40, 167, 69, 0.5);
+    background: linear-gradient(135deg, #218838 0%, #1ea085 100%);
+    transform: translateZ(5px) translateY(-3px) scale(1.05);
+    box-shadow: 0px 8px 20px rgba(40, 167, 69, 0.5);
+
+    &::before {
+      left: 100%;
+    }
+  }
+
+  &:active {
+    transform: translateZ(5px) translateY(-1px) scale(1.02);
   }
 `;

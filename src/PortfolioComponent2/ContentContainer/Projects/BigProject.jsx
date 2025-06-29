@@ -82,6 +82,8 @@ export default function BigProject() {
         { name: "Computer Vision" },
         { name: "Real-time Notifications" },
         { name: "Billing System" },
+        { name: "Push Notifications" },
+        { name: "Web Sockets" },
       ],
       backgroundImage:
         "https://user-images.githubusercontent.com/106812942/278866276-08e3e6cb-0648-4adb-a9fa-891a98e27d33.png",
