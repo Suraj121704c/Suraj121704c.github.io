@@ -22,11 +22,12 @@ export default function PortfolioVersion2() {
         <TopResumeButton />
       </StickyContainer>
 
+      {/* Desktop Chat Icon */}
       <MessageStickyContainer>
         <Messages />
       </MessageStickyContainer>
 
-      {/* Theme Toggle Button */}
+      {/* Desktop Theme Toggle Button */}
       <ThemeToggleContainer>
         <IconButton
           aria-label="Toggle theme"
@@ -37,6 +38,19 @@ export default function PortfolioVersion2() {
           colorScheme={colorMode === "light" ? "gray" : "yellow"}
         />
       </ThemeToggleContainer>
+
+      {/* Mobile Chat + Theme Toggle Row */}
+      <MobileTopRow>
+        <Messages />
+        <IconButton
+          aria-label="Toggle theme"
+          icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+          onClick={toggleColorMode}
+          size="md"
+          borderRadius="full"
+          colorScheme={colorMode === "light" ? "gray" : "yellow"}
+        />
+      </MobileTopRow>
 
       <MainPortfolioTwoContainer colorMode={colorMode}>
         <div className="sidebarcontainer">
@@ -137,6 +151,9 @@ const MessageStickyContainer = styled.div`
   top: 30px;
   left: 30px;
   z-index: 9999 !important;
+  @media (min-width: 100px) and (max-width: 1000px) {
+    display: none;
+  }
 `;
 
 const ThemeToggleContainer = styled.div`
@@ -144,4 +161,21 @@ const ThemeToggleContainer = styled.div`
   top: 30px;
   right: 30px;
   z-index: 9999 !important;
+  @media (min-width: 100px) and (max-width: 1000px) {
+    display: none;
+  }
+`;
+
+const MobileTopRow = styled.div`
+  display: none;
+  @media (min-width: 100px) and (max-width: 1000px) {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    z-index: 9999 !important;
+    gap: 10px;
+    background: transparent;
+  }
 `;
