@@ -1,8 +1,10 @@
 import React from "react";
-import GitHubCalendar from "react-github-calendar";
-import HeaderSection from "../../Helper/HeaderSection";
-import { Card } from "antd";
 import styled from "@emotion/styled";
+import GitHubCalendar from "react-github-calendar";
+import { Card } from "antd";
+
+// user defined imports
+import HeaderSection from "../../Helper/HeaderSection";
 
 export default function Github() {
   return (
@@ -10,7 +12,7 @@ export default function Github() {
       <HeaderSection title={"Github"} />
       <Card>
         <GitHubCalendar
-          username="mdfaizan973"
+          username="Suraj121704c"
           className="react-activity-calendar"
         />
       </Card>
@@ -18,13 +20,13 @@ export default function Github() {
       <StatsContainer>
         <Card>
           <StatImage
-            src="https://github-readme-streak-stats.herokuapp.com/?user=mdfaizan973&count_private=true&show_icons=true&custom_title=Github&theme=algolia&bg_color=0,000000,130F40&layout=compact&border_radius=8"
+            src="https://github-readme-streak-stats.herokuapp.com/?user=Suraj121704c&count_private=true&show_icons=true&custom_title=Github&theme=algolia&bg_color=0,000000,130F40&layout=compact&border_radius=8"
             alt="GitHub Streak Stats"
           />
         </Card>
         <Card>
           <StatImage
-            src="https://github-readme-stats.vercel.app/api?username=mdfaizan973&show_icons=true&count_private=true&theme=algolia&bg_color=0,000000,130F40&layout=compact&border_radius=10"
+            src="https://github-readme-stats.vercel.app/api?username=Suraj121704c&show_icons=true&count_private=true&theme=algolia&bg_color=0,000000,130F40&layout=compact&border_radius=10"
             alt="GitHub Stats"
           />
         </Card>
@@ -32,6 +34,7 @@ export default function Github() {
     </div>
   );
 }
+
 const StatsContainer = styled.div`
   display: flex;
   flex-direction: row;

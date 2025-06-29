@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
+import AnimatedCursor from "react-animated-cursor";
 
 // user defined imports
 import MiddleContaner from "../PortfolioComponent2/MiddleContaner";
@@ -12,7 +13,7 @@ import Sidebar from "../PortfolioComponent2/Sidebar";
 export default function PortfolioVersion2() {
   return (
     <>
-      {/* <AnimatedCursor /> */}
+      <AnimatedCursor />
       <StickyContainer>
         <TopResumeButton />
       </StickyContainer>
