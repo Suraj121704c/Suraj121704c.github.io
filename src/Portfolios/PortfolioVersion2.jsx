@@ -1,12 +1,13 @@
 import React from "react";
-import Sidebar from "../PortfolioComponent2/Sidebar";
 import styled from "@emotion/styled";
+
+// user defined imports
 import MiddleContaner from "../PortfolioComponent2/MiddleContaner";
 import LinkContainer from "../PortfolioComponent2/LinkContainer";
 import BottomNav from "../PortfolioComponent2/SidebarContent/BottomNav";
-import AnimatedCursor from "react-animated-cursor";
 import TopResumeButton from "../PortfolioComponent2/Helper/TopResumeButton";
 import Messages from "../PortfolioComponent2/Helper/Messages";
+import Sidebar from "../PortfolioComponent2/Sidebar";
 
 export default function PortfolioVersion2() {
   return (
@@ -51,7 +52,7 @@ const MainPortfolioTwoContainer = styled.div`
   .sidebarcontainer {
     width: 320px; //28%
     /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
-    height: 35rem;
+    height: 38rem;
     position: fixed;
     left: 5%;
     background-color: white;

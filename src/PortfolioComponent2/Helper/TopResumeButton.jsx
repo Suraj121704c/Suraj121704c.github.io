@@ -1,24 +1,27 @@
 import { DownloadIcon } from "@chakra-ui/icons";
 import styled from "@emotion/styled";
 import React from "react";
-import MdFaizan_Resume from "../../MdFaizan_resume.pdf";
+
+// user defined imports
+import SURAJ_SINGH_CV from "../../assets/Suraj_Singh_CV.pdf";
+
 export default function TopResumeButton() {
   return (
     <ResumeContainerDiv>
       <StyledButton
         onClick={() => {
           window.open(
-            "https://drive.google.com/file/d/17ti5ypZ77muuZC6yulNyPwNkgbKfpEM2/view?usp=drive_link",
+            "https://drive.google.com/file/d/1FxX6KlIwwyw6qQ4K67Lgzrl_2TmCPaK7/view?usp=sharing",
             "_blank"
           );
         }}
       >
         <a
           id="resume-link-1"
-          href={MdFaizan_Resume}
+          href={SURAJ_SINGH_CV}
           target="_blank"
           rel="noreferrer"
-          download="MdFaizan_Resume.pdf"
+          download="Suraj_Singh_Resume.pdf"
         >
           Resume <DownloadIcon />
         </a>

@@ -1,14 +1,16 @@
 import React from "react";
 import styled from "@emotion/styled";
-import ContactSection from "./SidebarContent/ContactSection";
-import SocialMedia from "./SidebarContent/SocialMedia";
 import { MdEmail, MdLocationOn, MdWhatsapp } from "react-icons/md";
 import { ImLinkedin } from "react-icons/im";
 import { FaGithub, FaYoutube } from "react-icons/fa";
 import { BsTwitter } from "react-icons/bs";
+
+// user defined imports
+import ContactSection from "./SidebarContent/ContactSection";
+import SocialMedia from "./SidebarContent/SocialMedia";
 import ResumeButton from "./SidebarContent/ResumeButton";
-import MdFaizan_Resume from ".././MdFaizan_resume.pdf";
 import { Suraj_Singh } from "../utils/images.js";
+import SURAJ_SINGH_CV from "../assets/Suraj_Singh_CV.pdf";
 
 export default function Sidebar() {
   const contectArray = [
@@ -39,22 +41,22 @@ export default function Sidebar() {
     {
       icon: <BsTwitter />,
       color: "black",
-      link: "https://twitter.com/MdFaiza59640358",
+      link: "https://x.com/Suraj121704C",
     },
     {
       icon: <ImLinkedin />,
       color: "skyblue",
-      link: "https://www.linkedin.com/in/md-faizan-380a65246/",
+      link: "https://www.linkedin.com/in/suraj-singh-22844a257/",
     },
     {
       icon: <FaGithub />,
       color: "black",
-      link: "https://github.com/mdfaizan973",
+      link: "https://github.com/Suraj121704C",
     },
     {
       icon: <FaYoutube />,
       color: "red",
-      link: "https://www.youtube.com/@CodeWithFaizu9735",
+      link: "https://www.youtube.com/c/PsychoPlayers1?app=desktop",
     },
   ];
   return (
@@ -84,17 +86,17 @@ export default function Sidebar() {
           className="resume_sectiion"
           onClick={() => {
             window.open(
-              "https://drive.google.com/file/d/17ti5ypZ77muuZC6yulNyPwNkgbKfpEM2/view?usp=drive_link",
+              "https://drive.google.com/file/d/1FxX6KlIwwyw6qQ4K67Lgzrl_2TmCPaK7/view?usp=sharing",
               "_blank"
             );
           }}
         >
           <a
             id="resume-link-1"
-            href={MdFaizan_Resume}
+            href={SURAJ_SINGH_CV}
             target="_blank"
             rel="noreferrer"
-            download="MdFaizan_Resume.pdf"
+            download="Suraj_Singh_Resume.pdf"
           >
             <ResumeButton />
           </a>
@@ -112,8 +114,9 @@ const SidebarContainerStyled = styled.div`
     overflow: hidden;
     height: 240px;
     margin-top: -100px;
+    margin-bottom: 20px;
     border-radius: 43% 57% 55% 45% / 27% 44% 56% 73%;
-    border: 2px solid skyblue;
+    border: 2px solid #000;
   }
   .profile_image img {
     object-fit: cover;
@@ -143,6 +146,6 @@ const SidebarContainerStyled = styled.div`
 
   .resume_sectiion {
     width: 65%;
-    margin: auto;
+    margin: 20px auto;
   }
 `;
