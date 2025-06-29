@@ -82,7 +82,9 @@
   font-size: 18px;
   margin-bottom: 15px;
   width: 100%;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.35s cubic-bezier(0.4,0,0.2,1), box-shadow 0.35s cubic-bezier(0.4,0,0.2,1);
+  will-change: transform, box-shadow;
+  backface-visibility: hidden;
   cursor: pointer;
   opacity: 0;
   transform: translateX(-30px);
@@ -95,9 +97,9 @@
 }
 
 .styled-contact:hover {
-  background-color: #367d82;
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 8px 25px rgba(72, 163, 166, 0.3);
+  transform: perspective(600px) rotateY(8deg) translateY(-6px) scale(1.04);
+  box-shadow: 0 16px 32px rgba(54,125,130,0.18), 0 2px 8px rgba(0,0,0,0.10);
+  z-index: 2;
 }
 
 .styled-contact::before {
@@ -175,7 +177,8 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.3s cubic-bezier(0.4,0,0.2,1), box-shadow 0.3s cubic-bezier(0.4,0,0.2,1);
+  will-change: transform, box-shadow;
   text-decoration: none;
   color: black;
   opacity: 0;
@@ -189,10 +192,9 @@
 }
 
 .social-link:hover {
-  background-color: #367d82;
-  transform: translateY(-8px) scale(1.15);
-  box-shadow: 0 10px 30px rgba(54, 125, 130, 0.4);
-  color: white;
+  transform: perspective(400px) rotateX(12deg) scale(1.18);
+  box-shadow: 0 8px 24px rgba(54,125,130,0.18);
+  z-index: 2;
 }
 
 .social-link::before {
@@ -251,11 +253,13 @@
   width: 100%;
   object-fit: cover;
   object-position: top;
-  transition: transform 0.3s ease;
+  transition: box-shadow 0.4s cubic-bezier(0.4,0,0.2,1), transform 0.4s cubic-bezier(0.4,0,0.2,1);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.10);
 }
 
 .contact-photo:hover {
-  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(54,125,130,0.18), 0 2px 8px rgba(0,0,0,0.10);
+  transform: scale(1.04) rotateZ(1deg);
 }
 
 /* Keyframe Animations */
@@ -350,4 +354,26 @@
   .social-container {
     transform: translateY(15px);
   }
-} 
+}
+
+/* 3D Entrance Animation */
+@keyframes card3DIn {
+  from {
+    opacity: 0;
+    transform: perspective(600px) rotateY(30deg) translateY(40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: perspective(600px) rotateY(0deg) translateY(0) scale(1);
+  }
+}
+.animate-in {
+  animation: card3DIn 0.7s cubic-bezier(0.4,0,0.2,1) both;
+}
+
+/* Social icon entrance delay for staggered effect */
+.social-item.animate-in {
+  animation-delay: 0.2s;
+}
+
+/* Remove old 3D/floating/pulse keyframes if present */ 

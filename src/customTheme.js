@@ -9,9 +9,13 @@ const customTheme = extendTheme({
   styles: {
     global: (props) => ({
       body: {
-        bg: props.colorMode === "dark" ? "customDark.900" : "#f7fafc",
+        bg: props.colorMode === "dark" 
+          ? "linear-gradient(135deg, #1a0000 0%, #330000 25%, #4d0000 50%, #660000 75%, #800000 100%)"
+          : "linear-gradient(135deg, #fff5f5 0%, #fed7d7 25%, #feb2b2 50%, #fc8181 75%, #f56565 100%)",
         color: props.colorMode === "dark" ? "white" : "black",
         transition: "all 0.3s ease",
+        backgroundAttachment: "fixed",
+        minHeight: "100vh",
       },
     }),
   },
