@@ -125,6 +125,23 @@ const mini_project_list = [
     image:
       "https://github.com/user-attachments/assets/8ad87c05-2cd0-4ce3-9934-e20ff78a88a4",
   },
+  {
+    title: "voiceAssistant",
+    description:
+      "A Ai powered voice assistant that can help you with your daily tasks and can also help you with your queries , you can send your queries to the assistant and it will give you the answer",
+    techStack: [
+      { name: "React Native" },
+      { name: "Redux Toolkit" },
+      { name: "Text to Speech" },
+      { name: "Voice Recording" },
+      { name: "OpenAI API" },
+    ],
+    bg: "#d4edda",
+    liveURL:
+      "https://drive.google.com/file/d/15MajdjLqFGxZPaCyHpN4IkwB9z9WBBeY/view?usp=sharing",
+    image:
+      "https://github.com/user-attachments/assets/8ad87c05-2cd0-4ce3-9934-e20ff78a88a4",
+  },
 ];
 
 export default function Projects() {
