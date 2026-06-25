@@ -111,34 +111,55 @@ export default function Sidebar() {
 
 const SidebarContainerStyled = styled.div`
   .profile_image {
-    width: 70%;
-    margin: auto;
-    /* border-radius: 20px; */
+    width: 150px;
+    height: 150px;
+    margin: -90px auto 18px;
     overflow: hidden;
-    height: 240px;
-    margin-top: -100px;
-    margin-bottom: 20px;
-    border-radius: 43% 57% 55% 45% / 27% 44% 56% 73%;
-    border: 2px solid
-      ${({ colorMode }) => (colorMode === "dark" ? "#e2e8f0" : "#000")};
+    border-radius: 50%;
+    padding: 4px;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    box-shadow: 0 12px 30px rgba(99, 102, 241, 0.35);
   }
   .profile_image img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid
+      ${({ colorMode }) => (colorMode === "dark" ? "#111827" : "#ffffff")};
   }
 
   .name {
-    font-size: 1.7rem;
-    padding: 5px;
-    color: ${({ colorMode }) => (colorMode === "dark" ? "white" : "black")};
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    padding: 4px;
+    color: ${({ colorMode }) => (colorMode === "dark" ? "#f8fafc" : "#0f172a")};
+  }
+
+  .occupation {
+    font-size: 0.82rem !important;
+    font-weight: 500;
+    padding: 8px 12px !important;
+    color: ${({ colorMode }) =>
+      colorMode === "dark" ? "#c7d2fe" : "#4f46e5"} !important;
+    background-color: ${({ colorMode }) =>
+      colorMode === "dark"
+        ? "rgba(99,102,241,0.15)"
+        : "rgba(99,102,241,0.08)"} !important;
   }
 
   .border_card {
-    width: 70%;
+    width: 78%;
     margin: auto;
-    border-radius: 5px;
+    border-radius: 14px;
     background-color: ${({ colorMode }) =>
-      colorMode === "dark" ? "#2d3748" : "#f4f6f5"};
-    color: ${({ colorMode }) => (colorMode === "dark" ? "white" : "black")};
+      colorMode === "dark" ? "rgba(148,163,184,0.07)" : "rgba(15,23,42,0.03)"};
+    color: ${({ colorMode }) => (colorMode === "dark" ? "#e2e8f0" : "#0f172a")};
+    border: 1px solid
+      ${({ colorMode }) =>
+        colorMode === "dark" ? "rgba(148,163,184,0.1)" : "rgba(15,23,42,0.05)"};
     transition: all 0.3s ease;
   }
   .socialmedia_section {

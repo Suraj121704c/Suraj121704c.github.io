@@ -6,14 +6,19 @@ const customTheme = extendTheme({
     initialColorMode: "light",
     useSystemColorMode: false,
   },
+  fonts: {
+    heading: `"Space Grotesk", "Inter", sans-serif`,
+    body: `"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif`,
+  },
   styles: {
     global: (props) => ({
       body: {
-        bg: props.colorMode === "dark" 
-          ? "linear-gradient(135deg, #1a0000 0%, #330000 25%, #4d0000 50%, #660000 75%, #800000 100%)"
-          : "linear-gradient(135deg, #fff5f5 0%, #fed7d7 25%, #feb2b2 50%, #fc8181 75%, #f56565 100%)",
-        color: props.colorMode === "dark" ? "white" : "black",
-        transition: "all 0.3s ease",
+        bg:
+          props.colorMode === "dark"
+            ? "radial-gradient(1200px 600px at 80% -10%, rgba(139,92,246,0.16), transparent 60%), radial-gradient(900px 500px at 0% 20%, rgba(99,102,241,0.14), transparent 55%), #0b1120"
+            : "radial-gradient(1200px 600px at 85% -10%, rgba(139,92,246,0.10), transparent 60%), radial-gradient(900px 500px at -5% 15%, rgba(99,102,241,0.10), transparent 55%), #f8fafc",
+        color: props.colorMode === "dark" ? "#e2e8f0" : "#0f172a",
+        transition: "background 0.4s ease, color 0.3s ease",
         backgroundAttachment: "fixed",
         minHeight: "100vh",
       },

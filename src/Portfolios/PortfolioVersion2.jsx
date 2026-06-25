@@ -1,181 +1,92 @@
 import React from "react";
 import styled from "@emotion/styled";
-import AnimatedCursor from "react-animated-cursor";
-import { useColorMode, IconButton } from "@chakra-ui/react";
-import { MoonIcon, SunIcon } from "@chakra-ui/icons";
+import { useColorMode } from "@chakra-ui/react";
 
-// user defined imports
-import MiddleContaner from "../PortfolioComponent2/MiddleContaner";
-import LinkContainer from "../PortfolioComponent2/LinkContainer";
-import BottomNav from "../PortfolioComponent2/SidebarContent/BottomNav";
-import TopResumeButton from "../PortfolioComponent2/Helper/TopResumeButton";
-import Messages from "../PortfolioComponent2/Helper/Messages";
-import Sidebar from "../PortfolioComponent2/Sidebar";
+// single-page layout pieces
+import Navbar from "../PortfolioComponent2/SinglePage/Navbar";
+import Hero from "../PortfolioComponent2/SinglePage/Hero";
+import AboutSection from "../PortfolioComponent2/SinglePage/AboutSection";
+import Footer from "../PortfolioComponent2/SinglePage/Footer";
+
+// reused content sections (data unchanged)
+import Skills from "../PortfolioComponent2/ContentContainer/SkillsFolder/Skills";
+import ExperienceAndEducation from "../PortfolioComponent2/ContentContainer/ExperienceAndEducation/ExperienceAndEducation";
+import Projects from "../PortfolioComponent2/ContentContainer/Projects/Projects";
+import Github from "../PortfolioComponent2/ContentContainer/GithubCertificate/Github";
+import Contact from "../PortfolioComponent2/ContentContainer/Contacts/Contact";
 
 export default function PortfolioVersion2() {
-  const { colorMode, toggleColorMode } = useColorMode();
+  const { colorMode } = useColorMode();
 
   return (
-    <>
-      <AnimatedCursor />
-      <StickyContainer>
-        <TopResumeButton />
-      </StickyContainer>
+    <Page colorMode={colorMode}>
+      <Navbar />
+      <Hero />
 
-      {/* Desktop Chat Icon */}
-      <MessageStickyContainer>
-        <Messages />
-      </MessageStickyContainer>
+      <main className="container">
+        <AboutSection />
 
-      {/* Desktop Theme Toggle Button */}
-      <ThemeToggleContainer>
-        <IconButton
-          aria-label="Toggle theme"
-          icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-          onClick={toggleColorMode}
-          size="md"
-          borderRadius="full"
-          colorScheme={colorMode === "light" ? "gray" : "yellow"}
-        />
-      </ThemeToggleContainer>
+        <section className="block">
+          <Skills />
+        </section>
 
-      {/* Mobile Chat + Theme Toggle Row */}
-      <MobileTopRow>
-        <Messages />
-        <IconButton
-          aria-label="Toggle theme"
-          icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-          onClick={toggleColorMode}
-          size="md"
-          borderRadius="full"
-          colorScheme={colorMode === "light" ? "gray" : "yellow"}
-        />
-      </MobileTopRow>
+        <section className="block">
+          <ExperienceAndEducation />
+        </section>
 
-      <MainPortfolioTwoContainer colorMode={colorMode}>
-        <div className="sidebarcontainer">
-          <Sidebar />
-        </div>
-        <div className="maincontainer">
-          <MiddleContaner />
-        </div>
-        <div className="linkcontainer">
-          <LinkContainer />
-        </div>
-      </MainPortfolioTwoContainer>
+        <section id="Projects" className="block">
+          <Projects />
+        </section>
 
-      <StickyContainer>
-        <BottomNav />
-      </StickyContainer>
-    </>
+        <section className="block">
+          <Github />
+        </section>
+
+        <section className="block">
+          <Contact />
+        </section>
+      </main>
+
+      <Footer />
+    </Page>
   );
 }
 
-const MainPortfolioTwoContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-  width: 90%;
-  margin: 100px auto;
-  font-family: -apple-system, BlinkMacSystemFont, "Roboto", sans-serif !important;
-  /* font-family: cursive; */
+const Page = styled.div`
+  width: 100%;
+  text-align: left;
 
-  .sidebarcontainer {
-    width: 320px; //28%
-    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
-    height: 38rem;
-    position: fixed;
-    left: 5%;
-    background-color: ${({ colorMode }) =>
-      colorMode === "dark" ? "#1a202c" : "white"};
-    color: ${({ colorMode }) => (colorMode === "dark" ? "white" : "black")};
-    border-radius: 20px;
-    transition: all 0.3s ease;
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
   }
 
-  .maincontainer {
-    width: 60%;
-    height: 100%;
-    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
-    margin-left: 27%;
-    overflow-y: auto;
-    background-color: ${({ colorMode }) =>
-      colorMode === "dark" ? "#1a202c" : "white"};
-    color: ${({ colorMode }) => (colorMode === "dark" ? "white" : "black")};
-    border-radius: 20px;
-    transition: all 0.3s ease;
+  .block {
+    padding: 60px 0;
   }
 
-  .linkcontainer {
-    width: 125px; // 8%
-    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
-    height: 35rem;
-    position: fixed;
-    right: 5%;
-    background-color: ${({ colorMode }) =>
-      colorMode === "dark" ? "#1a202c" : "white"};
-    color: ${({ colorMode }) => (colorMode === "dark" ? "white" : "black")};
-    border-radius: 20px;
-    transition: all 0.3s ease;
+  #About,
+  #Skills,
+  #Expe_Edu,
+  #Projects,
+  #Github,
+  #Contacts {
+    scroll-margin-top: 90px;
   }
 
-  @media (min-width: 100px) and (max-width: 1000px) {
-    width: 100%;
+  /* keep reused sections aligned to the new layout */
+  .block h1,
+  .block h2 {
+    text-align: left;
+  }
 
-    .sidebarcontainer {
-      display: none !important;
+  @media (max-width: 600px) {
+    .container {
+      padding: 0 16px;
     }
-
-    .maincontainer {
-      width: 100%;
-      margin-left: 0%;
+    .block {
+      padding: 44px 0;
     }
-
-    .linkcontainer {
-      display: none !important;
-    }
-  }
-`;
-
-const StickyContainer = styled.div`
-  display: none;
-  border-radius: 20px;
-  overflow: hidden;
-  @media (min-width: 100px) and (max-width: 1000px) {
-    display: block;
-  }
-`;
-
-const MessageStickyContainer = styled.div`
-  position: fixed;
-  top: 30px;
-  left: 30px;
-  z-index: 9999 !important;
-  @media (min-width: 100px) and (max-width: 1000px) {
-    display: none;
-  }
-`;
-
-const ThemeToggleContainer = styled.div`
-  position: fixed;
-  top: 30px;
-  right: 30px;
-  z-index: 9999 !important;
-  @media (min-width: 100px) and (max-width: 1000px) {
-    display: none;
-  }
-`;
-
-const MobileTopRow = styled.div`
-  display: none;
-  @media (min-width: 100px) and (max-width: 1000px) {
-    display: flex;
-    align-items: center;
-    position: fixed;
-    top: 30px;
-    left: 30px;
-    z-index: 9999 !important;
-    gap: 10px;
-    background: transparent;
   }
 `;

@@ -1,75 +1,30 @@
 html {
   scroll-behavior: smooth;
 }
+
 .App {
   text-align: center;
-  /* font-family: cursive !important; */
   overflow: hidden;
-  /* background-color: ghostwhite !important; */
-  background: linear-gradient(
-    90deg,
-    #edd3ec,
-    #d7def1,
-    #f0edec,
-    #dee6ed,
-    #daf7f1
-  );
-  font-family: Raleway, sans-serif;
-
+  background: transparent;
+  font-family: var(--font-sans);
   scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
+/* Modern minimal scrollbar */
 ::-webkit-scrollbar {
-  width: 7px;
+  width: 9px;
+  height: 9px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
-  border-radius: 10px;
+  background: transparent;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #e53e3e;
-  border-radius: 10px;
+  background: rgba(99, 102, 241, 0.45);
+  border-radius: 999px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #bb3535;
+  background: rgba(99, 102, 241, 0.7);
 }

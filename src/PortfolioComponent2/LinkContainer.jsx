@@ -88,27 +88,37 @@ const MainLinkContainer = styled.div`
     margin: auto;
   }
 `;
-export const LinkContainerStyled = styled.div(({ background, colorMode }) => ({
+export const LinkContainerStyled = styled.div(({ colorMode }) => ({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  // border: "1px solid green",
-  height: "75px",
-  margin: "auto",
-  fontSize: "1.5rem",
-  marginTop: "10px",
+  height: "54px",
+  width: "54px",
+  margin: "14px auto",
+  fontSize: "1.3rem",
   cursor: "pointer",
-  background: colorMode === "dark" ? "#2d3748" : "#daf7f1",
-  color: colorMode === "dark" ? "white" : "black",
-  transition: "transform 0.7s ease, background-color 0.3s ease",
+  background:
+    colorMode === "dark" ? "rgba(148,163,184,0.08)" : "rgba(15,23,42,0.04)",
+  color: colorMode === "dark" ? "#cbd5e1" : "#475569",
+  border: `1px solid ${
+    colorMode === "dark" ? "rgba(148,163,184,0.12)" : "rgba(15,23,42,0.06)"
+  }`,
+  transition: "all 0.25s ease",
   textAlign: "center",
-  fontWeight: "bold",
-  borderRadius: "66% 34% 41% 59% / 55% 38% 62% 45% ",
+  borderRadius: "16px",
+  "& a": {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    width: "100%",
+    height: "100%",
+    color: "inherit",
+  },
   "&:hover": {
-    transform: "scale(1.1)",
-    boxShadow:
-      "rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset",
-    background: background || (colorMode === "dark" ? "#4a5568" : "#daf7f1"),
-    // color: "white",
+    transform: "translateY(-3px)",
+    background: "linear-gradient(135deg, #6366f1, #8b5cf6)",
+    borderColor: "transparent",
+    color: "#ffffff",
+    boxShadow: "0 8px 20px rgba(99,102,241,0.4)",
   },
 }));
