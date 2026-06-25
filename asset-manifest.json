@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.b37d27fc.css",
-    "main.js": "/static/js/main.c91ccf7d.js",
+    "main.js": "/static/js/main.4c7759d3.js",
     "static/js/787.55722989.chunk.js": "/static/js/787.55722989.chunk.js",
+    "static/media/Suraj_Singh.jpg": "/static/media/Suraj_Singh.f7f61b6ea01576303f23.jpg",
+    "static/media/photo.jpg": "/static/media/photo.f7f61b6ea01576303f23.jpg",
     "static/media/Md_Faizan_resumenew.pdf": "/static/media/Md_Faizan_resumenew.ccc5a2acd40b17326d60.pdf",
-    "static/media/Suraj_Singh_CV.pdf": "/static/media/Suraj_Singh_CV.2ca272b7fc29d16981f4.pdf",
-    "static/media/photo.jpg": "/static/media/photo.11faf30452e3816f63ef.jpg",
-    "static/media/Suraj_Singh.jpg": "/static/media/Suraj_Singh.a5632119ddce37f4c372.jpg",
+    "static/media/Suraj_Singh_CV.pdf": "/static/media/Suraj_Singh_CV.6490e66c9dd6f81c2c24.pdf",
     "index.html": "/index.html",
     "main.b37d27fc.css.map": "/static/css/main.b37d27fc.css.map",
-    "main.c91ccf7d.js.map": "/static/js/main.c91ccf7d.js.map",
+    "main.4c7759d3.js.map": "/static/js/main.4c7759d3.js.map",
     "787.55722989.chunk.js.map": "/static/js/787.55722989.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b37d27fc.css",
-    "static/js/main.c91ccf7d.js"
+    "static/js/main.4c7759d3.js"
   ]
 }
