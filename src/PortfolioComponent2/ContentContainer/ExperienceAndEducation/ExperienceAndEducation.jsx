@@ -11,7 +11,14 @@ export default function ExperienceAndEducation() {
   const timelineData = [
     {
       type: "Experience",
-      date: "May 2024 – Oct 2024",
+      date: "Nov 2024 – present",
+      title: "Storewide Active Intelligence | Bangalore, India",
+      subtitle: "Mobile App Developer",
+      color: "#6C5CE7",
+    },
+    {
+      type: "Experience",
+      date: "May 2024 – Nov 2024",
       title: "Imfacto DigiFin | Bangalore, India",
       subtitle: "Mobile App Developer",
       color: "#FF6B6B",
@@ -26,7 +33,7 @@ export default function ExperienceAndEducation() {
     {
       type: "Education",
       date: "2024 – present",
-      title: "Kurushetra University",
+      title: "Kurukshetra University",
       subtitle: "Masters of Computer Application (MCA)",
       color: "#41516C",
     },
@@ -120,5 +127,8 @@ const TimelineContainer = styled.div`
   }
   & > *:nth-child(4) {
     animation-delay: 0.6s;
+  }
+  & > *:nth-child(5) {
+    animation-delay: 0.8s;
   }
 `;

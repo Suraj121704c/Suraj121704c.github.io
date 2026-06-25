@@ -51,7 +51,7 @@ export default function About() {
             <div className="paragraph-container">
               <p className="paragraph-animation">
                 <strong className="keyword-highlight">
-                  A Mobile App Developer with over 3 years of hands-on
+                  A Mobile App Developer with over 4 years of hands-on
                   experience
                 </strong>{" "}
                 in building user-friendly and scalable mobile applications using{" "}

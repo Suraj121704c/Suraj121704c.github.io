@@ -26,6 +26,23 @@ const main_projects = [
       "https://drive.google.com/file/d/1C5Dm3oFQTE1CQiolUQkh2JA_S_UXxsTK/view",
   },
   {
+    title: "AnalysisGPT - AI Data Analysis",
+    description:
+      "An AI-powered mobile app that lets users explore their data through natural-language conversation. Users can securely connect their own databases or upload spreadsheet/Excel datasets, then ask questions in plain English and receive instant, AI-generated insights rendered as richly formatted, Markdown-based responses. Every analysis is organised into chat threads with full conversation history, and users manage multiple database connections and uploaded data collections from an intuitive drawer-based interface. Features SSO via AWS Cognito alongside email/password login, push notifications via Firebase Cloud Messaging, multi-language localization, and over-the-air updates. Built with React Native on the New Architecture with a Redux-managed state layer, running natively on Android and iOS.",
+    techStack: [
+      { name: "React Native" },
+      { name: "New Architecture" },
+      { name: "Redux Toolkit" },
+      { name: "AWS Cognito (SSO)" },
+      { name: "Firebase Cloud Messaging" },
+      { name: "OTA Updates" },
+      { name: "Localization" },
+      { name: "Markdown" },
+    ],
+    bg: "#e8f5e8",
+    liveURL: "",
+  },
+  {
     title: "MyWeels - Pick and Drop",
     description:
       "A convenient pick-and-drop mobility platform that connects passengers with nearby drivers for safe and reliable transportation, using real-time location tracking to ensure quick pickups and smooth rides—just like Ola or Uber.",
